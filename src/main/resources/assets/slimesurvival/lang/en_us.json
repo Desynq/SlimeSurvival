@@ -1,4 +1,20 @@
 {
+	"itemGroup.slimesurvival.materials": "§2Slime Survival: Materials",
+
+
+
 	"item.slimesurvival.polar_bear_fur": "Polar Bear Fur",
-	"itemGroup.slimesurvival.materials": "§2Slime Survival:§3 Materials"
+	"item.slimesurvival.polar_bear_fur.tooltip": "§7• Can be found in medium quantities on polar bears",
+	"item.slimesurvival.polar_bear_fur.tooltip2": "§7• Essential material for winter clothing and medical dressings",
+
+	"item.slimesurvival.wool_of_bat": "Wool of Bat",
+	"item.slimesurvival.wool_of_bat.tooltip": "§7• Guaranteed drop from bats when using an athame",
+	"item.slimesurvival.wool_of_bat.tooltip2": "§7• Used in witchcraft and for vampiric equipment",
+
+	"item.slimesurvival.axolotl_gills": "§dAxolotl Gills",
+	"item.slimesurvival.axolotl_gills.tooltip": "§7• Rare drop from axolotls and \"fish\" fishing",
+	"item.slimesurvival.axolotl_gills.tooltip2": "§7• Potent regenerative abilities that can be used in armor and medicine",
+
+	"item.slimesurvival.mystite_ingot": "§dMystite Ingot",
+	"item.slimesurvival.mystite_ingot.tooltip": "§7• It doesn't seem to bend very easily unless exposed to water..."
 }
