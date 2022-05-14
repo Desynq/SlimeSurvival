@@ -1,5 +1,6 @@
 {
 	"itemGroup.slimesurvival.materials": "§2Slime Survival: Materials",
+	"itemGroup.slimesurvival.weapons": "§2Slime Survival: Weapons",
 
 
 
@@ -16,5 +17,7 @@
 	"item.slimesurvival.axolotl_gills.tooltip2": "§7• Potent regenerative abilities that can be used in armor and medicine",
 
 	"item.slimesurvival.mystite_ingot": "§dMystite Ingot",
-	"item.slimesurvival.mystite_ingot.tooltip": "§7• It doesn't seem to bend very easily unless exposed to water..."
+	"item.slimesurvival.mystite_ingot.tooltip": "§7• It doesn't seem to bend very easily unless exposed to water...",
+
+	"item.slimesurvival.rift_battleaxe": "Rift Battleaxe"
 }
