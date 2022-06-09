@@ -1,6 +1,6 @@
 package desynq.slimesurvival.toolmaterial;
 
-import desynq.slimesurvival.SlimeSurvival;
+import desynq.slimesurvival.registry.ModItems;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
@@ -34,6 +34,6 @@ public class MystiteMaterial implements ToolMaterial {
 
 	@Override
 	public Ingredient getRepairIngredient() {
-		return Ingredient.ofItems(SlimeSurvival.Mystite_Ingot);
+		return Ingredient.ofItems(ModItems.Mystite_Ingot);
 	}
 }
