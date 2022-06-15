@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:blasting",
+	"ingredient": {
+		"item": "slimesurvival:mystite_ore"
+	},
+	"result": "slimesurvival:mystite_ingot",
+	"experience": 10.0,
+	"cookingtime": 1200
+}

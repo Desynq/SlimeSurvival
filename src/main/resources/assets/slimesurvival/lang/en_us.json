@@ -1,6 +1,40 @@
 {
-	"itemGroup.slimesurvival.materials": "§2Slime Survival: Materials",
-	"itemGroup.slimesurvival.weapons": "§2Slime Survival: Weapons",
+	"itemGroup.slimesurvival.blocks": "Slime Survival Blocks",
+	"itemGroup.slimesurvival.materials": "Slime Survival Materials",
+	"itemGroup.slimesurvival.weapons": "Slime Survival Weapons",
+	"itemGroup.slimesurvival.armor": "Slime Survival Armor",
+
+
+
+
+
+
+
+
+
+
+
+	"block.slimesurvival.gmod_block": "GMod Block",
+	"block.slimesurvival.solid_black": "Solid Black",
+	"block.slimesurvival.solid_blue": "Solid Blue",
+	"block.slimesurvival.solid_green": "Solid Green",
+	"block.slimesurvival.solid_magenta": "Solid Magenta",
+	"block.slimesurvival.solid_red": "Solid Red",
+	"block.slimesurvival.solid_white": "Solid White",
+	"block.slimesurvival.solid_yellow": "Solid Yellow",
+
+
+
+
+
+
+
+
+
+	"item.slimesurvival.tooltip.show_details": "§7Hold §6Shift§7 for Details",
+	"item.slimesurvival.tooltip.show_how_to_obtain": "§7Hold §6Ctrl§7 to see How To Obtain",
+
+
 
 
 
@@ -8,16 +42,64 @@
 	"item.slimesurvival.polar_bear_fur.tooltip": "§7• Can be found in medium quantities on polar bears",
 	"item.slimesurvival.polar_bear_fur.tooltip2": "§7• Essential material for winter clothing and medical dressings",
 
-	"item.slimesurvival.wool_of_bat": "Wool of Bat",
-	"item.slimesurvival.wool_of_bat.tooltip": "§7• Guaranteed drop from bats when using an athame",
-	"item.slimesurvival.wool_of_bat.tooltip2": "§7• Used in witchcraft and for vampiric equipment",
 
 	"item.slimesurvival.axolotl_gills": "§dAxolotl Gills",
 	"item.slimesurvival.axolotl_gills.tooltip": "§7• Rare drop from axolotls and \"fish\" fishing",
 	"item.slimesurvival.axolotl_gills.tooltip2": "§7• Potent regenerative abilities that can be used in armor and medicine",
 
-	"item.slimesurvival.mystite_ingot": "§dMystite Ingot",
-	"item.slimesurvival.mystite_ingot.tooltip": "§7• It doesn't seem to bend very easily unless exposed to water...",
 
-	"item.slimesurvival.rift_battleaxe": "Rift Battleaxe"
+	"item.slimesurvival.mystite_ingot": "§dMystite Ingot",
+	"item.slimesurvival.mystite_ingot.detail[0]": "§7Highly durable and strong, this metal",
+	"item.slimesurvival.mystite_ingot.detail[1]": "§7won't falter unless submerged in water.",
+
+
+	"item.slimesurvival.mystite_tool_rod": "§3Mystite Tool Rod",
+	"item.slimesurvival.mystite_tool_rod.detail[0]": "§7A reinforced stick used for the crafting of stronger tools and weapons.",
+
+
+	"item.slimesurvival.mystite_ore": "§3Mystite Ore",
+	"item.slimesurvival.mystite_ore.detail[0]": "§7Contains slight traces of redstone and an unknown metal.",
+	"item.slimesurvival.mystite_ore.detail[1]": "§7Extremely resilient to high temperatures; use a blast furnace.",
+	"item.slimesurvival.mystite_ore.how_to_obtain[0]": "§7Rarely found in deepslate redstone",
+	"item.slimesurvival.mystite_ore.how_to_obtain[1]": "§7ore when using a §lMystite Pickaxe§r§7.",
+
+
+	"item.slimesurvival.enderium_alloy": "§5Enderium Alloy",
+	"item.slimesurvival.enderium_alloy.detail[0]": "§7Exerts magical properties far beyond",
+	"item.slimesurvival.enderium_alloy.detail[1]": "§7those of ordinary metallic substances",
+
+	"item.slimesurvival.enderium_alloy.detail[2]": "§7May have some applications as an ingredient",
+	"item.slimesurvival.enderium_alloy.detail[3]": "§7for mage armor, tools, and weapons.",
+
+
+
+
+
+	"item.slimesurvival.rift_battleaxe": "§4Rift Battleaxe",
+	"item.slimesurvival.rift_battleaxe.detail[0]": "§7A heavy weapon that swings slow but hits §lreally§r§7 hard.",
+	"item.slimesurvival.rift_battleaxe.detail[1]": "§7Right clicking will push away nearby mobs and players at the",
+	"item.slimesurvival.rift_battleaxe.detail[2]": "§7cost of a short movement speed penalty afterwards with cooldown.",
+
+
+
+	"item.slimesurvival.ban_hammer": "§b\"Ban\" Hammer",
+	"item.slimesurvival.ban_hammer.tooltip": "§4Admin-Only Weapon",
+	"item.slimesurvival.ban_hammer.detail[0]": "§7It unleashes an ungodly amount of energy at whomever it hits.",
+	"item.slimesurvival.ban_hammer.detail[1]": "§7It cannot, however, ban players, sadly.",
+
+
+
+
+
+
+
+
+	"item.slimesurvival.mystite_helmet": "§3Mystite Helmet",
+	"item.slimesurvival.mystite_chestplate": "§3Mystite Chestplate",
+	"item.slimesurvival.mystite_leggings": "§3Mystite Leggings",
+	"item.slimesurvival.mystite_boots": "§3Mystite Boots",
+
+
+
+	"": ""
 }

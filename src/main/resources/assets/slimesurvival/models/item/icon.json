@@ -1,0 +1,27 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "slimesurvival:item/icon/null"
+	},
+	"overrides": [
+		{"predicate": {"custom_model_data": 1}, "model": "slimesurvival:item/icon/enderchest/aid_shop"},
+		{"predicate": {"custom_model_data": 2}, "model": "slimesurvival:item/icon/enderchest/back"},
+		{"predicate": {"custom_model_data": 3}, "model": "slimesurvival:item/icon/enderchest/blank_slot"},
+		{"predicate": {"custom_model_data": 4}, "model": "slimesurvival:item/icon/enderchest/cancel"},
+		{"predicate": {"custom_model_data": 5}, "model": "slimesurvival:item/icon/enderchest/casino"},
+		{"predicate": {"custom_model_data": 6}, "model": "slimesurvival:item/icon/enderchest/confirm"},
+		{"predicate": {"custom_model_data": 7}, "model": "slimesurvival:item/icon/enderchest/info"},
+		{"predicate": {"custom_model_data": 8}, "model": "slimesurvival:item/icon/enderchest/locked"},
+		{"predicate": {"custom_model_data": 9}, "model": "slimesurvival:item/icon/enderchest/main_menu"},
+		{"predicate": {"custom_model_data": 10}, "model": "slimesurvival:item/icon/enderchest/notes"},
+		{"predicate": {"custom_model_data": 11}, "model": "slimesurvival:item/icon/enderchest/pawn_shop"},
+		{"predicate": {"custom_model_data": 12}, "model": "slimesurvival:item/icon/enderchest/quests_menu"},
+		{"predicate": {"custom_model_data": 13}, "model": "slimesurvival:item/icon/enderchest/refresh"},
+		{"predicate": {"custom_model_data": 14}, "model": "slimesurvival:item/icon/enderchest/reputation_menu"},
+		{"predicate": {"custom_model_data": 15}, "model": "slimesurvival:item/icon/enderchest/sell_menu"},
+		{"predicate": {"custom_model_data": 16}, "model": "slimesurvival:item/icon/enderchest/stats_menu"},
+		{"predicate": {"custom_model_data": 17}, "model": "slimesurvival:item/icon/enderchest/upgrade"},
+
+		{"predicate": {"custom_model_data": 2147483647}, "model": "slimesurvival:item/icon/null"}
+	]
+}
