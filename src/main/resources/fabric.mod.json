@@ -30,6 +30,9 @@
 		"fabric": "*",
 		"minecraft": "~1.18.2",
 		"java": ">=17",
-		"origins": ">=1.4.1"
+		"origins": ">=1.4.1",
+		"trinkets": ">=3.3.1",
+		"cloth-config": ">=6.0.0",
+		"patchouli": "*"
 	}
 }
