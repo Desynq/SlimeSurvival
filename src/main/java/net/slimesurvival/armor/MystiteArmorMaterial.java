@@ -23,12 +23,12 @@ public class MystiteArmorMaterial implements ArmorMaterial {
 		return INSTANCE;
 	}
 
-	private static final int[] BASE_DURABILITY = new int[] {28, 32, 35, 26};
+	private static final int[] BASE_DURABILITY = new int[] {2800, 3200, 3500, 2600};
 	private static final int[] PROTECTION_AMOUNTS = new int[] {5, 8, 10, 5};
 
 	@Override
 	public int getDurability(EquipmentSlot equipmentSlot) {
-		return BASE_DURABILITY[equipmentSlot.getEntitySlotId()] * 100;
+		return BASE_DURABILITY[equipmentSlot.getEntitySlotId()];
 	}
 
 	@Override
