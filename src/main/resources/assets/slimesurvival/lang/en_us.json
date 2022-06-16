@@ -101,5 +101,14 @@
 
 
 
+
+
+
+	"item.slimesurvival.winter_coat": "Winter Coat",
+	"item.slimesurvival.winter_coat.detail_0": "§7Made from polar bear fur and leather fox hide.",
+	"item.slimesurvival.winter_coat.detail_1": "§7It provides a moderate amount of insulation.",
+
+
+
 	"": ""
 }
