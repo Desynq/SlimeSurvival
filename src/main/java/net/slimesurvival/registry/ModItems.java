@@ -57,6 +57,7 @@ public class ModItems {
 
 	public static final Item WINTER_COAT = ModItems.register("winter_coat", new WinterCoat(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
 	public static final Item COUNTERCURSE_MANTRA = ModItems.register("countercurse_mantra", new CountercurseMantra(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
+	public static final Item REACTOR_CORE = ModItems.register("reactor_core", new ReactorCore(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
 
 	public static final Item SHAPED_GLASS = ModItems.register("shaped_glass", new ShapedGlass(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
 	public static final Item BlOODSTAINED_GLASS = ModItems.register("bloodstained_glass", new BloodstainedGlass(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));

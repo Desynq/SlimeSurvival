@@ -23,19 +23,14 @@ public class MystiteOre extends Item implements ExtendableTooltipProvider {
 	public String tooltipTranslationKey() {
 		return this.getTranslationKey();
 	}
-	@Override
-	public boolean hasDetails() {
-		return true;
-	}
-	@Override
-	public boolean hasHowToObtain() {
-		return true;
-	}
 
-
+	@Override
+	public boolean hasTooltip() {
+		return false;
+	}
 
 	@Override
 	public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-		tryAppend(tooltip, 2, 1);
+		tryAppend(tooltip);
 	}
 }

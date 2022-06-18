@@ -18,27 +18,29 @@ public interface ExtendableTooltipProvider {
 	default boolean hasExtendedTooltip() {
 		return true;
 	}
+	default boolean hasTooltip() {
+		return true;
+	}
 	default boolean hasDetails() {
-		return false;
+		return true;
 	}
 	default boolean hasHowToObtain() {
-		return false;
+		return true;
 	}
 
 
 
-	default void tryAppend(List<Text> tooltip, Integer details, Integer howToObtain) {
+	default void tryAppend(List<Text> tooltip) {
 		if (!hasExtendedTooltip()) return;
 
 		if (hasDetails() && Screen.hasShiftDown()) {
-			for (int i = 0; i < details; i++) {
-				append(tooltip, ".details" + i);
-			}
+			append(tooltip, ".details");
+
 		} else if (hasHowToObtain() && Screen.hasControlDown()) {
-			for (int i = 0; i < howToObtain; i++) {
-				append(tooltip, ".how_to_obtain" + i);
-			}
+			append(tooltip, ".how_to_obtain");
+
 		} else {
+			if (hasTooltip()) append(tooltip, ".tooltip");
 			if (hasDetails()) tooltip.add(SHOW_DETAILS_TOOLTIP);
 			if (hasHowToObtain()) tooltip.add(SHOW_HOW_TO_OBTAIN_TOOLTIP);
 		}

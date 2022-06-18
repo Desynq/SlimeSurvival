@@ -58,8 +58,8 @@
 
 
 	"item.slimesurvival.mystite_ore": "§3Mystite Ore",
-	"item.slimesurvival.mystite_ore.details0": "§7Contains slight traces of redstone\n§7and an unknown metal.\n§7Resistant to high temperatures; can\n§7only be smelted in a blast furnace.",
-	"item.slimesurvival.mystite_ore.how_to_obtain0": "§7Rarely found in deepslate redstone ore when using a §lMystite Pickaxe§r§7.",
+	"item.slimesurvival.mystite_ore.details": "§7Contains slight traces of redstone\n§7and an unknown metal.\n§7Resistant to high temperatures; can\n§7only be smelted in a blast furnace.",
+	"item.slimesurvival.mystite_ore.how_to_obtain": "§7Rarely found in deepslate redstone ore when using a §lMystite Pickaxe§r§7.",
 
 
 	"item.slimesurvival.enderium_alloy": "§5Enderium Alloy",
@@ -123,9 +123,8 @@
 	"item.slimesurvival.bloodstained_glass.detail_1": "§cOne-shot protection only works half of the time.",
 
 	"item.slimesurvival.reactor_core": "§5Reactor Core",
-	"item.slimesurvival.reactor_core.detail_0": "§7§oJesse, I have cancer.",
-	"item.slimesurvival.reactor_core.detail_1": "§7Emits short doses of radiation that augment cell hardness",
-	"item.slimesurvival.reactor_core.detail_2": "§7Side effects may include: Mild Fatigue and §oCancer§r§7.",
+	"item.slimesurvival.reactor_core.tooltip": "§7§oJesse, I have cancer",
+	"item.slimesurvival.reactor_core.detail": "§7Emits short doses of radiation that augment cell count rapidly.\n§7 The short doses of radiation may cause fatigue and, in rare cases, cancer.",
 
 
 
