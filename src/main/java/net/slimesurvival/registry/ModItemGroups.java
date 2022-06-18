@@ -14,7 +14,5 @@ public class ModItemGroups {
 
 	public static final ItemGroup Weapons = FabricItemGroupBuilder.create(SlimeSurvival.ID("weapons")).icon(() -> new ItemStack(ModItems.RIFT_BATTLEAXE)).build();
 
-	public static final ItemGroup Armor = FabricItemGroupBuilder.create(SlimeSurvival.ID("armor")).icon(() -> new ItemStack(ModItems.MYSTITE_HELMET)).build();
-
-	public static final ItemGroup Trinkets = FabricItemGroupBuilder.create(SlimeSurvival.ID("trinkets")).icon(() -> new ItemStack(ModItems.WINTER_COAT)).build();
+	public static final ItemGroup Equipment = FabricItemGroupBuilder.create(SlimeSurvival.ID("equipment")).icon(() -> new ItemStack(ModItems.MYSTITE_HELMET)).build();
 }

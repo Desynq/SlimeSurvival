@@ -20,9 +20,9 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.world.World;
 import net.slimesurvival.util.Tooltip;
 
-public class WinterCoat extends TrinketItem {
+public class ReactorCore extends TrinketItem {
 
-	public WinterCoat(Settings settings) {
+	public ReactorCore(Settings settings) {
 		super(settings);
 	}
 
@@ -31,7 +31,10 @@ public class WinterCoat extends TrinketItem {
 	public Multimap<EntityAttribute, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, UUID uuid) {
 		var modifiers = super.getModifiers(stack, slot, entity, uuid);
 		
-		modifiers.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(uuid, "slimesurvival:winter_coat_armor", 4, EntityAttributeModifier.Operation.ADDITION));
+		modifiers.put(EntityAttributes.GENERIC_MAX_HEALTH, new EntityAttributeModifier(uuid, "slimesurvival:reactor_core", 1.0, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
+		modifiers.put(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier(uuid, "slimesurvival:reactor_core", -0.25, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
+		modifiers.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(uuid, "slimesurvival:reactor_core", -0.25, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
+
 		return modifiers;
 	}
 
@@ -45,8 +48,9 @@ public class WinterCoat extends TrinketItem {
 		if (InputUtil.isKeyPressed(MinecraftClient.getInstance().getWindow().getHandle(), 340)) {
 			tooltip.remove(Tooltip.showDetailsTooltip);
 
-			tooltip.add(new TranslatableText("item.slimesurvival.winter_coat.detail_0"));
-			tooltip.add(new TranslatableText("item.slimesurvival.winter_coat.detail_1"));
+			tooltip.add(new TranslatableText("item.slimesurvival.reactor_core.detail_0"));
+			tooltip.add(new TranslatableText("item.slimesurvival.reactor_core.detail_1"));
+			tooltip.add(new TranslatableText("item.slimesurvival.reactor_core.detail_2"));
 		}
 	}
 }

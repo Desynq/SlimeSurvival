@@ -33,6 +33,7 @@
 		"origins": ">=1.4.1",
 		"trinkets": ">=3.3.1",
 		"cloth-config": ">=6.0.0",
-		"patchouli": "*"
+		"patchouli": "*",
+		"pehkui": ">=3.3.1"
 	}
 }

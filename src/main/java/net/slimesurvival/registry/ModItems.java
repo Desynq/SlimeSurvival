@@ -42,10 +42,10 @@ public class ModItems {
 
 	public static final ArmorMaterial MYSTITE_ARMOR_MATERIAL = MystiteArmorMaterial.getInstance();
 
-	public static final Item MYSTITE_HELMET = ModItems.register("mystite_helmet", (Item)new MystiteArmor(MYSTITE_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Settings().fireproof().group(ModItemGroups.Armor)));
-	public static final Item MYSTITE_CHESTPLATE = ModItems.register("mystite_chestplate", (Item)new MystiteArmor(MYSTITE_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Settings().fireproof().group(ModItemGroups.Armor)));
-	public static final Item MYSTITE_LEGGINGS = ModItems.register("mystite_leggings", (Item)new MystiteArmor(MYSTITE_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Settings().fireproof().group(ModItemGroups.Armor)));
-	public static final Item MYSTITE_BOOTS = ModItems.register("mystite_boots", (Item)new MystiteArmor(MYSTITE_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Settings().fireproof().group(ModItemGroups.Armor)));
+	public static final Item MYSTITE_HELMET = ModItems.register("mystite_helmet", (Item)new MystiteArmor(MYSTITE_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Settings().fireproof().group(ModItemGroups.Equipment)));
+	public static final Item MYSTITE_CHESTPLATE = ModItems.register("mystite_chestplate", (Item)new MystiteArmor(MYSTITE_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Settings().fireproof().group(ModItemGroups.Equipment)));
+	public static final Item MYSTITE_LEGGINGS = ModItems.register("mystite_leggings", (Item)new MystiteArmor(MYSTITE_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Settings().fireproof().group(ModItemGroups.Equipment)));
+	public static final Item MYSTITE_BOOTS = ModItems.register("mystite_boots", (Item)new MystiteArmor(MYSTITE_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Settings().fireproof().group(ModItemGroups.Equipment)));
 
 
 
@@ -53,7 +53,13 @@ public class ModItems {
 
 
 
-	public static final Item WINTER_COAT = ModItems.register("winter_coat", new WinterCoat(new FabricItemSettings().group(ModItemGroups.Trinkets).maxCount(1)));
+	public static final Item UTILITY_BELT = ModItems.register("utility_belt", new UtilityBelt(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
+
+	public static final Item WINTER_COAT = ModItems.register("winter_coat", new WinterCoat(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
+	public static final Item COUNTERCURSE_MANTRA = ModItems.register("countercurse_mantra", new CountercurseMantra(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
+
+	public static final Item SHAPED_GLASS = ModItems.register("shaped_glass", new ShapedGlass(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
+	public static final Item BlOODSTAINED_GLASS = ModItems.register("bloodstained_glass", new BloodstainedGlass(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
 
 
 

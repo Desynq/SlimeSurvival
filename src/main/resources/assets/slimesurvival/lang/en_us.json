@@ -2,7 +2,7 @@
 	"itemGroup.slimesurvival.blocks": "Slime Survival Blocks",
 	"itemGroup.slimesurvival.materials": "Slime Survival Materials",
 	"itemGroup.slimesurvival.weapons": "Slime Survival Weapons",
-	"itemGroup.slimesurvival.armor": "Slime Survival Armor",
+	"itemGroup.slimesurvival.equipment": "Slime Survival Equipment",
 
 
 
@@ -58,10 +58,8 @@
 
 
 	"item.slimesurvival.mystite_ore": "§3Mystite Ore",
-	"item.slimesurvival.mystite_ore.detail[0]": "§7Contains slight traces of redstone and an unknown metal.",
-	"item.slimesurvival.mystite_ore.detail[1]": "§7Extremely resilient to high temperatures; use a blast furnace.",
-	"item.slimesurvival.mystite_ore.how_to_obtain[0]": "§7Rarely found in deepslate redstone",
-	"item.slimesurvival.mystite_ore.how_to_obtain[1]": "§7ore when using a §lMystite Pickaxe§r§7.",
+	"item.slimesurvival.mystite_ore.details0": "§7Contains slight traces of redstone\n§7and an unknown metal.\n§7Resistant to high temperatures; can\n§7only be smelted in a blast furnace.",
+	"item.slimesurvival.mystite_ore.how_to_obtain0": "§7Rarely found in deepslate redstone ore when using a §lMystite Pickaxe§r§7.",
 
 
 	"item.slimesurvival.enderium_alloy": "§5Enderium Alloy",
@@ -105,8 +103,29 @@
 
 
 	"item.slimesurvival.winter_coat": "Winter Coat",
-	"item.slimesurvival.winter_coat.detail_0": "§7Made from polar bear fur and leather fox hide.",
+	"item.slimesurvival.winter_coat.detail_0": "§7Made from polar bear fur, fox hide, and woven thread.",
 	"item.slimesurvival.winter_coat.detail_1": "§7It provides a moderate amount of insulation.",
+
+
+	"item.slimesurvival.utility_belt": "Utility Belt",
+	"item.slimesurvival.utility_belt.detail_0": "§7Made from leather and gold.",
+	"item.slimesurvival.utility_belt.detail_1": "§7Allows for an extra trinket on your belt.",
+
+	"item.slimesurvival.countercurse_mantra": "Countercurse Mantra",
+	"item.slimesurvival.countercurse_mantra.detail_0": "§7Protects against Rifting.",
+
+	"item.slimesurvival.shaped_glass": "§bShaped Glass",
+	"item.slimesurvival.shaped_glass.detail_0": "§7§oHigh risk, high reward.",
+	"item.slimesurvival.shaped_glass.detail_1": "§cDisables one-shot protection.",
+
+	"item.slimesurvival.bloodstained_glass": "§4Bloodstained Glass",
+	"item.slimesurvival.bloodstained_glass.detail_0": "§7§oMedium risk, medium reward",
+	"item.slimesurvival.bloodstained_glass.detail_1": "§cOne-shot protection only works half of the time.",
+
+	"item.slimesurvival.reactor_core": "§5Reactor Core",
+	"item.slimesurvival.reactor_core.detail_0": "§7§oJesse, I have cancer.",
+	"item.slimesurvival.reactor_core.detail_1": "§7Emits short doses of radiation that augment cell hardness",
+	"item.slimesurvival.reactor_core.detail_2": "§7Side effects may include: Mild Fatigue and §oCancer§r§7.",
 
 
 

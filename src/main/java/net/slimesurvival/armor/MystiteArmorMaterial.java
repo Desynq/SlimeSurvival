@@ -38,7 +38,7 @@ public class MystiteArmorMaterial implements ArmorMaterial {
 
 	@Override
 	public int getEnchantability() {
-		return 20;
+		return 25;
 	}
 
 	@Override

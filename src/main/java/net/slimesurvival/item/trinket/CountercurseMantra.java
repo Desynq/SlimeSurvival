@@ -13,16 +13,15 @@ import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.world.World;
 import net.slimesurvival.util.Tooltip;
 
-public class WinterCoat extends TrinketItem {
+public class CountercurseMantra extends TrinketItem {
 
-	public WinterCoat(Settings settings) {
+	public CountercurseMantra(Settings settings) {
 		super(settings);
 	}
 
@@ -30,8 +29,7 @@ public class WinterCoat extends TrinketItem {
 
 	public Multimap<EntityAttribute, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, UUID uuid) {
 		var modifiers = super.getModifiers(stack, slot, entity, uuid);
-		
-		modifiers.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(uuid, "slimesurvival:winter_coat_armor", 4, EntityAttributeModifier.Operation.ADDITION));
+
 		return modifiers;
 	}
 
@@ -45,8 +43,7 @@ public class WinterCoat extends TrinketItem {
 		if (InputUtil.isKeyPressed(MinecraftClient.getInstance().getWindow().getHandle(), 340)) {
 			tooltip.remove(Tooltip.showDetailsTooltip);
 
-			tooltip.add(new TranslatableText("item.slimesurvival.winter_coat.detail_0"));
-			tooltip.add(new TranslatableText("item.slimesurvival.winter_coat.detail_1"));
+			tooltip.add(new TranslatableText("item.slimesurvival.countercurse_mantra.detail_0"));
 		}
 	}
 }

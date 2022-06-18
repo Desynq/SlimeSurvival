@@ -27,6 +27,8 @@ public class SlimeSurvival implements ModInitializer {
 		ModBlocks.register();
 		ModItems.register();
 
+
+
 		LOGGER.info("Slime Survival is now ruining everyone's fun for fun!");
 	}
 }
