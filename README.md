@@ -19,14 +19,18 @@ If you wish to compile this mod, I suggest you don't since it'll probably break 
 - Yarn Mappings: 1.18.2 + Build.3
 - Fabric Loader: 0.14.7
 
-Currently, this mod uses these mods explicitly as dependencies that need to be downloaded and installed separately:
+## Dependencies
+
+### Download Required
+
 - Bewitchment by MoriyaShiine
 - Origins by Apace100
 - *Patchouli is a mod by Vazkii*
 - Pehkui
 - Trinkets
 
-Included Dependencies:
+### Included
+
 - PlayerAbilityLib
 - Reach Entity Attributes
 - Terraform Wood API
