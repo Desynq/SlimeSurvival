@@ -34,3 +34,22 @@ If you wish to compile this mod, I suggest you don't since it'll probably break 
 - PlayerAbilityLib
 - Reach Entity Attributes
 - Terraform Wood API
+
+
+
+# Credits
+
+- DragonLoot
+	- I stole a lot of your code for my registries
+- MultiBossbarFix
+	- I literally copied your single mixin and transplanted it into my mod for 1.18.2
+- Things
+	- I used your `ExtendableTooltipProvider` as "inspiration" for my own tooltip provider that supports `\n` in tooltip translation keys
+- Mob Origins
+	- I literally copied your mixin for the bouncy effect
+
+
+
+# Additional Notes
+
+- I suggest using CraftTweaker to remove Artifact's NVGs and Snorkel from the item tag `trinkets:head/hat` so that they can only be equipped on the face trinket slot lol
