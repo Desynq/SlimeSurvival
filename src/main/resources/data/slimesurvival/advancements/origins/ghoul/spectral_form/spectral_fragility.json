@@ -1,0 +1,22 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:chainmail_chestplate"
+		},
+		"title": "Spectral Fragility",
+		"frame": "starter",
+		"description": "§7You take twice as much damage as normal while in spectral form.",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"acquired": {
+			"trigger": "origins:chose_origin",
+			"conditions": {
+				"origin": "slimesurvival:ghoul"
+			}
+		}
+	},
+	"parent": "slimesurvival:origins/ghoul/spectral_form"
+}

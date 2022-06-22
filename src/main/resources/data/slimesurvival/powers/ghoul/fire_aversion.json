@@ -1,0 +1,52 @@
+{
+	"type": "origins:modify_damage_taken",
+	"modifier": {
+		"name": "Fire Aversion",
+		"operation": "multiply_total",
+		"value": 1.0
+	},
+	"damage_condition": {
+		"type": "origins:or",
+		"conditions": [
+			{
+				"type": "origins:name",
+				"name": "inFire.player"
+			},
+			{
+				"type": "origins:name",
+				"name": "onFire.player"
+			},
+			{
+				"type": "origins:name",
+				"name": "inFire"
+			},
+			{
+				"type": "origins:name",
+				"name": "onFire"
+			}
+		]
+	},
+
+
+
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "§7You're more vulnerable to fire."
+		},
+		{
+			"sprite": "slimesurvival:textures/gui/badge/technical.png",
+			"text": "§bYou take twice as much damage from being on §lfire§r§b and from being §lin§r§b fire."
+		},
+		{
+			"sprite": "slimesurvival:textures/gui/badge/lore.png",
+			"text": "§7Your skin is rotten and flammable."
+		},
+		{
+			"sprite": "slimesurvival:textures/gui/badge/default.png",
+			"text": "Default"
+		}
+	],
+	"name": "§r",
+	"description": "Fire Aversion\n"
+}

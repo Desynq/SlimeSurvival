@@ -3,28 +3,45 @@ package net.slimesurvival.item.trinket;
 import java.util.List;
 import java.util.UUID;
 
+import org.jetbrains.annotations.Nullable;
+
 import com.google.common.collect.Multimap;
 
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketItem;
-import net.minecraft.client.MinecraftClient;
+import dev.emi.trinkets.api.TrinketsApi;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.world.World;
-import net.slimesurvival.util.Tooltip;
+import net.slimesurvival.events.LivingEntityDamagedCallback;
+import net.slimesurvival.registry.ModItems;
+import net.slimesurvival.util.provider.ExtendableTooltipProvider;
 
-public class BloodstainedGlass extends TrinketItem {
+public class BloodstainedGlass extends TrinketItem implements ExtendableTooltipProvider {
 
 	public BloodstainedGlass(Settings settings) {
 		super(settings);
+
+		LivingEntityDamagedCallback.EVENT.register(BloodstainedGlass::onLivingDamage);
 	}
+
+
+
+	private static void onLivingDamage(LivingEntity attackedEntity, DamageSource damageSource, float damage) {
+		if (damageSource.getSource() instanceof LivingEntity) {
+			LivingEntity attacker = (LivingEntity) damageSource.getSource();
+			if (TrinketsApi.getTrinketComponent(attacker).get().isEquipped(ModItems.BlOODSTAINED_GLASS)) {
+				attacker.heal(damage / 4);
+			}
+		}
+	}
+
 
 
 
@@ -40,15 +57,22 @@ public class BloodstainedGlass extends TrinketItem {
 
 
 	@Override
-	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-		super.appendTooltip(itemStack, world, tooltip, tooltipContext);
-		tooltip.add(Tooltip.showDetailsTooltip);
+	public String tooltipTranslationKey() {
+		return this.getTranslationKey();
+	}
 
-		if (InputUtil.isKeyPressed(MinecraftClient.getInstance().getWindow().getHandle(), 340)) {
-			tooltip.remove(Tooltip.showDetailsTooltip);
+	@Override
+	public boolean hasTooltip() {
+		return false;
+	}
 
-			tooltip.add(new TranslatableText("item.slimesurvival.bloodstained_glass.detail_0"));
-			tooltip.add(new TranslatableText("item.slimesurvival.bloodstained_glass.detail_1"));
-		}
+	@Override
+	public boolean hasHowToObtain() {
+		return false;
+	}
+
+	@Override
+	public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+		tryAppend(tooltip);
 	}
 }

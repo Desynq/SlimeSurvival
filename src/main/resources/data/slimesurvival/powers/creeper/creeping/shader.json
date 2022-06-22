@@ -1,0 +1,10 @@
+{
+	"type": "origins:shader",
+	"shader": "minecraft:shaders/post/creeper.json",
+	"toggleable": false,
+	"condition": {
+		"type": "origins:power_active",
+		"power": "*:creeper/creeping"
+	},
+	"hidden": true
+}

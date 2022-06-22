@@ -8,6 +8,8 @@ import net.slimesurvival.SlimeSurvival;
 
 
 public class ModItemGroups {
+	public static final ItemGroup MISC_ITEM_GROUP = FabricItemGroupBuilder.create(SlimeSurvival.ID("misc")).icon(() -> new ItemStack(ModItems.LEXICON)).build();
+
 	public static final ItemGroup BLOCKS = FabricItemGroupBuilder.create(SlimeSurvival.ID("blocks")).icon(() -> new ItemStack(ModItems.SOLID_BLACK)).build();
 
 	public static final ItemGroup Materials = FabricItemGroupBuilder.create(SlimeSurvival.ID("materials")).icon(() -> new ItemStack(ModItems.MYSTITE_ORE)).build();

@@ -39,10 +39,10 @@ public class MystiteArmor extends ArmorItem {
 
 		DispenserBlock.registerBehavior(this, DISPENSER_BEHAVIOR);
 		Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
-		UUID uUID = MODIFIERS[slot.getEntitySlotId()];
-		builder.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(uUID, "Armor modifier", (double) this.protection, EntityAttributeModifier.Operation.ADDITION));
-		builder.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, new EntityAttributeModifier(uUID, "Armor toughness", (double) this.toughness, EntityAttributeModifier.Operation.ADDITION));
-		builder.put(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, new EntityAttributeModifier(uUID, "Armor knockback resistance", (double) this.knockbackResistance / 10D, EntityAttributeModifier.Operation.ADDITION));
+		UUID UUID = MODIFIERS[slot.getEntitySlotId()];
+		builder.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(UUID, "Armor modifier", (double) this.protection, EntityAttributeModifier.Operation.ADDITION));
+		builder.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, new EntityAttributeModifier(UUID, "Armor toughness", (double) this.toughness, EntityAttributeModifier.Operation.ADDITION));
+		builder.put(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, new EntityAttributeModifier(UUID, "Armor knockback resistance", (double) this.knockbackResistance / 10.0d, EntityAttributeModifier.Operation.ADDITION));
 		this.attributeModifiers = builder.build();
 	}
 

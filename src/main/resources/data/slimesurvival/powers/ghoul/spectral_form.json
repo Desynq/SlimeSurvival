@@ -1,0 +1,38 @@
+{
+	"type": "origins:toggle",
+	"key": {
+		"key": "key.origins.primary_active",
+		"continuous": false
+	},
+	"retain_state": false,
+	"condition": {
+		"type": "apoli:food_level",
+		"comparison": ">",
+		"compare_to": 6
+	},
+
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "§7As a spririt possessing your dead remains, you can enter a partially ethereal form."
+		},
+		{
+			"sprite": "slimesurvival:textures/gui/badge/technical.png",
+			"text": "§bDepending on your upgrades, this can be used to enhance yourself temporarily or to run and hide."
+		},
+		{
+			"sprite": "slimesurvival:textures/gui/badge/lore.png",
+			"text": "§7You're a soul trapped in a suit of flesh piloting a bone mech."
+		},
+		{
+			"sprite": "slimesurvival:textures/gui/badge/constant.png",
+			"text": "Constant: Cannot be overridden by an upgrade"
+		},
+		{
+			"sprite": "origins:textures/gui/badge/toggle.png",
+			"text": "Toggle with %s"
+		}
+	],
+	"name": "§r",
+	"description": "§6Spectral Form\n"
+}

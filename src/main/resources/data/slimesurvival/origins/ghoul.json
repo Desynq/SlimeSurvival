@@ -1,0 +1,21 @@
+{
+	"powers": [
+		"slimesurvival:ghoul/burn_in_daylight",
+		"slimesurvival:ghoul/pallor",
+		"slimesurvival:ghoul/undead",
+		"slimesurvival:ghoul/flesh_eater",
+		"slimesurvival:ghoul/no_swimming",
+		"slimesurvival:ghoul/fire_aversion",
+
+		"slimesurvival:ghoul/spectral_form",
+		"slimesurvival:ghoul/spectral_form/desaturated_vision",
+		"slimesurvival:ghoul/spectral_form/ethereal_exhaustion",
+		"slimesurvival:ghoul/spectral_form/translucent",
+		"slimesurvival:ghoul/spectral_form/spectral_fragility"
+	],
+	"icon": {
+		"item": "minecraft:rotten_flesh"
+	},
+	"order": 4,
+	"impact": 2
+}

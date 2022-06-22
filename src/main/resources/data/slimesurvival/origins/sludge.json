@@ -1,0 +1,11 @@
+{
+	"powers": [
+		"slimesurvival:sludge/translucent",
+		"slimesurvival:sludge/bouncy"
+	],
+	"icon": {
+		"item": "minecraft:slime_ball"
+	},
+	"order": 3,
+	"impact": 2
+}

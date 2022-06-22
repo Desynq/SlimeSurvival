@@ -1,0 +1,22 @@
+{
+	"display": {
+		"icon": {
+			"item": "bewitchment:specter_bangle"
+		},
+		"title": "Monochromatic Vision",
+		"frame": "starter",
+		"description": "§7You cannot see color as well while in spectral form",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"acquired": {
+			"trigger": "origins:chose_origin",
+			"conditions": {
+				"origin": "slimesurvival:ghoul"
+			}
+		}
+	},
+	"parent": "slimesurvival:origins/ghoul/spectral_form"
+}

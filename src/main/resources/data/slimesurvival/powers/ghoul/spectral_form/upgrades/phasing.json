@@ -1,0 +1,73 @@
+{
+	"type": "origins:multiple",
+
+	"phasing": {
+		"type": "origins:phasing",
+		"blacklist": true,
+		"render_type": "blindness",
+		"view_distance": 8.0,
+		"block_condition": {
+			"type": "origins:in_tag",
+			"tag": "slimesurvival:unphasable"
+		},
+		"phase_down_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:sneaking"
+				},
+				{
+					"type": "origins:on_block"
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:power_active",
+					"power": "*:ghoul/spectral_form"
+				},
+				{
+					"type": "origins:gamemode",
+					"gamemode": "adventure",
+					"inverted": true
+				}
+			]
+		}
+	},
+
+	"phasing_in_adventure": {
+		"type": "origins:phasing",
+		"render_type": "blindness",
+		"view_distance": 8.0,
+		"block_condition": {
+			"type": "origins:in_tag",
+			"tag": "slimesurvival:phasable"
+		},
+		"phase_down_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:sneaking"
+				},
+				{
+					"type": "origins:on_block"
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:power_active",
+					"power": "*:ghoul/spectral_form"
+				},
+				{
+					"type": "origins:gamemode",
+					"gamemode": "adventure"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"replace": true,
+	"order": 0,
+	"enabled": true,
+	"origins": [
+		"slimesurvival:human",
+		"slimesurvival:creeper",
+		"slimesurvival:sludge",
+		"slimesurvival:ghoul",
+		"slimesurvival:arachnid",
+		"slimesurvival:floran"
+	],
+	"allow_random": true,
+	"exclude_random": [],
+	"allow_random_unchoosable": false,
+	"hidden": false
+}

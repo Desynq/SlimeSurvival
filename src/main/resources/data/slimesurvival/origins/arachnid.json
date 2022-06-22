@@ -1,0 +1,9 @@
+{
+	"powers": [
+	],
+	"icon": {
+		"item": "minecraft:string"
+	},
+	"order": 5,
+	"impact": 2
+}

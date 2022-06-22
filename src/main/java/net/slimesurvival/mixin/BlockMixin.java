@@ -1,7 +1,6 @@
 package net.slimesurvival.mixin;
 
-import net.slimesurvival.power.Powers;
-
+import net.slimesurvival.registry.ModPowers;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.world.BlockView;
@@ -14,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class BlockMixin {
 	@Inject(method = "onEntityLand", at = @At("HEAD"), cancellable = true)
 	public void onEntityLand(BlockView world, Entity entity, CallbackInfo callbackInfo) {
-		if (Powers.BOUNCY.isActive(entity) && !entity.bypassesLandingEffects()) {
+		if (ModPowers.BOUNCY.isActive(entity) && !entity.bypassesLandingEffects()) {
 			entity.setVelocity(entity.getVelocity().multiply(1.0F, -0.85F, 1.0F));
 			callbackInfo.cancel();
 		}

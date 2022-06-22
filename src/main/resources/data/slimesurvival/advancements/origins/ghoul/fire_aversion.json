@@ -1,0 +1,22 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:blaze_powder"
+		},
+		"title": "Fire Aversion",
+		"frame": "starter",
+		"description": "§7You take double damage from fire",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"acquired": {
+			"trigger": "origins:chose_origin",
+			"conditions": {
+				"origin": "slimesurvival:ghoul"
+			}
+		}
+	},
+	"parent": "slimesurvival:origins/ghoul/root"
+}

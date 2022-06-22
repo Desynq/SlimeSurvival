@@ -1,0 +1,30 @@
+{
+	"type": "origins:shader",
+	"shader": "minecraft:shaders/post/desaturate.json",
+	"toggleable": false,
+	"condition": {
+		"type": "origins:power_active",
+		"power": "*:ghoul/spectral_form"
+	},
+
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "§7While in Spectral Form:\n - You're unable to see color as vividly"
+		},
+		{
+			"sprite": "slimesurvival:textures/gui/badge/technical.png",
+			"text": "§bYour screen becomes desaturated"
+		},
+		{
+			"sprite": "slimesurvival:textures/gui/badge/lore.png",
+			"text": "§7Your soul's vision operates at a different wavelength and is not fine tuned to see color as vividly as your corpse's eyes."
+		},
+		{
+			"sprite": "slimesurvival:textures/gui/badge/default.png",
+			"text": "Default"
+		}
+	],
+	"name": "§r",
+	"description": "Desaturated Vision\n"
+}

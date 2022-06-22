@@ -6,6 +6,7 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import net.slimesurvival.common.event.*;
 import net.slimesurvival.registry.*;
 
 public class SlimeSurvival implements ModInitializer {
@@ -25,7 +26,16 @@ public class SlimeSurvival implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModBlocks.register();
+		ModMaterials.register();
 		ModItems.register();
+		ModEnchantments.register();
+		ModStats.register();
+
+		ModPowers.register();
+
+
+
+		ShieldBlock.register();
 
 
 

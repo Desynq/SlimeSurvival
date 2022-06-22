@@ -1,0 +1,12 @@
+{
+	"powers": [
+		"slimesurvival:creeper/creeping",
+		"slimesurvival:creeper/creeping/shader",
+		"slimesurvival:creeper/creeping/hunger_over_time"
+	],
+	"icon": {
+		"item": "minecraft:gunpowder"
+	},
+	"order": 2,
+	"impact": 2
+}

@@ -3,23 +3,22 @@ package net.slimesurvival.item.trinket;
 import java.util.List;
 import java.util.UUID;
 
+import org.jetbrains.annotations.Nullable;
+
 import com.google.common.collect.Multimap;
 
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketItem;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.world.World;
-import net.slimesurvival.util.Tooltip;
+import net.slimesurvival.util.provider.ExtendableTooltipProvider;
 
-public class CountercurseMantra extends TrinketItem {
+public class CountercurseMantra extends TrinketItem implements ExtendableTooltipProvider {
 
 	public CountercurseMantra(Settings settings) {
 		super(settings);
@@ -36,14 +35,22 @@ public class CountercurseMantra extends TrinketItem {
 
 
 	@Override
-	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-		super.appendTooltip(itemStack, world, tooltip, tooltipContext);
-		tooltip.add(Tooltip.showDetailsTooltip);
+	public String tooltipTranslationKey() {
+		return this.getTranslationKey();
+	}
 
-		if (InputUtil.isKeyPressed(MinecraftClient.getInstance().getWindow().getHandle(), 340)) {
-			tooltip.remove(Tooltip.showDetailsTooltip);
+	@Override
+	public boolean hasTooltip() {
+		return false;
+	}
 
-			tooltip.add(new TranslatableText("item.slimesurvival.countercurse_mantra.detail_0"));
-		}
+	@Override
+	public boolean hasHowToObtain() {
+		return false;
+	}
+
+	@Override
+	public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+		tryAppend(tooltip);
 	}
 }
