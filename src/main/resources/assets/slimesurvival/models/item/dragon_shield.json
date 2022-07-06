@@ -1,0 +1,14 @@
+{
+	"parent": "fabricshieldlib:item/fabric_shield",
+	"textures": {
+		"shield": "slimesurvival:item/shield/dragon_shield"
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"blocking": 1
+			},
+			"model": "slimesurvival:item/dragon_shield_blocking"
+		}
+	]
+}

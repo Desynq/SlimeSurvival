@@ -4,8 +4,12 @@
 		"slimesurvival:sludge/bouncy"
 	],
 	"icon": {
-		"item": "minecraft:slime_ball"
+		"item": "minecraft:player_head",
+		"tag": "{SkullOwner:\"MHF_Slime\"}"
 	},
 	"order": 3,
-	"impact": 2
+	"impact": 0,
+
+	"name": "Sludge",
+	"description": "You're a gluttonous mass of gelatin that always wants to consume stuff."
 }

@@ -60,15 +60,9 @@ public class BloodstainedGlass extends TrinketItem implements ExtendableTooltipP
 	public String tooltipTranslationKey() {
 		return this.getTranslationKey();
 	}
-
 	@Override
-	public boolean hasTooltip() {
-		return false;
-	}
-
-	@Override
-	public boolean hasHowToObtain() {
-		return false;
+	public boolean hasDetails() {
+		return true;
 	}
 
 	@Override

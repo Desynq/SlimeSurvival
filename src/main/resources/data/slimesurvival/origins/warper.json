@@ -1,0 +1,14 @@
+{
+	"powers": [
+	],
+	"icon": {
+		"item": "minecraft:player_head",
+		"tag": "{SkullOwner:\"MHF_Enderman\"}"
+	},
+	"order": 9,
+	"impact": 0,
+	"unchoosable": true,
+
+	"name": "§kUnknown",
+	"description": "§kLorem ipsum sit dolor amet lmao"
+}

@@ -1,0 +1,22 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:fire_charge"
+		},
+		"title": "Solar Urticaria",
+		"frame": "starter",
+		"description": "§7You burn in direct sunlight unless invisible or in spectral form.",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"acquired": {
+			"trigger": "origins:chose_origin",
+			"conditions": {
+				"origin": "slimesurvival:ghoul"
+			}
+		}
+	},
+	"parent": "slimesurvival:origins/ghoul/root"
+}

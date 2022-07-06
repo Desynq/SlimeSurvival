@@ -1,0 +1,14 @@
+{
+	"powers": [
+	],
+	"icon": {
+		"item": "minecraft:player_head",
+		"tag": "{SkullOwner:\"MHF_Golem\"}"
+	},
+	"order": 7,
+	"impact": 0,
+	"unchoosable": true,
+
+	"name": "Warforged",
+	"description": "You're a computer running on \"outdated\" software."
+}

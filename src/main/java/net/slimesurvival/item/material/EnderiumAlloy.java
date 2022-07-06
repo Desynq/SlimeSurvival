@@ -2,18 +2,16 @@ package net.slimesurvival.item.material;
 
 import java.util.List;
 
-import net.slimesurvival.util.Tooltip;
+import org.jetbrains.annotations.Nullable;
 
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.client.util.InputUtil;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.world.World;
+import net.slimesurvival.util.provider.ExtendableTooltipProvider;
 
-public class EnderiumAlloy extends Item {
+public class EnderiumAlloy extends Item implements ExtendableTooltipProvider {
 	public EnderiumAlloy(Settings settings) {
 		super(settings);
 	}
@@ -27,19 +25,20 @@ public class EnderiumAlloy extends Item {
 
 
 
+
+
 	@Override
-	public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-		super.appendTooltip(itemStack, world, tooltip, tooltipContext);
-		tooltip.add(Tooltip.showDetailsTooltip);
+	public String tooltipTranslationKey() {
+		return this.getTranslationKey();
+	}
 
-		if (InputUtil.isKeyPressed(MinecraftClient.getInstance().getWindow().getHandle(), 340)) {
-			tooltip.remove(Tooltip.showDetailsTooltip);
+	@Override
+	public boolean hasDetails() {
+		return true;
+	}
 
-			tooltip.add(new TranslatableText("item.slimesurvival.enderium_alloy.detail[0]"));
-			tooltip.add(new TranslatableText("item.slimesurvival.enderium_alloy.detail[1]"));
-			tooltip.add(new TranslatableText(""));
-			tooltip.add(new TranslatableText("item.slimesurvival.enderium_alloy.detail[2]"));
-			tooltip.add(new TranslatableText("item.slimesurvival.enderium_alloy.detail[3]"));
-		}
+	@Override
+	public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+		tryAppend(tooltip);
 	}
 }

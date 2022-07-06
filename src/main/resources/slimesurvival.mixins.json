@@ -6,6 +6,7 @@
 	"mixins": [
 		"BlockMixin",
 		"BossBarHudMixin",
+		"BowItemMixin",
 		"PlayerEntityMixin",
 		"ToolMaterialsMixin"
 	],

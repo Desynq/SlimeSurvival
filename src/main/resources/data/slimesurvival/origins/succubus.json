@@ -1,0 +1,13 @@
+{
+	"powers": [
+	],
+	"icon": {
+		"item": "minecraft:player_head",
+		"tag": "{SkullOwner:\"Succubus\"}"
+	},
+	"order": 8,
+	"impact": 0,
+
+	"name": "Succubus",
+	"description": "You're a \"parasitic\" demon."
+}

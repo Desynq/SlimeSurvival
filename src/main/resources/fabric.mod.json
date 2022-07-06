@@ -20,6 +20,9 @@
 		"main": [
 			"net.slimesurvival.SlimeSurvival"
 		],
+		"client": [
+			"net.slimesurvival.client.SlimeSurvivalClient"
+		],
 		"mm:early_risers": [
 			"net.slimesurvival.common.SlimeSurvivalEarlyRiser"
 		]
@@ -27,7 +30,8 @@
 	"mixins": [
 		"slimesurvival.mixins.json",
 		"slimesurvival.bewitchment.mixins.json",
-		"slimesurvival.fabricshieldlib.mixins.json"
+		"slimesurvival.fabricshieldlib.mixins.json",
+		"slimesurvival.scarpet.mixins.json"
 	],
 
 	"depends": {

@@ -40,13 +40,8 @@ public class CountercurseMantra extends TrinketItem implements ExtendableTooltip
 	}
 
 	@Override
-	public boolean hasTooltip() {
-		return false;
-	}
-
-	@Override
-	public boolean hasHowToObtain() {
-		return false;
+	public boolean hasDetails() {
+		return true;
 	}
 
 	@Override

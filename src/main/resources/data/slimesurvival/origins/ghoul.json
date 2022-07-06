@@ -1,6 +1,6 @@
 {
 	"powers": [
-		"slimesurvival:ghoul/burn_in_daylight",
+		"slimesurvival:ghoul/solar_urticaria",
 		"slimesurvival:ghoul/pallor",
 		"slimesurvival:ghoul/undead",
 		"slimesurvival:ghoul/flesh_eater",
@@ -14,8 +14,11 @@
 		"slimesurvival:ghoul/spectral_form/spectral_fragility"
 	],
 	"icon": {
-		"item": "minecraft:rotten_flesh"
+		"item": "minecraft:zombie_head"
 	},
 	"order": 4,
-	"impact": 2
+	"impact": 0,
+
+	"name": "Ghoul",
+	"description": "You're a ghost piloting a bone mech suit covered in rotting flesh."
 }

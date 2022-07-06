@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" 0 ",
+		"010",
+		" 0 "
+	],
+	"key": {
+		"0": {
+			"item": "minecraft:prismarine_shard"
+		},
+		"1": {
+			"item": "minecraft:amethyst_shard"
+		}
+	},
+	"result": {
+		"item": "slimesurvival:experience_crystal",
+		"count": 1
+	}
+}

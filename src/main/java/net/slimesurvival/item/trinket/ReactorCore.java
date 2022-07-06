@@ -45,8 +45,12 @@ public class ReactorCore extends TrinketItem implements ExtendableTooltipProvide
 	}
 
 	@Override
-	public boolean hasHowToObtain() {
-		return false;
+	public boolean hasTooltip() {
+		return true;
+	}
+	@Override
+	public boolean hasDetails() {
+		return true;
 	}
 
 	@Override

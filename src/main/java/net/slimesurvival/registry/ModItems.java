@@ -29,6 +29,11 @@ public class ModItems {
 
 	public static final Item LEXICON = ModItems.register("lexicon", new Lexicon(new FabricItemSettings().group(ModItemGroups.MISC_ITEM_GROUP).maxCount(1)));
 
+	public static final Item EXPERIENCE_CRYSTAL = ModItems.register("experience_crystal", new ExperienceCrystal(new FabricItemSettings()
+		.group(ModItemGroups.MISC_ITEM_GROUP)
+		.maxCount(1)
+	));
+
 
 
 
@@ -48,8 +53,20 @@ public class ModItems {
 
 
 	public static final Item DUSKBREAKER = ModItems.register("duskbreaker", (Item)new Duskbreaker(BWMaterials.SILVER_TOOL, 5, -2.0F, new FabricItemSettings().group(ModItemGroups.Weapons)));
-
 	public static final Item BAN_HAMMER = ModItems.register("ban_hammer", (Item)new BanHammer(ToolMaterials.DIAMOND, 2147483644, 16.0F, new FabricItemSettings().group(ModItemGroups.Weapons)));
+
+
+
+	public static final Item MYSTITE_BOW = ModItems.register("mystite_bow", (Item)new MystiteBow(new Item.Settings()
+		.maxDamage(ModMaterials.MYSTITE_TOOL.getDurability())
+		.fireproof()
+		.group(ModItemGroups.Weapons)
+	));
+
+	public static final Item ZEUS_BOW = register("zeus_bow", (Item)new ZeusBow(new Item.Settings()
+		.maxDamage(1337)
+		.group(ModItemGroups.Weapons)
+	));
 
 
 
@@ -74,6 +91,7 @@ public class ModItems {
 
 
 	public static final Item NETHERITE_SHIELD = ModItems.register("netherite_shield", (Item)new FabricShieldItem(new FabricItemSettings().maxDamage(2500).group(ModItemGroups.Equipment), 10, 13, Items.NETHERITE_INGOT));
+	public static final Item DRAGON_SHIELD = ModItems.register("dragon_shield", (Item)new FabricShieldItem(new FabricItemSettings().maxDamage(3200).group(ModItemGroups.Equipment), 10, 13, Items.NETHERITE_INGOT));
 
 
 

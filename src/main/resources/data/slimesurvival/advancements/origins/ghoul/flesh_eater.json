@@ -1,0 +1,22 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:rotten_flesh"
+		},
+		"title": "Flesh Eater",
+		"frame": "starter",
+		"description": "§7You can only eat",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"acquired": {
+			"trigger": "origins:chose_origin",
+			"conditions": {
+				"origin": "slimesurvival:ghoul"
+			}
+		}
+	},
+	"parent": "slimesurvival:origins/ghoul/root"
+}

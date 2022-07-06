@@ -12,6 +12,8 @@ import net.minecraft.text.TranslatableText;
 public interface ExtendableTooltipProvider {
 	Text SHOW_DETAILS_TOOLTIP = new TranslatableText("item.slimesurvival.tooltip.show_details");
 	Text SHOW_HOW_TO_OBTAIN_TOOLTIP = new TranslatableText("item.slimesurvival.tooltip.show_how_to_obtain");
+	Text SHOW_LORE = new TranslatableText("item.slimesurvival.tooltip.show_lore");
+	Text SHOW_CREDITS = new TranslatableText("item.slimesurvival.tooltip.show_credits");
 
 	String tooltipTranslationKey();
 
@@ -19,13 +21,19 @@ public interface ExtendableTooltipProvider {
 		return true;
 	}
 	default boolean hasTooltip() {
-		return true;
+		return false;
 	}
 	default boolean hasDetails() {
-		return true;
+		return false;
 	}
 	default boolean hasHowToObtain() {
-		return true;
+		return false;
+	}
+	default boolean hasLore() {
+		return false;
+	}
+	default boolean hasCredits() {
+		return false;
 	}
 
 
@@ -33,16 +41,24 @@ public interface ExtendableTooltipProvider {
 	default void tryAppend(List<Text> tooltip) {
 		if (!hasExtendedTooltip()) return;
 
-		if (hasDetails() && Screen.hasShiftDown()) {
+		if (hasCredits() && Screen.hasControlDown() && Screen.hasAltDown()) {
+			append(tooltip, ".credits");
+
+		} else if (hasDetails() && Screen.hasShiftDown()) {
 			append(tooltip, ".details");
 
 		} else if (hasHowToObtain() && Screen.hasControlDown()) {
 			append(tooltip, ".how_to_obtain");
 
+		} else if (hasLore() && Screen.hasAltDown()) {
+			append(tooltip, ".lore");
+
 		} else {
 			if (hasTooltip()) append(tooltip, ".tooltip");
 			if (hasDetails()) tooltip.add(SHOW_DETAILS_TOOLTIP);
 			if (hasHowToObtain()) tooltip.add(SHOW_HOW_TO_OBTAIN_TOOLTIP);
+			if (hasLore()) tooltip.add(SHOW_LORE);
+			if (hasCredits()) tooltip.add(SHOW_CREDITS);
 		}
 	}
 

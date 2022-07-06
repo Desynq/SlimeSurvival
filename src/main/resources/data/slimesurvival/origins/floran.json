@@ -2,8 +2,12 @@
 	"powers": [
 	],
 	"icon": {
-		"item": "minecraft:kelp"
+		"item": "minecraft:player_head",
+		"tag": "{SkullOwner:\"MHF_Grass\"}"
 	},
-	"order": 6,
-	"impact": 2
+	"order": 5,
+	"impact": 0,
+
+	"name": "Floran",
+	"description": "You're a plant --- no, really, that's it."
 }

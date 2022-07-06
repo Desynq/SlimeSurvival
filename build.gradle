@@ -23,6 +23,9 @@ repositories {
 
 
 	maven {
+		url 'https://masa.dy.fi/maven'
+	}
+	maven {
 		url "https://maven.shedaniel.me/"
 	}
 	maven {
@@ -116,8 +119,14 @@ dependencies {
 
 
 	// https://github.com/CrimsonDawn45/Fabric-Shield-Lib/blob/main/gradle.properties
-	//modImplementation "com.github.CrimsonDawn45:Fabric-Shield-Lib:v1.5.3-1.18"
-	modImplementation 'com.github.Desynq:Fabric-Shield-Lib:v1.5.4-1.18'
+	modImplementation "com.github.CrimsonDawn45:Fabric-Shield-Lib:v1.5.3-1.18"
+
+
+
+
+
+	// https://www.curseforge.com/minecraft/mc-mods/bclib/files
+	modImplementation "curse.maven:bclib-495191:3814359"
 
 
 
@@ -139,11 +148,17 @@ dependencies {
 		exclude(group: "io.github.onyxstudios.Cardinal-Components-API")
 	}
 
+
+
 	modImplementation("dev.emi:trinkets:${project.trinkets_version}") {
 		transitive = false
 	}
 
+
+
 	modImplementation "vazkii.patchouli:Patchouli:${project.patchouli_version}"
+
+
 
 	modCompileOnly "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
 	modLocalRuntime "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
@@ -180,8 +195,34 @@ dependencies {
 
 
 
+
+
+
+	modImplementation "carpet:fabric-carpet:1.18.2-1.4.69+v220331"
+
+
+
+
+
 	// https://www.curseforge.com/minecraft/mc-mods/bewitchment/files
 	modImplementation "curse.maven:bewitchment-394915:3830795"
+
+	// https://www.curseforge.com/minecraft/mc-mods/betterend/files
+	modImplementation "curse.maven:betterend-413596:3814370"
+
+	// https://www.curseforge.com/minecraft/mc-mods/betternether/files
+	modImplementation "curse.maven:betternether-311377:3814362"
+
+	// https://www.curseforge.com/minecraft/mc-mods/asbestos-removal/files
+	modImplementation "curse.maven:asbestos-removal-430398:3735256"
+
+	// https://www.curseforge.com/minecraft/mc-mods/alloy-forgery/files
+	modImplementation "curse.maven:alloy-forgery-438718:3758381"
+
+
+
+
+
 
 
 

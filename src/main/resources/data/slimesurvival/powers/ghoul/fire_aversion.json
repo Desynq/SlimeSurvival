@@ -10,14 +10,6 @@
 		"conditions": [
 			{
 				"type": "origins:name",
-				"name": "inFire.player"
-			},
-			{
-				"type": "origins:name",
-				"name": "onFire.player"
-			},
-			{
-				"type": "origins:name",
 				"name": "inFire"
 			},
 			{

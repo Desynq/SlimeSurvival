@@ -25,8 +25,12 @@ public class MystiteOre extends Item implements ExtendableTooltipProvider {
 	}
 
 	@Override
-	public boolean hasTooltip() {
-		return false;
+	public boolean hasDetails() {
+		return true;
+	}
+	@Override
+	public boolean hasHowToObtain() {
+		return true;
 	}
 
 	@Override

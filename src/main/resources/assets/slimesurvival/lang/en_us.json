@@ -1,112 +1,32 @@
 {
-	"origin.slimesurvival.creeper.name": "Creeper",
-	"origin.slimesurvival.creeper.description": "You shine with an §oexplosive§r personality.",
-
-
-
-
-	"power.slimesurvival.creeper/creeping.name": "Creeping Mode",
-	"power.slimesurvival.creeper/creeping.description": "While you are, hopefully, an evolved member of your species, you still hold an innate primal creeper \"mode\".",
-
-	"power.slimesurvival.creeper/creeping/hunger_over_time.name": "Creeping Exhaustion",
-	"power.slimesurvival.creeper/creeping/hunger_over_time.description": "You exhaust §n0.75§r hunger for every second in §lCreeping Mode§r.",
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	"origin.slimesurvival.ghoul.name": "Ghoul",
-	"origin.slimesurvival.ghoul.description": "You don't remember much of your past life, except for an everlasting hunger for flesh...",
-
-	"power.slimesurvival.ghoul/undead.name": "Undead Monster",
-	"power.slimesurvival.ghoul/undead.description": "Due to no longer being alive, you exhibit properties analogous to the undead.\n§d- Immune to poison and regeneration.\n§d- Instant health and instant damage are inverted.\n§c- Silver and smite do more damage against you.\n§a- You cannot drown.",
-
-	"power.slimesurvival.ghoul/flesh_eater.name": "Flesh Eater",
-	"power.slimesurvival.ghoul/flesh_eater.description": "You can only eat rotten flesh",
-
-	"power.slimesurvival.ghoul/burn_in_daylight.name": "Rotten Skin",
-	"power.slimesurvival.ghoul/burn_in_daylight.description": "Your skin is rotten. It burns easily, especially in sunlight, and gives off a sickly green appearance.",
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	"advancement.slimesurvival.ghoul/root.title": "Ghoul",
-	"advancement.slimesurvival.ghoul/root.description": "Funny undead magic monster thing.",
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	"itemGroup.slimesurvival.misc": "Slime Survival Misc",
 	"itemGroup.slimesurvival.blocks": "Slime Survival Blocks",
 	"itemGroup.slimesurvival.materials": "Slime Survival Materials",
 	"itemGroup.slimesurvival.weapons": "Slime Survival Weapons",
 	"itemGroup.slimesurvival.equipment": "Slime Survival Equipment",
+
+
+
+
+
+
+
+
+	"item.slimesurvival.tooltip.show_details": "§7Hold §6Shift§7 for Details",
+	"item.slimesurvival.tooltip.show_how_to_obtain": "§7Hold §6Ctrl§7 to see How To Obtain",
+	"item.slimesurvival.tooltip.show_lore": "§7Hold §6Alt§7 to see Lore",
+	"item.slimesurvival.tooltip.show_credits": "§7Hold §6Ctrl + Alt§7 to see Credits",
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -133,9 +53,14 @@
 
 
 
+	"item.slimesurvival.icon": "",
 
 	"item.slimesurvival.lexicon": "Slime Survival Lexicon",
 
+	"item.slimesurvival.experience_crystal": "Experience Crystal",
+	"item.slimesurvival.experience_crystal.tooltip": "§bStored Experience: %s / 3000",
+	"item.slimesurvival.experience_crystal.details": "§7This crystal is able to hold a large supply of experience.\n\n§e• Insert experience by right clicking.\n§e• Extract experience by shift right clicking.\n§e• Transfer rate is 10 while in mainhand, 100 while in offhand.",
+	"item.slimesurvival.experience_crystal.credits": "§7• Texture was made Crash404",
 
 
 
@@ -143,9 +68,6 @@
 
 
 
-
-	"item.slimesurvival.tooltip.show_details": "§7Hold §6Shift§7 for Details",
-	"item.slimesurvival.tooltip.show_how_to_obtain": "§7Hold §6Ctrl§7 to see How To Obtain",
 
 
 
@@ -175,20 +97,14 @@
 
 
 	"item.slimesurvival.enderium_alloy": "§5Enderium Alloy",
-	"item.slimesurvival.enderium_alloy.detail[0]": "§7Exerts magical properties far beyond",
-	"item.slimesurvival.enderium_alloy.detail[1]": "§7those of ordinary metallic substances",
-
-	"item.slimesurvival.enderium_alloy.detail[2]": "§7May have some applications as an ingredient",
-	"item.slimesurvival.enderium_alloy.detail[3]": "§7for mage armor, tools, and weapons.",
+	"item.slimesurvival.enderium_alloy.details": "§7Exerts magical properties far beyond\n§7those of ordinary metallic substances\n\n§7May also have some applications as an ingredient\n§7for mage armor, tools, and weapons.",
 
 
 
 
 
 	"item.slimesurvival.rift_battleaxe": "§4Rift Battleaxe",
-	"item.slimesurvival.rift_battleaxe.detail[0]": "§7A heavy weapon that swings slow but hits §lreally§r§7 hard.",
-	"item.slimesurvival.rift_battleaxe.detail[1]": "§7Right clicking will push away nearby mobs and players at the",
-	"item.slimesurvival.rift_battleaxe.detail[2]": "§7cost of a short movement speed penalty afterwards with cooldown.",
+	"item.slimesurvival.rift_battleaxe.details": "§7A heavy weapon that swings slow but hits §lreally§r§7 hard.\n\n§7Right clicking will push away nearby mobs and players at the\n§7cost of a short movement speed penalty afterwards.",
 
 
 
@@ -199,8 +115,7 @@
 
 	"item.slimesurvival.ban_hammer": "§b\"Ban\" Hammer",
 	"item.slimesurvival.ban_hammer.tooltip": "§4Admin-Only Weapon",
-	"item.slimesurvival.ban_hammer.detail[0]": "§7It unleashes an ungodly amount of energy at whomever it hits.",
-	"item.slimesurvival.ban_hammer.detail[1]": "§7It cannot, however, ban players, sadly.",
+	"item.slimesurvival.ban_hammer.details": "§7It unleashes an ungodly amount of energy at whomever it hits.\n§7It does §lnot§r§7 ban players.",
 
 
 
@@ -220,13 +135,11 @@
 
 
 	"item.slimesurvival.winter_coat": "Winter Coat",
-	"item.slimesurvival.winter_coat.detail_0": "§7Made from polar bear fur, fox hide, and woven thread.",
-	"item.slimesurvival.winter_coat.detail_1": "§7It provides a moderate amount of insulation.",
+	"item.slimesurvival.winter_coat.details": "§7Made from polar bear fur, fox hide, and woven thread.\n§7It also provides a moderate amount of insulation",
 
 
 	"item.slimesurvival.utility_belt": "Utility Belt",
-	"item.slimesurvival.utility_belt.detail_0": "§7Made from leather and gold.",
-	"item.slimesurvival.utility_belt.detail_1": "§7Allows for an extra trinket on your belt.",
+	"item.slimesurvival.utility_belt.details": "§7Made from leather and gold, the utility\n§7belt allows for an extra trinket on your belt.",
 
 
 	"item.slimesurvival.countercurse_mantra": "Countercurse Mantra",
@@ -234,12 +147,11 @@
 
 
 	"item.slimesurvival.shaped_glass": "§bShaped Glass",
-	"item.slimesurvival.shaped_glass.detail_0": "§7§oHigh risk, high reward.",
-	"item.slimesurvival.shaped_glass.detail_1": "§cDisables one-shot protection.",
+	"item.slimesurvival.shaped_glass.details": "§7§oHigh risk, high reward.",
 
 
 	"item.slimesurvival.bloodstained_glass": "§4Bloodstained Glass",
-	"item.slimesurvival.bloodstained_glass.details": "§7§oMedium risk, medium reward\n\n§cOne-shot protection only works half of the time.",
+	"item.slimesurvival.bloodstained_glass.details": "§7§oMedium risk, medium reward\n\n§cImplements partial life steal, recovering 25% of damage dealt as\n§chealth regenerated to its user.",
 
 
 	"item.slimesurvival.reactor_core": "§5Reactor Core",

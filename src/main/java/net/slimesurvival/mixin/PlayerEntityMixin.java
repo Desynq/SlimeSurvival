@@ -22,6 +22,5 @@ public class PlayerEntityMixin {
 			player.setInvulnerable(false);
 			immunityFrames = 0;
 		}
-
 	}
 }

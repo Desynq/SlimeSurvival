@@ -5,5 +5,8 @@
 		"item": "minecraft:player_head"
 	},
 	"order": 1,
-	"impact": 1
+	"impact": 0,
+
+	"name": "Human",
+	"description": "You're an ordinary human being and probably don't amount to much."
 }

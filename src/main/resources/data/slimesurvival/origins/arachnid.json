@@ -2,8 +2,12 @@
 	"powers": [
 	],
 	"icon": {
-		"item": "minecraft:string"
+		"item": "minecraft:player_head",
+		"tag": "{SkullOwner:\"MHF_Spider\"}"
 	},
-	"order": 5,
-	"impact": 2
+	"order": 6,
+	"impact": 0,
+	
+	"name": "Arachnid",
+	"description": "You're an §mAustralian§r spider."
 }
