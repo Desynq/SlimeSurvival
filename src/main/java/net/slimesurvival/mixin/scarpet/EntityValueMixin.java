@@ -46,7 +46,7 @@ public class EntityValueMixin extends HashMap<String, BiFunction<Entity, Value, 
 		});
 
 
-		put("has_advancement", (e, a) -> {
+		put("advancement", (e, a) -> {
 			if (e instanceof ServerPlayerEntity) {
 				Advancement advancement = e.getServer().getAdvancementLoader().get(InputValidator.identifierOf(a.getString()));
 				if (advancement == null) return Value.NULL;
