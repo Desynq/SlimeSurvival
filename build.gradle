@@ -3,6 +3,9 @@ plugins {
 	id 'maven-publish'
 }
 
+loom {
+}
+
 sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
@@ -78,6 +81,10 @@ repositories {
 		name "ExpandAbility"
 		url "https://maven.florens.be"
 	}
+	maven {
+		name "BuildCraft"
+		url "https://mod-buildcraft.com/maven"
+	}
 }
 
 dependencies {
@@ -90,16 +97,12 @@ dependencies {
 
 
 
-
+	// Libraries
 	modImplementation "com.github.Chocohead:Fabric-ASM:${project.asm_version}"
 	include "com.github.Chocohead:Fabric-ASM:${project.asm_version}"
 
 
 
-
-
-
-	// Libraries
 	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
@@ -113,6 +116,7 @@ dependencies {
 	implementation annotationProcessor(include("com.github.LlamaLad7:MixinExtras:${project.mixin_extras_version}"))
 
 
+
 	// https://maven.wispforest.io/io/wispforest/owo-lib/
 	modImplementation "io.wispforest:owo-lib:0.6.0+1.18"
 	include "io.wispforest:owo-sentinel:0.6.0+1.18"
@@ -120,8 +124,7 @@ dependencies {
 
 	// https://github.com/CrimsonDawn45/Fabric-Shield-Lib/blob/main/gradle.properties
 	modImplementation "com.github.CrimsonDawn45:Fabric-Shield-Lib:v1.5.3-1.18"
-
-
+	include "com.github.CrimsonDawn45:Fabric-Shield-Lib:v1.5.3-1.18"
 
 
 
@@ -210,14 +213,11 @@ dependencies {
 	// https://www.curseforge.com/minecraft/mc-mods/betterend/files
 	modImplementation "curse.maven:betterend-413596:3814370"
 
-	// https://www.curseforge.com/minecraft/mc-mods/betternether/files
-	modImplementation "curse.maven:betternether-311377:3814362"
-
-	// https://www.curseforge.com/minecraft/mc-mods/asbestos-removal/files
-	modImplementation "curse.maven:asbestos-removal-430398:3735256"
-
 	// https://www.curseforge.com/minecraft/mc-mods/alloy-forgery/files
 	modImplementation "curse.maven:alloy-forgery-438718:3758381"
+
+	// https://www.curseforge.com/minecraft/mc-mods/fabricae-ex-nihilo/files
+	modImplementation "curse.maven:fabricae-ex-nihilo-596911:3844360"
 
 
 
@@ -236,14 +236,6 @@ dependencies {
 
 
 	// Workspace
-
-	modImplementation "com.blamejared.crafttweaker:CraftTweaker-fabric-1.18.2:9.1.155"
-
-	modCompileOnly "curse.maven:artifacts-fabric-401236:${artifacts_version}"
-
-	// https://www.curseforge.com/minecraft/mc-mods/armorpoints/files
-	//modCompileOnly "curse.maven:armorpoints-396094:3774094"
-
 	modLocalRuntime "com.ptsmods:devlogin:2.0"
 }
 

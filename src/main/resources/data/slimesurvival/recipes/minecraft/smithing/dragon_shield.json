@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:smithing",
+	"base": {
+		"item": "slimesurvival:netherite_shield"
+	},
+	"addition": {
+		"item": "dragonloot:dragon_scale"
+	},
+	"result": {
+		"item": "slimesurvival:dragon_shield"
+	}
+}

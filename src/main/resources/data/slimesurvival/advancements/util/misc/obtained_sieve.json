@@ -1,0 +1,10 @@
+{
+	"criteria": {
+		"acquired": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"tag": "fabricaeexnihilo:sieves"
+			}
+		}
+	}
+}

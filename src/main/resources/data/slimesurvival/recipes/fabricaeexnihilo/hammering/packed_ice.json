@@ -1,0 +1,18 @@
+{
+	"type": "fabricaeexnihilo:hammer",
+	"block": "minecraft:packed_ice",
+	"result": {
+		"stack": "minecraft:ice",
+		"chances": [
+			1.0,
+			1.0,
+			1.0,
+			1.0,
+			1.0,
+			1.0,
+			1.0,
+			1.0,
+			1.0
+		]
+	}
+}
