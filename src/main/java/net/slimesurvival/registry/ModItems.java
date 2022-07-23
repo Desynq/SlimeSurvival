@@ -53,7 +53,7 @@ public class ModItems {
 
 
 	public static final Item DUSKBREAKER = ModItems.register("duskbreaker", (Item)new Duskbreaker(BWMaterials.SILVER_TOOL, 5, -2.0F, new FabricItemSettings().group(ModItemGroups.Weapons)));
-	public static final Item BAN_HAMMER = ModItems.register("ban_hammer", (Item)new BanHammer(ToolMaterials.DIAMOND, 2147483644, 16.0F, new FabricItemSettings().group(ModItemGroups.Weapons)));
+	public static final Item BAN_HAMMER = ModItems.register("ban_hammer", (Item)new BanHammer(ToolMaterials.DIAMOND, Integer.MAX_VALUE, 16.0F, new FabricItemSettings().group(ModItemGroups.Weapons)));
 
 
 
@@ -90,8 +90,8 @@ public class ModItems {
 
 
 
-	public static final Item NETHERITE_SHIELD = ModItems.register("netherite_shield", (Item)new FabricShieldItem(new FabricItemSettings().maxDamage(2500).group(ModItemGroups.Equipment), 10, 13, Items.NETHERITE_INGOT));
-	public static final Item DRAGON_SHIELD = ModItems.register("dragon_shield", (Item)new FabricShieldItem(new FabricItemSettings().maxDamage(3200).group(ModItemGroups.Equipment), 10, 13, Items.NETHERITE_INGOT));
+	public static final Item NETHERITE_SHIELD = ModItems.register("netherite_shield", (Item)new FabricShieldItem(new FabricItemSettings().maxDamage(2500).group(ModItemGroups.Equipment), 60, 13, Items.NETHERITE_INGOT));
+	public static final Item DRAGON_SHIELD = ModItems.register("dragon_shield", (Item)new FabricShieldItem(new FabricItemSettings().maxDamage(3200).group(ModItemGroups.Equipment), 20, 13, Items.NETHERITE_INGOT));
 
 
 
