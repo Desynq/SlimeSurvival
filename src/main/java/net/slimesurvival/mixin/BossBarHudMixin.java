@@ -10,6 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 /*
 	Fixes bossbars with custom styles losing transparency if they're not first
 	Fixed in 22w11a (1.19)
+	Source: https://github.com/ModsByLeo/MultiBossBarFix/blob/1.16/src/main/java/adudecalledleo/multibossbarfix/mixin/MixinBossBarHud.java
 */
 
 @Mixin(BossBarHud.class)
