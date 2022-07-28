@@ -1,11 +1,9 @@
 package net.slimesurvival.mixin.scarpet;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 import java.util.function.BiFunction;
-import java.util.stream.Collectors;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -55,32 +53,6 @@ public class EntityValueMixin extends HashMap<String, BiFunction<Entity, Value, 
 				if (advancement == null) return Value.NULL;
 
 				return BooleanValue.of(((ServerPlayerEntity) e).getAdvancementTracker().getProgress(advancement).isDone());
-			}
-			return Value.NULL;
-		});
-
-
-		put("advancement_parent", (e, a) -> {
-			if (e instanceof ServerPlayerEntity) {
-				Advancement advancement = e.getServer().getAdvancementLoader().get(InputValidator.identifierOf(a.getString()));
-				if (advancement == null) return Value.NULL;
-
-				return new StringValue(advancement.getParent().getId().toString());
-			}
-			return Value.NULL;
-		});
-
-
-		put("advancement_children", (e, a) -> {
-			if (e instanceof ServerPlayerEntity) {
-				Advancement advancement = e.getServer().getAdvancementLoader().get(InputValidator.identifierOf(a.getString()));
-				if (advancement == null) return Value.NULL;
-
-				List<String> children = new ArrayList<String>();
-				for (Advancement child : advancement.getChildren()) {
-					children.add(child.getId().toString());
-				}
-				return ListValue.wrap(children.stream().map(StringValue::new).collect(Collectors.toList()));
 			}
 			return Value.NULL;
 		});
