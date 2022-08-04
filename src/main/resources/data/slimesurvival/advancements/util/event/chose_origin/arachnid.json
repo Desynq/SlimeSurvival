@@ -1,0 +1,11 @@
+{
+	"criteria": {
+		"acquired": {
+			"trigger": "origins:chose_origin",
+			"conditions": {
+				"origin": "slimesurvival:arachnid"
+			}
+		}
+	},
+	"parent": "slimesurvival:util/root"
+}

@@ -1,0 +1,11 @@
+{
+	"criteria": {
+		"acquired": {
+			"trigger": "origins:chose_origin",
+			"conditions": {
+				"origin": "slimesurvival:succubus"
+			}
+		}
+	},
+	"parent": "slimesurvival:util/root"
+}

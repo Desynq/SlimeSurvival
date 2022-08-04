@@ -1,0 +1,11 @@
+{
+	"criteria": {
+		"acquired": {
+			"trigger": "origins:chose_origin",
+			"conditions": {
+				"origin": "slimesurvival:creeper"
+			}
+		}
+	},
+	"parent": "slimesurvival:util/root"
+}
