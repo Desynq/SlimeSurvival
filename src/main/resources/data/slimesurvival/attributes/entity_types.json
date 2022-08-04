@@ -1,0 +1,12 @@
+{
+	"values": {
+		"minecraft:player": {
+			"slimesurvival:dodge_chance": 0.01,
+			"slimesurvival:instability": 0.0,
+
+			"slimesurvival:mana_cap": 10.0,
+			"slimesurvival:mana_regen_amount": 0.05,
+			"slimesurvival:mana_regen_interval": 1.0
+		}
+	}
+}
