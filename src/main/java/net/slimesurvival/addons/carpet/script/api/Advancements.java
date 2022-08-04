@@ -8,7 +8,9 @@ import carpet.script.CarpetContext;
 import carpet.script.Expression;
 import carpet.script.exception.InternalExpressionException;
 import carpet.script.utils.InputValidator;
+import carpet.script.value.BooleanValue;
 import carpet.script.value.ListValue;
+import carpet.script.value.NumericValue;
 import carpet.script.value.StringValue;
 import carpet.script.value.Value;
 import net.minecraft.advancement.Advancement;
@@ -23,6 +25,8 @@ public class Advancements {
 			validArguments.add("title");
 			validArguments.add("description");
 			validArguments.add("frame");
+			validArguments.add("hidden");
+			validArguments.add("requirement_count");
 			validArguments.add("parent");
 			validArguments.add("children");
 
@@ -46,6 +50,14 @@ public class Advancements {
 			}
 			if (arg2.equals("frame")) {
 				return new StringValue(advancement.getDisplay().getFrame().getId().toString());
+			}
+			if (arg2.equals("hidden")) {
+				return BooleanValue.of(advancement.getDisplay().isHidden());
+			}
+
+
+			if (arg2.equals("requirement_count")) {
+				return new NumericValue(advancement.getRequirementCount());
 			}
 
 
