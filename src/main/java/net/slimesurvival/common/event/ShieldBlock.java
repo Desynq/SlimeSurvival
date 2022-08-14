@@ -12,7 +12,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.slimesurvival.common.enchantment.ShieldEnchantmentHelper;
-import net.slimesurvival.registry.ModEnchantments;
+import net.slimesurvival.common.registry.ModEnchantments;
 
 public class ShieldBlock {
 

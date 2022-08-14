@@ -11,7 +11,7 @@ import carpet.CarpetServer;
 import carpet.script.CarpetExpression;
 import net.slimesurvival.addons.carpet.script.api.Advancements;
 import net.slimesurvival.common.event.*;
-import net.slimesurvival.registry.*;
+import net.slimesurvival.common.registry.*;
 
 public class SlimeSurvival implements CarpetExtension, ModInitializer {
 	public static Identifier ID(String path) {
@@ -29,6 +29,8 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModStatusEffects.register();
+
 		ModBlocks.register();
 		ModMaterials.register();
 		ModItems.register();

@@ -9,3 +9,7 @@ advancement grant @s only slimesurvival:origins/ghoul/default/spectral_form
 	advancement grant @s only slimesurvival:origins/ghoul/default/monochromatic_vision
 	advancement grant @s only slimesurvival:origins/ghoul/default/spectral_fragility
 	advancement grant @s only slimesurvival:origins/ghoul/default/spectral_transparency
+
+
+
+advancement grant @s only slimesurvival:origins/ghoul/eof/flesh_eater_iii

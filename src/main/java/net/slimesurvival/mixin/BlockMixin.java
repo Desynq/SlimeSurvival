@@ -1,9 +1,10 @@
 package net.slimesurvival.mixin;
 
-import net.slimesurvival.registry.ModPowers;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.world.BlockView;
+import net.slimesurvival.common.registry.ModPowers;
+
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

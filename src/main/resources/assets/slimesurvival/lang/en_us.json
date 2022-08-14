@@ -9,13 +9,16 @@
 
 
 
+	"effect.slimesurvival.unsafe": "Unsafe",
 
 
 
-	"item.slimesurvival.tooltip.show_details": "§7Hold §6Shift§7 for Details",
-	"item.slimesurvival.tooltip.show_how_to_obtain": "§7Hold §6Ctrl§7 to see How To Obtain",
-	"item.slimesurvival.tooltip.show_lore": "§7Hold §6Alt§7 to see Lore",
-	"item.slimesurvival.tooltip.show_credits": "§7Hold §6Ctrl + Alt§7 to see Credits",
+
+
+	"tooltip.slimesurvival.show_details": "§7Hold §6Shift§7 for Details",
+	"tooltip.slimesurvival.show_how_to_obtain": "§7Hold §6Ctrl§7 to see How To Obtain",
+	"tooltip.slimesurvival.show_lore": "§7Hold §6Alt§7 to see Lore",
+	"tooltip.slimesurvival.show_credits": "§7Hold §6Ctrl + Alt§7 to see Credits",
 
 
 
@@ -124,6 +127,12 @@
 	"item.slimesurvival.zeus_bow": "Zeus Bow",
 
 	"item.slimesurvival.mystite_bow": "Mystite Bow",
+
+
+
+
+
+	"item.slimesurvival.bolt_action_rifle": "Bolt Action Rifle",
 
 
 

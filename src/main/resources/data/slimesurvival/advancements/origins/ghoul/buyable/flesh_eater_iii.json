@@ -1,10 +1,10 @@
 {
 	"display": {
-		"title": "Flesh Eater II",
-		"description": "§7Rotten flesh now \"tastes\" like chicken.",
+		"title": "Flesh Eater III",
+		"description": "§7Rotten flesh now \"tastes\" like a steak.",
 
 		"icon": {
-			"item": "minecraft:cooked_chicken"
+			"item": "minecraft:cooked_beef"
 		},
 		"frame": "task",
 		"show_toast": false,
@@ -16,5 +16,5 @@
 			"trigger": "minecraft:impossible"
 		}
 	},
-	"parent": "slimesurvival:origins/ghoul/default/flesh_eater"
+	"parent": "slimesurvival:origins/ghoul/buyable/flesh_eater_ii"
 }

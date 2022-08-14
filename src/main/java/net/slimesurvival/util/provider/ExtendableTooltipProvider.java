@@ -10,10 +10,10 @@ import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 
 public interface ExtendableTooltipProvider {
-	Text SHOW_DETAILS_TOOLTIP = new TranslatableText("item.slimesurvival.tooltip.show_details");
-	Text SHOW_HOW_TO_OBTAIN_TOOLTIP = new TranslatableText("item.slimesurvival.tooltip.show_how_to_obtain");
-	Text SHOW_LORE = new TranslatableText("item.slimesurvival.tooltip.show_lore");
-	Text SHOW_CREDITS = new TranslatableText("item.slimesurvival.tooltip.show_credits");
+	Text SHOW_DETAILS_TOOLTIP = new TranslatableText("tooltip.slimesurvival.show_details");
+	Text SHOW_HOW_TO_OBTAIN_TOOLTIP = new TranslatableText("tooltip.slimesurvival.show_how_to_obtain");
+	Text SHOW_LORE = new TranslatableText("tooltip.slimesurvival.show_lore");
+	Text SHOW_CREDITS = new TranslatableText("tooltip.slimesurvival.show_credits");
 
 	String tooltipTranslationKey();
 

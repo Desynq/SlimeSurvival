@@ -3,8 +3,8 @@ package net.slimesurvival.client.registry;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.util.Identifier;
 import net.slimesurvival.SlimeSurvival;
-import net.slimesurvival.item.misc.ExperienceCrystal;
-import net.slimesurvival.registry.ModItems;
+import net.slimesurvival.common.item.misc.ExperienceCrystal;
+import net.slimesurvival.common.registry.ModItems;
 
 public class ModModelPredicateProvider {
 	

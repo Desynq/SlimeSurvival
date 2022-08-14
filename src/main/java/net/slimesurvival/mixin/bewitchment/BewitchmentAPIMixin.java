@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import moriyashiine.bewitchment.api.BewitchmentAPI;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
-import net.slimesurvival.item.weapon.Duskbreaker;
+import net.slimesurvival.common.item.weapon.Duskbreaker;
 
 @Mixin(BewitchmentAPI.class)
 public class BewitchmentAPIMixin {

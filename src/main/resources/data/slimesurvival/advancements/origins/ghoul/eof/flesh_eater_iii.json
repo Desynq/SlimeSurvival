@@ -1,0 +1,8 @@
+{
+	"criteria": {
+		"acquired": {
+			"trigger": "minecraft:impossible"
+		}
+	},
+	"parent": "slimesurvival:origins/ghoul/buyable/flesh_eater_iii"
+}
