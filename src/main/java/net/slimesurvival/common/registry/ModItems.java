@@ -15,8 +15,10 @@ import net.minecraft.item.ToolMaterials;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.slimesurvival.common.armor.*;
+import net.slimesurvival.common.item.ammo.*;
 import net.slimesurvival.common.item.material.*;
 import net.slimesurvival.common.item.misc.*;
+import net.slimesurvival.common.item.tool.*;
 import net.slimesurvival.common.item.trinket.*;
 import net.slimesurvival.common.item.weapon.*;
 
@@ -27,12 +29,10 @@ public class ModItems {
 
 
 
-	public static final Item LEXICON = ModItems.register("lexicon", new Lexicon(new FabricItemSettings().group(ModItemGroups.MISC_ITEM_GROUP).maxCount(1)));
+	public static final Item LEXICON = ModItems.register("lexicon", new Lexicon(new FabricItemSettings()));
 
-	public static final Item EXPERIENCE_CRYSTAL = ModItems.register("experience_crystal", new ExperienceCrystal(new FabricItemSettings()
-		.group(ModItemGroups.MISC_ITEM_GROUP)
-		.maxCount(1)
-	));
+	public static final Item EXPERIENCE_CRYSTAL = ModItems.register("experience_crystal", new ExperienceCrystal(new FabricItemSettings()));
+	public static final Item MIXING_BOWL = ModItems.register("mixing_bowl", new MixingBowl(new FabricItemSettings()));
 
 
 
@@ -45,11 +45,31 @@ public class ModItems {
 	public static final Item MYSTITE_ORE = ModItems.register("mystite_ore", new MystiteOre(new FabricItemSettings().group(ModItemGroups.Materials).maxCount(32)));
 	public static final Item ENDERIUM_ALLOY = ModItems.register("enderium_alloy", new EnderiumAlloy(new FabricItemSettings().group(ModItemGroups.Materials).maxCount(32)));
 
+	public static final Item CINNABAR = ModItems.register("cinnabar", new Cinnabar(new FabricItemSettings()));
+	public static final Item CINNABAR_CHUNK = ModItems.register("cinnabar_chunk", new CinnabarChunk(new FabricItemSettings()));
+	public static final Item COPPER_SULFATE = ModItems.register("copper_sulfate", new CopperSulfate(new FabricItemSettings()));
+	public static final Item CREEPER_FLESH = ModItems.register("creeper_flesh", new CreeperFlesh(new FabricItemSettings()));
+	public static final Item LEAD_INGOT = ModItems.register("lead_ingot", new LeadIngot(new FabricItemSettings()));
+	public static final Item MAGMATIC_MAGMA = ModItems.register("magmatic_magma", new MagmaticMagma(new FabricItemSettings()));
+	public static final Item QUICKSILVER = ModItems.register("quicksilver", new Quicksilver(new FabricItemSettings()));
+	public static final Item RAW_GALENA = ModItems.register("raw_galena", new RawGalena(new FabricItemSettings()));
+	public static final Item RAW_GALENA_PIECE = ModItems.register("raw_galena_piece", new RawGalenaPiece(new FabricItemSettings()));
+	public static final Item SMALL_LEATHER = ModItems.register("small_leather", new SmallLeather(new FabricItemSettings()));
+	public static final Item SULFUR = ModItems.register("sulfur", new Sulfur(new FabricItemSettings()));
 
 
 
 
-	public static final Item RIFT_BATTLEAXE = ModItems.register("rift_battleaxe", (Item)new RiftBattleaxe(ModMaterials.MYSTITE_TOOL, 29.0F, -3.25F, new FabricItemSettings().group(ModItemGroups.Weapons)));
+
+
+	public static final Item MOLTEN_PICKAXE = ModItems.register("molten_pickaxe", new MoltenPickaxe(new FabricItemSettings()));
+	public static final Item MOLTEN_AXE = ModItems.register("molten_axe", new MoltenAxe(new FabricItemSettings()));
+	public static final Item MOLTEN_SHOVEL = ModItems.register("molten_shovel", new MoltenShovel(new FabricItemSettings()));
+
+
+
+	public static final Item MOLTEN_SWORD = ModItems.register("molten_sword", new MoltenSword(new FabricItemSettings()));
+	public static final Item RIFT_BATTLEAXE = ModItems.register("rift_battleaxe", new RiftBattleaxe(ModToolMaterials.MYSTITE, 29.0F, -3.25F, new FabricItemSettings().group(ModItemGroups.Weapons)));
 
 
 	public static final Item DUSKBREAKER = ModItems.register("duskbreaker", (Item)new Duskbreaker(BWMaterials.SILVER_TOOL, 5, -2.0F, new FabricItemSettings().group(ModItemGroups.Weapons)));
@@ -58,7 +78,7 @@ public class ModItems {
 
 
 	public static final Item MYSTITE_BOW = ModItems.register("mystite_bow", (Item)new MystiteBow(new Item.Settings()
-		.maxDamage(ModMaterials.MYSTITE_TOOL.getDurability())
+		.maxDamage(ModToolMaterials.MYSTITE.getDurability())
 		.fireproof()
 		.group(ModItemGroups.Weapons)
 	));
@@ -96,10 +116,16 @@ public class ModItems {
 
 
 
-	public static final Item BOLT_ACTION_RIFLE = ModItems.register("bolt_action_rifle", (Item)new BoltActionRifle(new FabricItemSettings()
-		.maxDamage(120)
-		.group(ModItemGroups.GUNS_ITEM_GROUP)
-	));
+	public static final Item BOLT_ACTION_RIFLE = ModItems.register("bolt_action_rifle", (Item)new BoltActionRifle(new FabricItemSettings()));
+
+
+
+
+
+	public static final Item HEAVY_RIFLE_AMMO = ModItems.register("heavy_rifle_ammo", (Item)new HeavyRifleAmmo(new FabricItemSettings()));
+	public static final Item RIFLE_AMMO = ModItems.register("rifle_ammo", (Item)new RifleAmmo(new FabricItemSettings()));
+	public static final Item PISTOL_AMMO = ModItems.register("pistol_ammo", (Item)new PistolAmmo(new FabricItemSettings()));
+	public static final Item SHOTGUN_AMMO = ModItems.register("shotgun_ammo", (Item)new ShotgunAmmo(new FabricItemSettings()));
 
 
 

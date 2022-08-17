@@ -4,12 +4,19 @@
 	"itemGroup.slimesurvival.materials": "Slime Survival Materials",
 	"itemGroup.slimesurvival.weapons": "Slime Survival Weapons",
 	"itemGroup.slimesurvival.equipment": "Slime Survival Equipment",
+	"itemGroup.slimesurvival.tools": "Slime Survival Tools",
 
 
 
 
 
-	"effect.slimesurvival.unsafe": "Unsafe",
+	"power.slimesurvival.ghoul/flesh_eater.name": "Flesh Eater",
+
+
+
+
+	"enchantment.slimesurvival.autosmelt": "Autosmelt",
+	"enchantment.slimesurvival.autosmelt.desc": "Smelts drops from mined blocks",
 
 
 
@@ -98,9 +105,30 @@
 	"item.slimesurvival.mystite_ore.details": "§7Contains slight traces of redstone\n§7and an unknown metal.\n\n§7Resistant to high temperatures; can\n§7only be smelted in a blast furnace.",
 	"item.slimesurvival.mystite_ore.how_to_obtain": "§7Rarely found in deepslate redstone ore\n§7when using a §lMystite Pickaxe§r§7.",
 
-
 	"item.slimesurvival.enderium_alloy": "§5Enderium Alloy",
 	"item.slimesurvival.enderium_alloy.details": "§7Exerts magical properties far beyond\n§7those of ordinary metallic substances\n\n§7May also have some applications as an ingredient\n§7for mage armor, tools, and weapons.",
+
+	"item.slimesurvival.cinnabar": "Cinnabar",
+
+	"item.slimesurvival.cinnabar_chunk": "Cinnabar Chunk",
+
+	"item.slimesurvival.quicksilver": "Quicksilver",
+
+	"item.slimesurvival.magmatic_magma": "Magmatic Magma",
+	"item.slimesurvival.magmatic_magma.details": "§7Burns at over 1,000°C; hot enough to smelt most\n§7metals and definitely hot enough to burn through skin.\n\n§7May have some applications in crafting given heat resilient equipment is used.",
+
+
+
+
+
+
+
+
+	"item.slimesurvival.molten_pickaxe": "§6Molten Pickaxe",
+	"item.slimesurvival.molten_axe": "§6Molten Axe",
+	"item.slimesurvival.molten_shovel": "§6Molten Shovel",
+	"item.slimesurvival.molten_sword": "§6Molten Sword",
+
 
 
 

@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "slimesurvival:mixing_bowl"
+		},
+		{
+			"item": "slimesurvival:sulfur"
+		},
+		{
+			"item": "slimesurvival:sulfur"
+		},
+		{
+			"item": "slimesurvival:copper_dust"
+		}
+	],
+	"result": {
+		"item": "slimesurvival:copper_sulfate",
+		"count": 1
+	}
+}

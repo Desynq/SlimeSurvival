@@ -1,7 +1,5 @@
 package net.slimesurvival.common.item.misc;
 
-import net.slimesurvival.util.provider.ExtendableTooltipProvider;
-
 import java.util.List;
 
 import org.jetbrains.annotations.Nullable;
@@ -16,11 +14,16 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
+import net.slimesurvival.common.registry.ModItemGroups;
 
 public class ExperienceCrystal extends Item implements ExtendableTooltipProvider {
 
 	public ExperienceCrystal(Settings settings) {
-		super(settings);
+		super(settings
+			.group(ModItemGroups.MISC)
+			.maxCount(1)
+		);
 	}
 
 

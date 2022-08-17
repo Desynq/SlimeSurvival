@@ -17,7 +17,7 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
-import net.slimesurvival.util.provider.ExtendableTooltipProvider;
+import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
 
 public class ReactorCore extends TrinketItem implements ExtendableTooltipProvider {
 

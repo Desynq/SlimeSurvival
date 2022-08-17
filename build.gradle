@@ -82,8 +82,8 @@ repositories {
 		url "https://maven.florens.be"
 	}
 	maven {
-		name "BuildCraft"
-		url "https://mod-buildcraft.com/maven"
+		name "NBTCrafting"
+		url "https://maven.siphalor.de"
 	}
 }
 
@@ -130,6 +130,11 @@ dependencies {
 
 	// https://www.curseforge.com/minecraft/mc-mods/bclib/files
 	modImplementation "curse.maven:bclib-495191:3814359"
+
+
+
+	// https://www.curseforge.com/minecraft/mc-mods/nbt-crafting/files
+	modImplementation "de.siphalor:nbtcrafting-1.18:2.1.4+mc1.18.2"
 
 
 

@@ -20,8 +20,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import net.slimesurvival.common.event.LivingEntityDamagedCallback;
+import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
 import net.slimesurvival.common.registry.ModItems;
-import net.slimesurvival.util.provider.ExtendableTooltipProvider;
 
 public class BloodstainedGlass extends TrinketItem implements ExtendableTooltipProvider {
 

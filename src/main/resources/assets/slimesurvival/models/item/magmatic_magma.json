@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "slimesurvival:item/material/magmatic_magma"
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"type": "fabricaeexnihilo:sieve",
+	"result": "slimesurvival:raw_galena_piece",
+	"input": "minecraft:gravel",
+	"rolls": {
+		"fabricaeexnihilo:iron_mesh": [
+			0.05
+		],
+		"fabricaeexnihilo:diamond_mesh": [
+			0.08
+		],
+		"fabricaeexnihilo:netherite_mesh": [
+			0.12
+		]
+	}
+}

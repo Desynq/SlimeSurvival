@@ -1,4 +1,4 @@
-package net.slimesurvival.util.provider;
+package net.slimesurvival.common.interfaces;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
-import net.slimesurvival.util.provider.ExtendableTooltipProvider;
+import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
 
 public class RiftBattleaxe extends AxeItem implements ExtendableTooltipProvider {
 	public RiftBattleaxe(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {

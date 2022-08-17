@@ -8,12 +8,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
-import net.slimesurvival.util.provider.ExtendableTooltipProvider;
+import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
+import net.slimesurvival.common.registry.ModItemGroups;
 
 public class BoltActionRifle extends Item implements ExtendableTooltipProvider {
 
 	public BoltActionRifle(Settings settings) {
-		super(settings);
+		super(settings.group(ModItemGroups.Weapons).maxDamage(120));
 	}
 
 

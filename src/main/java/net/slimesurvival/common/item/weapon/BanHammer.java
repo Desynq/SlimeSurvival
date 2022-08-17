@@ -11,7 +11,7 @@ import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
-import net.slimesurvival.util.provider.ExtendableTooltipProvider;
+import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
 
 public class BanHammer extends SwordItem implements ExtendableTooltipProvider {
 	public BanHammer(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Item.Settings settings) {

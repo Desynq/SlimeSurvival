@@ -29,10 +29,7 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModStatusEffects.register();
-
 		ModBlocks.register();
-		ModMaterials.register();
 		ModItems.register();
 		ModEnchantments.register();
 		ModStats.register();

@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "minecraft:netherite_pickaxe"
+		},
+		{
+			"item": "slimesurvival:magmatic_magma"
+		},
+		{
+			"item": "minecraft:magma_cream"
+		}
+	],
+	"result": {
+		"item": "slimesurvival:molten_pickaxe",
+		"count": 1
+	}
+}

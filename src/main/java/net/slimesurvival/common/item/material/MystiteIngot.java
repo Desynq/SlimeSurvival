@@ -4,12 +4,12 @@ import java.util.List;
 
 import org.jetbrains.annotations.Nullable;
 
-import net.slimesurvival.util.provider.ExtendableTooltipProvider;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
+import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
 
 public class MystiteIngot extends Item implements ExtendableTooltipProvider {
 	public MystiteIngot(Settings settings) {

@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": {
+		"item": "fabricaeexnihilo:raw_iron_piece"
+	},
+	"result": "minecraft:iron_nugget",
+	"experience": 10.0,
+	"cookingtime": 50
+}

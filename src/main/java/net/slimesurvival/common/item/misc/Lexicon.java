@@ -8,6 +8,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
+import net.slimesurvival.common.registry.ModItemGroups;
 import vazkii.patchouli.api.PatchouliAPI;
 import vazkii.patchouli.common.base.PatchouliSounds;
 import vazkii.patchouli.common.book.Book;
@@ -15,7 +16,10 @@ import vazkii.patchouli.common.book.BookRegistry;
 
 public class Lexicon extends Item {
 	public Lexicon(Settings settings) {
-		super(settings);
+		super(settings
+			.group(ModItemGroups.MISC)
+			.maxCount(1)
+		);
 	}
 
 
