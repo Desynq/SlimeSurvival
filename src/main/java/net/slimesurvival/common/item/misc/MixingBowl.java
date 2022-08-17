@@ -17,7 +17,7 @@ public class MixingBowl extends Item implements ExtendableTooltipProvider {
 	public MixingBowl(Settings settings) {
 		super(settings
 			.group(ModItemGroups.Materials)
-			.maxDamage(32)
+			.maxDamage(31)
 		);
 	}
 
