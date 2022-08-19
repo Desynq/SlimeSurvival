@@ -1,16 +1,16 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"pattern": [
-		" 0 ",
+		" 01",
 		"010",
-		" 0 "
+		"10 "
 	],
 	"key": {
 		"0": {
-			"item": "minecraft:prismarine_shard"
+			"item": "minecraft:experience_bottle"
 		},
 		"1": {
-			"item": "minecraft:amethyst_shard"
+			"item": "geodes:emerald_shard"
 		}
 	},
 	"result": {

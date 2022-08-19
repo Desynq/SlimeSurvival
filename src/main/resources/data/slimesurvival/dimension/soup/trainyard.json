@@ -1,0 +1,47 @@
+{
+	"type": {
+		"ultrawarm": false,
+		"natural": false,
+		"piglin_safe": true,
+		"respawn_anchor_works": true,
+		"bed_works": true,
+		"has_raids": false,
+		"has_skylight": true,
+		"has_ceiling": false,
+		"coordinate_scale": 1,
+		"ambient_light": 0,
+		"fixed_time": 18000,
+		"logical_height": 0,
+		"effects": "minecraft:overworld",
+		"infiniburn": "#minecraft:infiniburn_overworld",
+		"min_y": 0,
+		"height": 256
+	},
+	"generator": {
+		"type": "minecraft:flat",
+		"settings": {
+			"biome": "minecraft:the_void",
+			"lakes": false,
+			"features": true,
+			"layers": [
+				{
+					"block": "minecraft:bedrock",
+					"height": 1
+				},
+				{
+					"block": "minecraft:stone",
+					"height": 58
+				},
+				{
+					"block": "minecraft:dirt",
+					"height": 4
+				},
+				{
+					"block": "minecraft:grass_block",
+					"height": 1
+				}
+			],
+			"structure_overrides": []
+		}
+	}
+}

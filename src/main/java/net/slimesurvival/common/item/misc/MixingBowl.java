@@ -5,19 +5,21 @@ import java.util.List;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
+import net.slimesurvival.common.item.MixingBowlItem;
 import net.slimesurvival.common.registry.ModItemGroups;
+import net.slimesurvival.common.registry.ModItems;
 
-public class MixingBowl extends Item implements ExtendableTooltipProvider {
+public class MixingBowl extends MixingBowlItem implements ExtendableTooltipProvider {
 
 	public MixingBowl(Settings settings) {
 		super(settings
 			.group(ModItemGroups.Materials)
-			.maxDamage(31)
+			.maxDamage(32)
+			.recipeRemainder(ModItems.MIXING_BOWL)
 		);
 	}
 

@@ -1,0 +1,21 @@
+{
+	"type": "slimesurvival:mixing",
+	"ingredients": [
+		{
+			"tag": "slimesurvival:mixing_bowls"
+		},
+		{
+			"item": "slimesurvival:sulfur_dust"
+		},
+		{
+			"item": "minecraft:charcoal"
+		},
+		{
+			"item": "slimesurvival:niter_dust"
+		}
+	],
+	"result": {
+		"item": "minecraft:gunpowder",
+		"count": 2
+	}
+}

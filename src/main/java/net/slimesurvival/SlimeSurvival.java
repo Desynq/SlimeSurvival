@@ -18,12 +18,13 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 		return new Identifier(MOD_ID, path);
 	}
 
-	private static final String MOD_ID = "slimesurvival";
+	public static final String MOD_ID = "slimesurvival";
+	public static final String MOD_NAME = "Slime Survival";
 
 
 
 
-	public static final Logger LOGGER = LoggerFactory.getLogger("slimesurvival");
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 
 
@@ -35,9 +36,13 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 		ModStats.register();
 
 		ModPowers.register();
-
-
 		ShieldBlock.register();
+
+		ModRecipeSerializers.register();
+
+		ModDimensions.register();
+		ModDimensionTypes.register();
+
 
 
 		CarpetServer.manageExtension(this);

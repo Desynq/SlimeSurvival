@@ -1,0 +1,15 @@
+{
+	"type": "slimesurvival:mixing",
+	"ingredients": [
+		{
+			"tag": "slimesurvival:mixing_bowls"
+		},
+		{
+			"item": "betterend:crystalline_sulphur"
+		}
+	],
+	"result": {
+		"item": "slimesurvival:sulfur_dust",
+		"count": 2
+	}
+}

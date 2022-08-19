@@ -1,0 +1,34 @@
+{
+	"temperature": 1,
+	"downfall": 0.3,
+	"precipitation": "rain",
+	"category": "mountain",
+	"effects": {
+		"sky_color": 7907327,
+		"fog_color": 12638463,
+		"water_color": 4159204,
+		"water_fog_color": 329011,
+		"grass_color": 9470285,
+		"foliage_color": 7691311,
+		"grass_color_modifier": "none",
+		"particle": {
+			"options": {
+				"type": "minecraft:ash"
+			},
+			"probability": 0.05
+		}
+	},
+	"spawners": {
+		"monster": [
+			{
+				"type": "minecraft:husk",
+				"weight": 1,
+				"minCount": 4,
+				"maxCount": 4
+			}
+		]
+	},
+	"spawn_costs": {},
+	"carvers": {},
+	"features": []
+}

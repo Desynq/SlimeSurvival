@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "minecraft:emerald_block"
+	},
+	"result": "geodes:emerald_shard",
+	"count": 3
+}

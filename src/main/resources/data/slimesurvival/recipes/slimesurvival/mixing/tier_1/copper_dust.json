@@ -1,11 +1,11 @@
 {
-	"type": "minecraft:crafting_shapeless",
+	"type": "slimesurvival:mixing",
 	"ingredients": [
 		{
-			"item": "slimesurvival:mixing_bowl"
+			"tag": "slimesurvival:mixing_bowls"
 		},
 		{
-			"item": "minecraft:copper"
+			"item": "minecraft:raw_copper"
 		}
 	],
 	"result": {

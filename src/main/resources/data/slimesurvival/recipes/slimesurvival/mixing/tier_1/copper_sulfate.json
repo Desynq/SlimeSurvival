@@ -1,14 +1,14 @@
 {
-	"type": "minecraft:crafting_shapeless",
+	"type": "slimesurvival:mixing",
 	"ingredients": [
 		{
-			"item": "slimesurvival:mixing_bowl"
+			"tag": "slimesurvival:mixing_bowls"
 		},
 		{
-			"item": "slimesurvival:sulfur"
+			"item": "slimesurvival:sulfur_dust"
 		},
 		{
-			"item": "slimesurvival:sulfur"
+			"item": "slimesurvival:sulfur_dust"
 		},
 		{
 			"item": "slimesurvival:copper_dust"

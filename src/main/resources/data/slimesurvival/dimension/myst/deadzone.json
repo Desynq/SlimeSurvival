@@ -1,0 +1,34 @@
+{
+	"type": {
+		"ultrawarm": false,
+		"natural": false,
+		"piglin_safe": true,
+		"respawn_anchor_works": true,
+		"bed_works": true,
+		"has_raids": false,
+		"has_skylight": true,
+		"has_ceiling": false,
+		"coordinate_scale": 1,
+		"ambient_light": 0,
+		"logical_height": 384,
+		"effects": "minecraft:overworld",
+		"infiniburn": "#minecraft:infiniburn_overworld",
+		"min_y": -64,
+		"height": 384
+	},
+	"generator": {
+		"type": "minecraft:flat",
+		"settings": {
+			"biome": "slimesurvival:deadzone",
+			"lakes": false,
+			"features": false,
+			"layers": [
+				{
+					"block": "minecraft:air",
+					"height": 1
+				}
+			],
+			"structure_overrides": []
+		}
+	}
+}

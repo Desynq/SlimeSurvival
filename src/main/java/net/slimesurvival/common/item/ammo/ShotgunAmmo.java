@@ -15,7 +15,7 @@ import net.slimesurvival.common.registry.ModItemGroups;
 public class ShotgunAmmo extends Item implements ExtendableTooltipProvider {
 
 	public ShotgunAmmo(Settings settings) {
-		super(settings.group(ModItemGroups.AMMO).maxCount(120));
+		super(settings.group(ModItemGroups.AMMO).maxCount(64));
 	}
 
 

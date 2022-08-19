@@ -1,6 +1,6 @@
 {
 	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "slimesurvival:item/material/enderium_alloy"
+		"layer0": "slimesurvival:item/material/ingot/enderium_alloy"
 	}
 }

@@ -7,8 +7,10 @@
 		"BlockMixin",
 		"BossBarHudMixin",
 		"BowItemMixin",
+		"ExplosionMixin",
 		"ItemStackMixin",
 		"PlayerEntityMixin",
+		"ShapelessRecipeMixin",
 		"ToolMaterialsMixin"
 	],
 	"client": [

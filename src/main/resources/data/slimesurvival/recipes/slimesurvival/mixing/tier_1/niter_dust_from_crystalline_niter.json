@@ -1,0 +1,15 @@
+{
+	"type": "slimesurvival:mixing",
+	"ingredients": [
+		{
+			"tag": "slimesurvival:mixing_bowls"
+		},
+		{
+			"item": "slimesurvival:niter"
+		}
+	],
+	"result": {
+		"item": "slimesurvival:niter_dust",
+		"count": 2
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"type": "slimesurvival:mixing",
+	"ingredients": [
+		{
+			"tag": "slimesurvival:mixing_bowls_above_tier_one"
+		},
+		{
+			"item": "slimesurvival:sulfur_dust"
+		},
+		{
+			"item": "slimesurvival:sulfur_dust"
+		},
+		{
+			"item": "slimesurvival:sulfur_dust"
+		},
+		{
+			"item": "slimesurvival:niter_dust"
+		},
+		{
+			"item": "slimesurvival:niter_dust"
+		},
+		{
+			"item": "betterend:charcoal_block"
+		}
+	],
+	"result": {
+		"item": "minecraft:gunpowder",
+		"count": 5
+	}
+}

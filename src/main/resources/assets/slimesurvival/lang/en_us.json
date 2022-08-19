@@ -79,6 +79,22 @@
 
 
 
+	"item.slimesurvival.cinnabar_chunk": "Cinnabar Chunk",
+	"item.slimesurvival.cinnabar": "Cinnabar",
+	"item.slimesurvival.copper_sulfate": "Copper Sulfate",
+	"item.slimesurvival.creeper_flesh": "Creeper Flesh",
+	"item.slimesurvival.lead_ingot": "Lead Ingot",
+	"item.slimesurvival.quicksilver": "Quicksilver",
+	"item.slimesurvival.small_leather": "Small Leather",
+
+	"item.slimesurvival.copper_dust": "Copper Dust",
+	"item.slimesurvival.niter_dust": "Niter Dust",
+	"item.slimesurvival.silver_dust": "Silver Dust",
+	"item.slimesurvival.sulfur_dust": "Sulfur Dust",
+
+
+
+
 
 
 
@@ -108,14 +124,26 @@
 	"item.slimesurvival.enderium_alloy": "§5Enderium Alloy",
 	"item.slimesurvival.enderium_alloy.details": "§7Exerts magical properties far beyond\n§7those of ordinary metallic substances\n\n§7May also have some applications as an ingredient\n§7for mage armor, tools, and weapons.",
 
-	"item.slimesurvival.cinnabar": "Cinnabar",
-
-	"item.slimesurvival.cinnabar_chunk": "Cinnabar Chunk",
-
-	"item.slimesurvival.quicksilver": "Quicksilver",
-
 	"item.slimesurvival.magmatic_magma": "Magmatic Magma",
 	"item.slimesurvival.magmatic_magma.details": "§7Burns at over 1,000°C; hot enough to smelt most\n§7metals and definitely hot enough to burn through skin.\n\n§7May have some applications in crafting given heat resilient equipment is used.",
+
+
+
+	"item.slimesurvival.mixing_bowl": "Mixing Bowl",
+	"item.slimesurvival.mixing_bowl.tooltip": "§oIt's mixin time.",
+	"item.slimesurvival.mixing_bowl.details": "§7Has a limited durability of 32 and can only be\n§7repaired by combining with other mixing bowls.\n\n§7It's often used to crush resources into their dust or powder\n§7form as well as mixing them together into new substances.\n\n§cDo keep in mind that it does lose §osome\n§cdurability everytime it's used in crafting.",
+
+
+
+	"item.slimesurvival.reinforced_mixing_bowl": "Reinforced Mixing Bowl",
+	"item.slimesurvival.reinforced_mixing_bowl.tooltip": "§oStrong and *hopefully* durable enough to last through an enum mixin.",
+	"item.slimesurvival.reinforced_mixing_bowl.details": "§7Has an extended durability of 8192.\n§7Still has to repaired by combining it with another mixing bowl (has to be reinforced)\n\n§7It should be strong enough to crush even the densest of resources,\n§7unless we're talking about you; You'll need an §lEternal Mixing Bowl§7 for that.",
+
+
+
+	"item.slimesurvival.eternal_mixing_bowl": "Eternal Mixing Bowl",
+	"item.slimesurvival.eternal_mixing_bowl.tooltip": "§oMixin is love, mixin is life, mixin is §leternal§7§o.",
+	"item.slimesurvival.eternal_mixing_bowl.details": "§7Has an extended durability of §l§keternity§7.\n§7Does §lnot§7 need to be repaired\n\n§7It should be strong enough to crush your spirit (if it hasn't already).",
 
 
 

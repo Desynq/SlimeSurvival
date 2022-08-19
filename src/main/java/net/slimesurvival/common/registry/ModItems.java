@@ -15,6 +15,7 @@ import net.minecraft.item.ToolMaterials;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.slimesurvival.common.armor.*;
+import net.slimesurvival.common.item.*;
 import net.slimesurvival.common.item.ammo.*;
 import net.slimesurvival.common.item.material.*;
 import net.slimesurvival.common.item.misc.*;
@@ -33,6 +34,8 @@ public class ModItems {
 
 	public static final Item EXPERIENCE_CRYSTAL = ModItems.register("experience_crystal", new ExperienceCrystal(new FabricItemSettings()));
 	public static final Item MIXING_BOWL = ModItems.register("mixing_bowl", new MixingBowl(new FabricItemSettings()));
+	public static final Item REINFORCED_MIXING_BOWL = ModItems.register("reinforced_mixing_bowl", new ReinforcedMixingBowl(new FabricItemSettings()));
+	public static final Item ETERNAL_MIXING_BOWL = ModItems.register("eternal_mixing_bowl", new EternalMixingBowl(new FabricItemSettings()));
 
 
 
@@ -51,11 +54,16 @@ public class ModItems {
 	public static final Item CREEPER_FLESH = ModItems.register("creeper_flesh", new CreeperFlesh(new FabricItemSettings()));
 	public static final Item LEAD_INGOT = ModItems.register("lead_ingot", new LeadIngot(new FabricItemSettings()));
 	public static final Item MAGMATIC_MAGMA = ModItems.register("magmatic_magma", new MagmaticMagma(new FabricItemSettings()));
+	public static final Item NITER = ModItems.register("niter", new Niter(new FabricItemSettings()));
 	public static final Item QUICKSILVER = ModItems.register("quicksilver", new Quicksilver(new FabricItemSettings()));
 	public static final Item RAW_GALENA = ModItems.register("raw_galena", new RawGalena(new FabricItemSettings()));
 	public static final Item RAW_GALENA_PIECE = ModItems.register("raw_galena_piece", new RawGalenaPiece(new FabricItemSettings()));
 	public static final Item SMALL_LEATHER = ModItems.register("small_leather", new SmallLeather(new FabricItemSettings()));
-	public static final Item SULFUR = ModItems.register("sulfur", new Sulfur(new FabricItemSettings()));
+
+	public static final Item COPPER_DUST = ModItems.register("copper_dust", new DustItem(new FabricItemSettings()));
+	public static final Item NITER_DUST = ModItems.register("niter_dust", new DustItem(new FabricItemSettings()));
+	public static final Item SILVER_DUST = ModItems.register("silver_dust", new DustItem(new FabricItemSettings()));
+	public static final Item SULFUR_DUST = ModItems.register("sulfur_dust", new DustItem(new FabricItemSettings()));
 
 
 

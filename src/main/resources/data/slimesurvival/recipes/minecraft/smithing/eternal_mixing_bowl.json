@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:smithing",
+	"base": {
+		"item": "slimesurvival:reinforced_mixing_bowl"
+	},
+	"addition": {
+		"item": "betterend:eternal_crystal"
+	},
+	"result": {
+		"item": "slimesurvival:eternal_mixing_bowl"
+	}
+}

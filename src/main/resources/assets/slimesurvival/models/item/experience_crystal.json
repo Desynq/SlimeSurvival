@@ -1,20 +1,32 @@
 {
 	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "slimesurvival:item/misc/experience_crystal/0"
+		"layer0": "slimesurvival:item/misc/experience_crystal/state_0"
 	},
 	"overrides": [
 		{
 			"predicate": {
+				"slimesurvival:fill": 0.25
+			},
+			"model": "slimesurvival:item/experience_crystal/state_1"
+		},
+		{
+			"predicate": {
 				"slimesurvival:fill": 0.5
 			},
-			"model": "slimesurvival:item/experience_crystal/1"
+			"model": "slimesurvival:item/experience_crystal/state_2"
+		},
+		{
+			"predicate": {
+				"slimesurvival:fill": 0.75
+			},
+			"model": "slimesurvival:item/experience_crystal/state_3"
 		},
 		{
 			"predicate": {
 				"slimesurvival:fill": 1.0
 			},
-			"model": "slimesurvival:item/experience_crystal/2"
+			"model": "slimesurvival:item/experience_crystal/state_4"
 		}
 	]
 }
