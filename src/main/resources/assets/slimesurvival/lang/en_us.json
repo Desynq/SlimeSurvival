@@ -49,6 +49,7 @@
 
 
 	"block.slimesurvival.gmod_block": "GMod Block",
+
 	"block.slimesurvival.solid_black": "Solid Black",
 	"block.slimesurvival.solid_blue": "Solid Blue",
 	"block.slimesurvival.solid_green": "Solid Green",
@@ -56,6 +57,10 @@
 	"block.slimesurvival.solid_red": "Solid Red",
 	"block.slimesurvival.solid_white": "Solid White",
 	"block.slimesurvival.solid_yellow": "Solid Yellow",
+
+	"block.slimesurvival.fake_tnt": "Fake TNT",
+
+	"block.slimesurvival.cracked_obsidian": "Cracked Obsidian",
 
 
 

@@ -178,6 +178,10 @@ public class ModItems {
 	public static final Item SOLID_WHITE = ModItems.register(ModBlocks.SOLID_WHITE, ModItemGroups.BLOCKS);
 	public static final Item SOLID_YELLOW = ModItems.register(ModBlocks.SOLID_YELLOW, ModItemGroups.BLOCKS);
 
+	public static final Item FAKE_TNT = ModItems.register(ModBlocks.FAKE_TNT, ModItemGroups.BLOCKS);
+
+	public static final Item CRACKED_OBSIDIAN = ModItems.register(ModBlocks.CRACKED_OBSIDIAN, ModItemGroups.BLOCKS);
+
 
 
 

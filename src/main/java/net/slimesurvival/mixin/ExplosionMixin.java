@@ -6,7 +6,8 @@ import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.BlockPos;
@@ -40,8 +41,10 @@ public class ExplosionMixin {
 	@Shadow
 	private World world;
 
-	@ModifyVariable(method = "affectWorld(Z)V", at = @At("STORE"), ordinal = 1)
-	private boolean injected(boolean bl) {
-		return bl && !ModDimensions.ANTIGRIEF_DIMENSIONS.contains(this.world.getRegistryKey());
+	@Inject(method = "affectWorld(Z)V", at = @At("HEAD"), cancellable = false)
+	private void affectWorld(boolean spawnParticles, CallbackInfo ci) {
+		if (!affectedBlocks.isEmpty() && ModDimensions.ANTIGRIEF_DIMENSIONS.contains(this.world.getRegistryKey())) {
+			affectedBlocks.clear();
+		}
 	}
 }

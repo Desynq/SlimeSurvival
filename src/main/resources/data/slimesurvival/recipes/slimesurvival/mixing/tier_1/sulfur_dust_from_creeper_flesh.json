@@ -1,0 +1,15 @@
+{
+	"type": "slimesurvival:mixing",
+	"ingredients": [
+		{
+			"tag": "slimesurvival:mixing_bowls"
+		},
+		{
+			"item": "slimesurvival:creeper_flesh"
+		}
+	],
+	"result": {
+		"item": "slimesurvival:sulfur_dust",
+		"count": 1
+	}
+}
