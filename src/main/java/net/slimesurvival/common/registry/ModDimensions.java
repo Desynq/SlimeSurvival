@@ -1,8 +1,5 @@
 package net.slimesurvival.common.registry;
 
-import java.util.Arrays;
-import java.util.List;
-
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.World;
@@ -24,19 +21,7 @@ public class ModDimensions {
 
 
 
-	public static final List<RegistryKey<World>> ANTIGRIEF_DIMENSIONS = Arrays.asList(
-		MYST_DEADZONE,
-		MYST_EPISODE_1,
-		MYST_TRAINYARD,
-		SOUP_CS_OFFICE,
-		SOUP_PARADISE,
-		SOUP_TRAINYARD,
-		ZAXACO_LABYRINTH
-	);
-
-
-
 	public static void register() {
-		SlimeSurvival.LOGGER.debug("Registering dimensions for " + SlimeSurvival.MOD_ID);
+		SlimeSurvival.LOGGER.debug("Registering dimension keys for " + SlimeSurvival.MOD_ID);
 	}
 }

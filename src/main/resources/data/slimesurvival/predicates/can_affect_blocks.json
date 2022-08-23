@@ -1,0 +1,12 @@
+{
+	"condition": "minecraft:inverted",
+	"term": {
+		"condition": "minecraft:alternative",
+		"terms": [
+			{
+				"condition": "minecraft:reference",
+				"name": "slimesurvival:in/antigrief_dimension"
+			}
+		]
+	}
+}

@@ -10,10 +10,17 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.loot.condition.LootCondition;
+import net.minecraft.loot.condition.LootConditionManager;
+import net.minecraft.loot.context.LootContext;
+import net.minecraft.loot.context.LootContextParameters;
+import net.minecraft.loot.context.LootContextTypes;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
-import net.slimesurvival.common.registry.ModDimensions;
+import net.minecraft.server.world.ServerWorld;
+import net.slimesurvival.SlimeSurvival;
 
 @Mixin(Explosion.class)
 public class ExplosionMixin {
@@ -43,8 +50,15 @@ public class ExplosionMixin {
 
 	@Inject(method = "affectWorld(Z)V", at = @At("HEAD"), cancellable = false)
 	private void affectWorld(boolean spawnParticles, CallbackInfo ci) {
-		if (!affectedBlocks.isEmpty() && ModDimensions.ANTIGRIEF_DIMENSIONS.contains(this.world.getRegistryKey())) {
-			affectedBlocks.clear();
+
+		if (this.world instanceof ServerWorld) {
+			LootContext.Builder builder = new LootContext.Builder((ServerWorld) this.world).parameter(LootContextParameters.ORIGIN, new Vec3d(x, y, z)).optionalParameter(LootContextParameters.THIS_ENTITY, this.entity);
+			LootConditionManager lootConditionManager = ((ServerWorld) this.world).getServer().getPredicateManager();
+			LootCondition lootCondition = lootConditionManager.get(SlimeSurvival.ID("can_affect_blocks"));
+
+			if (!affectedBlocks.isEmpty() && lootCondition != null && !lootCondition.test(builder.build(LootContextTypes.COMMAND))) {
+				affectedBlocks.clear();
+			}
 		}
 	}
 }
