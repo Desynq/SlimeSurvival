@@ -61,10 +61,13 @@ public class EntityValueMixin extends HashMap<String, BiFunction<Entity, Value, 
 
 
 		put("owner", (e, a) -> {
-			if (e instanceof TameableEntity) {
-				return new EntityValue(((TameableEntity)e).getOwner());
-			} else if (e instanceof ProjectileEntity) {
-				return new EntityValue(((ProjectileEntity)e).getOwner());
+			if (e instanceof TameableEntity tameableEntity) {
+				Entity owner = tameableEntity.getOwner();
+				return owner == null ? Value.NULL : new EntityValue(owner);
+			}
+			if (e instanceof ProjectileEntity projectileEntity) {
+				Entity owner = projectileEntity.getOwner();
+				return owner == null ? Value.NULL : new EntityValue(owner);
 			}
 			return Value.NULL;
 		});
