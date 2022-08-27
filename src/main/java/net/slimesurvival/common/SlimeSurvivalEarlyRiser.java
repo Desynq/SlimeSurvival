@@ -5,7 +5,6 @@ import com.chocohead.mm.api.ClassTinkerers;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.util.Formatting;
 
-// gave up on this because I suck at ASM lol
 public class SlimeSurvivalEarlyRiser implements Runnable {
 	
 	@Override

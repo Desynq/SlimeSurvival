@@ -8,7 +8,7 @@
 		"view_distance": 8.0,
 		"block_condition": {
 			"type": "origins:in_tag",
-			"tag": "slimesurvival:unphasable"
+			"tag": "besmirchment:ghost_impassable"
 		},
 		"phase_down_condition": {
 			"type": "origins:and",
@@ -43,7 +43,7 @@
 		"view_distance": 8.0,
 		"block_condition": {
 			"type": "origins:in_tag",
-			"tag": "slimesurvival:phasable"
+			"tag": "slimesurvival:ghost_passable"
 		},
 		"phase_down_condition": {
 			"type": "origins:and",

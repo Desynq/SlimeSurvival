@@ -72,6 +72,66 @@
 					}
 				}
 			]
+		},
+		{
+			"condition": "minecraft:alternative",
+			"_comment": "CMP Dimensions",
+			"terms": [
+				{
+					"condition": "minecraft:location_check",
+					"predicate": {
+						"dimension": "slimesurvival:cmp/old_1"
+					}
+				},
+				{
+					"condition": "minecraft:location_check",
+					"predicate": {
+						"dimension": "slimesurvival:cmp/old_2"
+					}
+				},
+				{
+					"condition": "minecraft:location_check",
+					"predicate": {
+						"dimension": "slimesurvival:cmp/superflat"
+					}
+				},
+				{
+					"condition": "minecraft:location_check",
+					"predicate": {
+						"dimension": "slimesurvival:cmp/void"
+					}
+				}
+			]
+		},
+		{
+			"condition": "minecraft:alternative",
+			"_comment": "Red Dimensions",
+			"terms": [
+				{
+					"condition": "minecraft:location_check",
+					"predicate": {
+						"dimension": "slimesurvival:red/swamp"
+					}
+				},
+				{
+					"condition": "minecraft:location_check",
+					"predicate": {
+						"dimension": "slimesurvival:red/swamp2"
+					}
+				}
+			]
+		},
+		{
+			"condition": "minecraft:alternative",
+			"_comment": "Se7en Dimensions",
+			"terms": [
+				{
+					"condition": "minecraft:location_check",
+					"predicate": {
+						"dimension": "slimesurvival:se7en/a_lost_mind"
+					}
+				}
+			]
 		}
 	]
 }

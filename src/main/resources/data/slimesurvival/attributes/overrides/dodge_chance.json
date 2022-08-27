@@ -2,6 +2,6 @@
 	"fallbackValue": 0.0,
 	"minValue": 0.0,
 	"maxValue": 1.0,
-	"translationKey": "slimesurvival.attribute.name.dodge_chance",
+	"translationKey": "attribute.slimesurvival.generic.dodge_chance",
 	"stackingBehaviour": "FLAT"
 }

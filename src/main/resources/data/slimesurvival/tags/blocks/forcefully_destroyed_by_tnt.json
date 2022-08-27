@@ -1,0 +1,9 @@
+{
+	"values": [
+		"minecraft:enchanting_table",
+		"minecraft:ender_chest",
+		"ironchests:obsidian_chest",
+		"bewitchment:obsidian_witch_altar",
+		"betterend:infusion_pedestal"
+	]
+}

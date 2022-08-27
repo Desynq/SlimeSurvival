@@ -160,6 +160,8 @@ public class ModItems {
 	public static final Item SHAPED_GLASS = ModItems.register("shaped_glass", new ShapedGlass(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
 	public static final Item BlOODSTAINED_GLASS = ModItems.register("bloodstained_glass", new BloodstainedGlass(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
 
+	public static final Item TACTICAL_GLOVE = ModItems.register("tactical_glove", new TacticalGlove(new FabricItemSettings()));
+
 
 
 

@@ -2,6 +2,6 @@
 	"fallbackValue": 1.0,
 	"minValue": 1.0,
 	"maxValue": 2147483647.0,
-	"translationKey": "slimesurvival.attribute.name.mana_regen_interval",
+	"translationKey": "attribute.slimesurvival.generic.mana/regen_interval",
 	"stackingBehaviour": "FLAT"
 }

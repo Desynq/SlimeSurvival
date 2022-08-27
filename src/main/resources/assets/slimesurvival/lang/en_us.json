@@ -8,6 +8,22 @@
 
 
 
+	"attribute.slimesurvival.generic.gun/horizontal_recoil": "Horizontal Gun Recoil",
+	"attribute.slimesurvival.generic.gun/vertical_recoil": "Vertical Gun Recoil",
+	"attribute.slimesurvival.generic.gun/accuracy": "Gun Accuracy",
+	"attribute.slimesurvival.generic.gun/precision": "Gun Precision",
+
+	"attribute.slimesurvival.generic.mana/cap": "Mana Cap",
+	"attribute.slimesurvival.generic.mana/regen_amount": "Mana Regen Amount",
+	"attribute.slimesurvival.generic.mana/regen_interval": "Mana Regen Interval",
+
+	"attribute.slimesurvival.generic.random_crit/multiplier": "Random Crit Multiplier",
+
+	"attribute.slimesurvival.generic.dodge_chance": "Dodge Chance",
+	"attribute.slimesurvival.generic.instability": "Instability",
+
+
+
 
 
 	"power.slimesurvival.ghoul/flesh_eater.name": "Flesh Eater",
@@ -232,12 +248,16 @@
 
 
 	"item.slimesurvival.bloodstained_glass": "§4Bloodstained Glass",
-	"item.slimesurvival.bloodstained_glass.details": "§7§oMedium risk, medium reward\n\n§cImplements partial life steal, recovering 25% of damage dealt as\n§chealth regenerated to its user.",
+	"item.slimesurvival.bloodstained_glass.details": "§7§oMedium risk, medium reward\n\n§cImplements partial life steal, recovering 25%% of damage dealt as\n§chealth regenerated to its user.",
 
 
 	"item.slimesurvival.reactor_core": "§5Reactor Core",
-	"item.slimesurvival.reactor_core.tooltip": "§e§oJesse, I have cancer\n§",
+	"item.slimesurvival.reactor_core.tooltip": "§e§oJesse, I have cancer\n",
 	"item.slimesurvival.reactor_core.details": "§7Emits short doses of radiation that augment cell count rapidly.\n\n§7The short doses of radiation may cause fatigue and, in rare cases, cancer.\n§§",
+
+
+	"item.slimesurvival.tactical_glove": "Tactical Glove",
+	"item.slimesurvival.tactical_glove.details": "§7Provides improved ergonomics, reducing recoil and\n§7improving accuracy for guns at the cost of slower hand movement.",
 
 
 

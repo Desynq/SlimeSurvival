@@ -1,0 +1,9 @@
+{
+	"type": "fabricaeexnihilo:fluid_transformation",
+	"contained": "#c:brine",
+	"catalyst": "bewitchment:silver_block",
+	"result": {
+		"id": "item",
+		"stack": "bewitchment:salt_block"
+	}
+}

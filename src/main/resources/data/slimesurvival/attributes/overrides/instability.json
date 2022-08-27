@@ -2,6 +2,6 @@
 	"fallbackValue": 0.0,
 	"minValue": 0.0,
 	"maxValue": 2147483647.0,
-	"translationKey": "slimesurvival.attribute.name.instability",
+	"translationKey": "attribute.slimesurvival.generic.instability",
 	"stackingBehaviour": "FLAT"
 }

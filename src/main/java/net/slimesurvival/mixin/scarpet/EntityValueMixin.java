@@ -1,7 +1,9 @@
 package net.slimesurvival.mixin.scarpet;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 import java.util.function.BiFunction;
 
@@ -18,6 +20,11 @@ import carpet.script.value.ListValue;
 import carpet.script.value.NumericValue;
 import carpet.script.value.StringValue;
 import carpet.script.value.Value;
+import carpet.script.value.ValueConversions;
+import dev.emi.trinkets.api.SlotReference;
+import dev.emi.trinkets.api.SlotType;
+import dev.emi.trinkets.api.TrinketComponent;
+import dev.emi.trinkets.api.TrinketsApi;
 import io.github.apace100.origins.origin.OriginLayers;
 import io.github.apace100.origins.registry.ModComponents;
 import net.minecraft.advancement.Advancement;
@@ -28,8 +35,10 @@ import net.minecraft.entity.attribute.EntityAttributeInstance;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Pair;
 import net.minecraft.util.registry.Registry;
 
 // carpet.script.value.EntityValue
@@ -86,6 +95,29 @@ public class EntityValueMixin extends HashMap<String, BiFunction<Entity, Value, 
 
 			EntityAttributeInstance attributeInstance = ((LivingEntity)e).getAttributeInstance(attribute);
 			return new NumericValue(attributeInstance.getModifier(uuid).getValue());
+		});
+
+
+		put("trinkets", (e, a) -> {
+			if(a == null) {
+				Optional<TrinketComponent> component = TrinketsApi.getTrinketComponent((LivingEntity) (Object) e);
+				if(component.isPresent()) {
+					List<Value> list = new ArrayList<>();
+					for (Pair<SlotReference, ItemStack> equipped : component.get().getAllEquipped()) {
+						SlotReference slotReference = equipped.getLeft();
+						SlotType slotType = slotReference.inventory().getSlotType();
+						ItemStack stack = equipped.getRight();
+
+						list.add(ListValue.of(
+							new StringValue("trinkets:" + slotType.getGroup() + "/" + slotType.getName()),
+							new NumericValue(slotReference.index()),
+							ValueConversions.of(stack)
+						));
+					}
+					return ListValue.wrap(list);
+				}
+			}
+			return Value.NULL;
 		});
 	}
 }

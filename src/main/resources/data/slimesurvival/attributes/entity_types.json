@@ -1,12 +1,19 @@
 {
 	"values": {
 		"minecraft:player": {
-			"slimesurvival:dodge_chance": 0.01,
-			"slimesurvival:instability": 0.0,
+			"slimesurvival:gun/vertical_recoil": 0.0,
+			"slimesurvival:gun/horizontal_recoil": 0.0,
+			"slimesurvival:gun/accuracy": 1.0,
+			"slimesurvival:gun/precision": 0.0,
 
-			"slimesurvival:mana_cap": 10.0,
-			"slimesurvival:mana_regen_amount": 0.05,
-			"slimesurvival:mana_regen_interval": 1.0
+			"slimesurvival:mana/cap": 10.0,
+			"slimesurvival:mana/regen_amount": 0.05,
+			"slimesurvival:mana/regen_interval": 1.0,
+
+			"slimesurvival:random_crit/multiplier": 1.0,
+
+			"slimesurvival:dodge_chance": 0.01,
+			"slimesurvival:instability": 0.0
 		}
 	}
 }

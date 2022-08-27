@@ -50,15 +50,19 @@ public class ExperienceCrystal extends Item implements ExtendableTooltipProvider
 
 			user.sendMessage(new LiteralText(storedExperience.toString()), true);
 
-		} else if (user.isSneaking() && storedExperience >= experienceMultiplier) {
+			return TypedActionResult.success(stack);
+		}
+		if (user.isSneaking() && storedExperience >= experienceMultiplier) {
 			storedExperience -= experienceMultiplier;
 			stack.getOrCreateNbt().putInt("StoredExperience", storedExperience);
 			user.addExperience(experienceMultiplier);
 
 			user.sendMessage(new LiteralText(storedExperience.toString()), true);
+
+			return TypedActionResult.success(stack);
 		}
 
-		return TypedActionResult.success(stack);
+		return TypedActionResult.pass(stack);
 	}
 
 

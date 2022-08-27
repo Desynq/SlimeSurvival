@@ -82,8 +82,11 @@ repositories {
 		url "https://maven.florens.be"
 	}
 	maven {
-		name "NBTCrafting"
-		url "https://maven.siphalor.de"
+		name = "Modrinth"
+		url = "https://api.modrinth.com/maven"
+		content {
+			includeGroup "maven.modrinth"
+		}
 	}
 }
 
@@ -118,8 +121,8 @@ dependencies {
 
 
 	// https://maven.wispforest.io/io/wispforest/owo-lib/
-	modImplementation "io.wispforest:owo-lib:0.6.0+1.18"
-	include "io.wispforest:owo-sentinel:0.6.0+1.18"
+	modImplementation "io.wispforest:owo-lib:0.7.2+1.18"
+	include "io.wispforest:owo-sentinel:0.7.2+1.18"
 
 
 	// https://github.com/CrimsonDawn45/Fabric-Shield-Lib/blob/main/gradle.properties
@@ -133,8 +136,7 @@ dependencies {
 
 
 
-	// https://www.curseforge.com/minecraft/mc-mods/nbt-crafting/files
-	modImplementation "de.siphalor:nbtcrafting-1.18:2.1.4+mc1.18.2"
+	modImplementation "maven.modrinth:data-attributes:1.1.11"
 
 
 
@@ -223,6 +225,17 @@ dependencies {
 
 	// https://www.curseforge.com/minecraft/mc-mods/fabricae-ex-nihilo/files
 	modImplementation "curse.maven:fabricae-ex-nihilo-596911:3844360"
+
+	// https://www.curseforge.com/minecraft/mc-mods/alloy-forgery/files
+	modImplementation "curse.maven:alloy-forgery-438718:3758381"
+
+
+
+
+
+	modImplementation "curse.maven:fabric-disable-custom-worlds-advice-401978:3677546"
+
+	modImplementation "curse.maven:language-reload-527334:3641052"
 
 
 
