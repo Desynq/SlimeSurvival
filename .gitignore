@@ -38,4 +38,5 @@ run/
 
 # misc
 
-export.bat
+export_client.bat
+export_server.bat
