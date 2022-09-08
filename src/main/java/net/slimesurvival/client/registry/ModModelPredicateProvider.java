@@ -13,7 +13,7 @@ public class ModModelPredicateProvider {
 
 
 
-		ModelPredicateProviderRegistry.register(ModItems.MYSTITE_BOW, new Identifier("pull"), (stack, world, entity, seed) -> {
+		ModelPredicateProviderRegistry.register(ModItems.MYSTITE_LONGBOW, new Identifier("pull"), (stack, world, entity, seed) -> {
 			if (entity == null) {
 				return 0.0f;
 			}
@@ -22,7 +22,34 @@ public class ModModelPredicateProvider {
 			}
 			return (float) (stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.0f;
 		});
-		ModelPredicateProviderRegistry.register(ModItems.MYSTITE_BOW, new Identifier("pulling"), (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
+		ModelPredicateProviderRegistry.register(ModItems.MYSTITE_LONGBOW, new Identifier("pulling"), (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
+
+
+
+
+
+
+
+		ModelPredicateProviderRegistry.register(ModItems.MYSTITE_SHORTBOW, new Identifier("pull"), (stack, world, entity, seed) -> {
+			if (entity == null) {
+				return 0.0f;
+			}
+			if (entity.getActiveItem() != stack) {
+				return 0.0f;
+			}
+			return (float) (stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.0f;
+		});
+		ModelPredicateProviderRegistry.register(ModItems.MYSTITE_SHORTBOW, new Identifier("pulling"), (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
+
+
+
+
+
+
+
+
+
+
 
 
 		ModelPredicateProviderRegistry.register(ModItems.ZEUS_BOW, new Identifier("pull"), (stack, world, entity, seed) -> {

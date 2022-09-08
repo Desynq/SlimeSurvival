@@ -2,9 +2,11 @@
 	"itemGroup.slimesurvival.misc": "Slime Survival Misc",
 	"itemGroup.slimesurvival.blocks": "Slime Survival Blocks",
 	"itemGroup.slimesurvival.materials": "Slime Survival Materials",
-	"itemGroup.slimesurvival.weapons": "Slime Survival Weapons",
 	"itemGroup.slimesurvival.equipment": "Slime Survival Equipment",
 	"itemGroup.slimesurvival.tools": "Slime Survival Tools",
+
+	"itemGroup.slimesurvival.weapons": "Slime Survival Weapons",
+	"itemGroup.slimesurvival.ranged_weapons": "Slime Survival Ranged Weapons",
 
 
 
@@ -17,10 +19,17 @@
 	"attribute.slimesurvival.generic.mana/regen_amount": "Mana Regen Amount",
 	"attribute.slimesurvival.generic.mana/regen_interval": "Mana Regen Interval",
 
+	"attribute.slimesurvival.generic.random_crit/chance": "Random Crit Chance",
 	"attribute.slimesurvival.generic.random_crit/multiplier": "Random Crit Multiplier",
 
 	"attribute.slimesurvival.generic.dodge_chance": "Dodge Chance",
 	"attribute.slimesurvival.generic.instability": "Instability",
+
+
+
+	"biome.slimesurvival.deadzone": "Deadzone",
+
+
 
 
 
@@ -176,21 +185,42 @@
 	"item.slimesurvival.molten_pickaxe": "§6Molten Pickaxe",
 	"item.slimesurvival.molten_axe": "§6Molten Axe",
 	"item.slimesurvival.molten_shovel": "§6Molten Shovel",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	"item.slimesurvival.molten_sword": "§6Molten Sword",
 
+	
+	"item.slimesurvival.butterfly_knife": "Butterfly Knife",
 
 
-
-
-
-	"item.slimesurvival.rift_battleaxe": "§4Rift Battleaxe",
-	"item.slimesurvival.rift_battleaxe.details": "§7A heavy weapon that swings slow but hits §lreally§r§7 hard.\n\n§7Right clicking will push away nearby mobs and players at the\n§7cost of a short movement speed penalty afterwards.",
-
-
+	"item.slimesurvival.rift_halberd": "§4Rift Halberd",
 
 
 	"item.slimesurvival.duskbreaker": "Duskbreaker",
 
+
+	"item.slimesurvival.rift_greatsword": "Rift Greatsword",
+
+
+	"item.slimesurvival.rift_battleaxe": "Rift Battleaxe",
+
+
+	"item.slimesurvival.rift_dagger": "Rift Dagger",
+
+
+	"item.slimesurvival.sentient_katana": "Sentient Katana",
 
 
 	"item.slimesurvival.ban_hammer": "§b\"Ban\" Hammer",
@@ -201,9 +231,28 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 	"item.slimesurvival.zeus_bow": "Zeus Bow",
 
-	"item.slimesurvival.mystite_bow": "Mystite Bow",
+
+	"item.slimesurvival.mystite_longbow": "Mystite Longbow",
+
+
+
+
+
+
+
 
 
 
@@ -218,10 +267,31 @@
 
 
 
+
+
+
+
+
+
+
+
+
 	"item.slimesurvival.mystite_helmet": "§3Mystite Helmet",
 	"item.slimesurvival.mystite_chestplate": "§3Mystite Chestplate",
 	"item.slimesurvival.mystite_leggings": "§3Mystite Leggings",
 	"item.slimesurvival.mystite_boots": "§3Mystite Boots",
+
+	"item.slimesurvival.axolotl_helmet": "Axolotl Helmet",
+	"item.slimesurvival.axolotl_chestplate": "Axolotl Chestplate",
+	"item.slimesurvival.axolotl_leggings": "Axolotl Leggings",
+	"item.slimesurvival.axolotl_boots": "Axolotl Boots",
+
+	"item.slimesurvival.turtle_helmet": "Turtle Helmet",
+	"item.slimesurvival.turtle_chestplate": "Turtle Chestplate",
+	"item.slimesurvival.turtle_leggings": "Turtle Leggings",
+	"item.slimesurvival.turtle_boots": "Turtle Boots",
+
+
 
 	"item.slimesurvival.netherite_shield": "Netherite Shield",
 	"item.slimesurvival.dragon_shield": "Dragon Scale Shield",

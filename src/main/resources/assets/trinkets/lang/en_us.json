@@ -1,6 +1,9 @@
 {
-	"trinkets.slot.hand.glove": "Glove (L)",
-	"trinkets.slot.offhand.glove": "Glove (R)",
+	"trinkets.slot.hand.glove": "Glove (R)",
+	"trinkets.slot.hand.ring": "Ring (R)",
+
+	"trinkets.slot.offhand.glove": "Glove (L)",
+	"trinkets.slot.offhand.ring": "Ring (L)",
 
 	"trinkets.slot.charm.charm": "Charm",
 	"trinkets.slot.charm.expansion": "Expansion"

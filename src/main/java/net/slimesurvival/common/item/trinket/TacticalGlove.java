@@ -16,28 +16,19 @@ import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemStack.TooltipSection;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import net.slimesurvival.SlimeSurvival;
 import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
-import net.slimesurvival.common.interfaces.InitialStackStateProvider;
 import net.slimesurvival.common.registry.ModItemGroups;
 
-public class TacticalGlove extends TrinketItem implements InitialStackStateProvider, ExtendableTooltipProvider {
+public class TacticalGlove extends TrinketItem implements ExtendableTooltipProvider {
 
 	public TacticalGlove(Settings settings) {
 		super(settings
 			.group(ModItemGroups.Equipment)
 			.maxCount(1)
 		);
-	}
-
-
-
-	@Override
-	public void initializeState(ItemStack stack) {
-		stack.addHideFlag(TooltipSection.MODIFIERS);
 	}
 
 

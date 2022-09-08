@@ -6,7 +6,6 @@ import moriyashiine.bewitchment.common.registry.BWMaterials;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -21,7 +20,9 @@ import net.slimesurvival.common.item.material.*;
 import net.slimesurvival.common.item.misc.*;
 import net.slimesurvival.common.item.tool.*;
 import net.slimesurvival.common.item.trinket.*;
-import net.slimesurvival.common.item.weapon.*;
+import net.slimesurvival.common.item.weapon.gun.*;
+import net.slimesurvival.common.item.weapon.melee.*;
+import net.slimesurvival.common.item.weapon.ranged.*;
 
 
 
@@ -76,25 +77,26 @@ public class ModItems {
 
 
 
+
+
+
+
+	public static final Item BAN_HAMMER = ModItems.register("ban_hammer", new BanHammer(ToolMaterials.DIAMOND, Integer.MAX_VALUE, 16.0F, new FabricItemSettings().group(ModItemGroups.WEAPONS)));
+
+	public static final Item BUTTERFLY_KNIFE = ModItems.register("butterfly_knife", new ButterflyKnife(new FabricItemSettings()));
+
+	public static final Item DUSKBREAKER = ModItems.register("duskbreaker", new Duskbreaker(BWMaterials.SILVER_TOOL, 5, -2.0F, new FabricItemSettings().group(ModItemGroups.WEAPONS)));
+
 	public static final Item MOLTEN_SWORD = ModItems.register("molten_sword", new MoltenSword(new FabricItemSettings()));
-	public static final Item RIFT_BATTLEAXE = ModItems.register("rift_battleaxe", new RiftBattleaxe(ModToolMaterials.MYSTITE, 29.0F, -3.25F, new FabricItemSettings().group(ModItemGroups.Weapons)));
 
+	public static final Item RIFT_BATTLEAXE = ModItems.register("rift_battleaxe", new RiftBattleaxe(new FabricItemSettings()));
+	public static final Item RIFT_DAGGER = ModItems.register("rift_dagger", new RiftDagger(new FabricItemSettings()));
+	public static final Item RIFT_GREATSWORD = ModItems.register("rift_greatsword", new RiftGreatsword(new FabricItemSettings()));
+	public static final Item RIFT_HALBERD = ModItems.register("rift_halberd", new RiftHalberd(new FabricItemSettings()));
 
-	public static final Item DUSKBREAKER = ModItems.register("duskbreaker", (Item)new Duskbreaker(BWMaterials.SILVER_TOOL, 5, -2.0F, new FabricItemSettings().group(ModItemGroups.Weapons)));
-	public static final Item BAN_HAMMER = ModItems.register("ban_hammer", (Item)new BanHammer(ToolMaterials.DIAMOND, Integer.MAX_VALUE, 16.0F, new FabricItemSettings().group(ModItemGroups.Weapons)));
+	public static final Item SENTIENT_KATANA = ModItems.register("sentient_katana", new SentientKatana(new FabricItemSettings()));
 
-
-
-	public static final Item MYSTITE_BOW = ModItems.register("mystite_bow", (Item)new MystiteBow(new Item.Settings()
-		.maxDamage(ModToolMaterials.MYSTITE.getDurability())
-		.fireproof()
-		.group(ModItemGroups.Weapons)
-	));
-
-	public static final Item ZEUS_BOW = register("zeus_bow", (Item)new ZeusBow(new Item.Settings()
-		.maxDamage(1337)
-		.group(ModItemGroups.Weapons)
-	));
+	public static final Item ZWEIHANDER = ModItems.register("zweihander", new Zweihander(new FabricItemSettings()));
 
 
 
@@ -103,12 +105,36 @@ public class ModItems {
 
 
 
-	public static final ArmorMaterial MYSTITE_ARMOR_MATERIAL = MystiteArmorMaterial.getInstance();
+	public static final Item MYSTITE_SHORTBOW = ModItems.register("mystite_shortbow", new MystiteShortbow(new FabricItemSettings()));
+	public static final Item MYSTITE_LONGBOW = ModItems.register("mystite_longbow", new MystiteLongbow(new FabricItemSettings()));
 
-	public static final Item MYSTITE_HELMET = ModItems.register("mystite_helmet", (Item)new MystiteArmor(MYSTITE_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Settings().fireproof().group(ModItemGroups.Equipment)));
-	public static final Item MYSTITE_CHESTPLATE = ModItems.register("mystite_chestplate", (Item)new MystiteArmor(MYSTITE_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Settings().fireproof().group(ModItemGroups.Equipment)));
-	public static final Item MYSTITE_LEGGINGS = ModItems.register("mystite_leggings", (Item)new MystiteArmor(MYSTITE_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Settings().fireproof().group(ModItemGroups.Equipment)));
-	public static final Item MYSTITE_BOOTS = ModItems.register("mystite_boots", (Item)new MystiteArmor(MYSTITE_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Settings().fireproof().group(ModItemGroups.Equipment)));
+	public static final Item ZEUS_BOW = register("zeus_bow", new ZeusBow(new FabricItemSettings()));
+
+
+
+
+
+
+
+
+	public static final Item MYSTITE_HELMET = ModItems.register("mystite_helmet", new MystiteArmor(ModArmorMaterials.MYSTITE, EquipmentSlot.HEAD, new Item.Settings().fireproof().group(ModItemGroups.Equipment)));
+	public static final Item MYSTITE_CHESTPLATE = ModItems.register("mystite_chestplate", new MystiteArmor(ModArmorMaterials.MYSTITE, EquipmentSlot.CHEST, new Item.Settings().fireproof().group(ModItemGroups.Equipment)));
+	public static final Item MYSTITE_LEGGINGS = ModItems.register("mystite_leggings", new MystiteArmor(ModArmorMaterials.MYSTITE, EquipmentSlot.LEGS, new Item.Settings().fireproof().group(ModItemGroups.Equipment)));
+	public static final Item MYSTITE_BOOTS = ModItems.register("mystite_boots", new MystiteArmor(ModArmorMaterials.MYSTITE, EquipmentSlot.FEET, new Item.Settings().fireproof().group(ModItemGroups.Equipment)));
+
+
+
+	public static final Item TURTLE_HELMET = ModItems.register("turtle_helmet", new TurtleArmor(ModArmorMaterials.TURTLE, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroups.Equipment)));
+	public static final Item TURTLE_CHESTPLATE = ModItems.register("turtle_chestplate", new TurtleArmor(ModArmorMaterials.TURTLE, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroups.Equipment)));
+	public static final Item TURTLE_LEGGINGS = ModItems.register("turtle_leggings", new TurtleArmor(ModArmorMaterials.TURTLE, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroups.Equipment)));
+	public static final Item TURTLE_BOOTS = ModItems.register("turtle_boots", new TurtleArmor(ModArmorMaterials.TURTLE, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroups.Equipment)));
+
+
+
+	public static final Item AXOLOTL_HELMET = ModItems.register("axolotl_helmet", new AxolotlArmor(ModArmorMaterials.AXOLOTL, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroups.Equipment)));
+	public static final Item AXOLOTL_CHESTPLATE = ModItems.register("axolotl_chestplate", new AxolotlArmor(ModArmorMaterials.AXOLOTL, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroups.Equipment)));
+	public static final Item AXOLOTL_LEGGINGS = ModItems.register("axolotl_leggings", new AxolotlArmor(ModArmorMaterials.AXOLOTL, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroups.Equipment)));
+	public static final Item AXOLOTL_BOOTS = ModItems.register("axolotl_boots", new AxolotlArmor(ModArmorMaterials.AXOLOTL, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroups.Equipment)));
 
 
 

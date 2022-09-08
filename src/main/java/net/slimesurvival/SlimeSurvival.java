@@ -10,7 +10,6 @@ import carpet.CarpetExtension;
 import carpet.CarpetServer;
 import carpet.script.CarpetExpression;
 import net.slimesurvival.addons.carpet.script.api.Advancements;
-import net.slimesurvival.common.event.*;
 import net.slimesurvival.common.registry.*;
 
 public class SlimeSurvival implements CarpetExtension, ModInitializer {
@@ -33,11 +32,10 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 		ModBlocks.register();
 		ModItems.register();
 		ModEnchantments.register();
-		ModStats.register();
 
 		ModPowers.register();
-		ShieldBlock.register();
 
+		ModItemTags.register();
 		ModRecipeSerializers.register();
 
 		ModDimensions.register();

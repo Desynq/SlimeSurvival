@@ -9,6 +9,7 @@
 		"BowItemMixin",
 		"ExplosionMixin",
 		"ItemStackMixin",
+		"LivingEntityMixin",
 		"PlayerEntityMixin",
 		"ShapelessRecipeMixin",
 		"ToolMaterialsMixin"

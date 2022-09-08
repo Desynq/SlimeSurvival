@@ -1,5 +1,7 @@
 {
+	"version": 1.1,
 	"name": "Slime Survival Lexicon",
-	"landing_text": "This is a very funny landing text entry lmao.",
-	"version": 1
+	"landing_text": "Welcome to hell.",
+	"custom_book_item": "slimesurvival:lexicon",
+	"dont_generate_book": true
 }

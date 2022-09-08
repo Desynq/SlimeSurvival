@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/bow",
+	"textures": {
+		"layer0": "slimesurvival:item/weapon/mystite_longbow/pulling_0"
+	}
+}

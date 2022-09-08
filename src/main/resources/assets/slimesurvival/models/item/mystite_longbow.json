@@ -1,0 +1,28 @@
+{
+	"parent": "minecraft:item/bow",
+	"textures": {
+		"layer0": "slimesurvival:item/weapon/mystite_longbow/standby"
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"pulling": 1
+			},
+			"model": "slimesurvival:item/mystite_longbow/pulling_0"
+		},
+		{
+			"predicate": {
+				"pulling": 1,
+				"pull": 0.65
+			},
+			"model": "slimesurvival:item/mystite_longbow/pulling_1"
+		},
+		{
+			"predicate": {
+				"pulling": 1,
+				"pull": 0.9
+			},
+			"model": "slimesurvival:item/mystite_longbow/pulling_2"
+		}
+	]
+}

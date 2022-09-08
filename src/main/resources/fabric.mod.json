@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "slimesurvival",
-	"version": "1.2.8",
+	"version": "1.2.9b",
 
 	"name": "Slime Survival",
 	"description": "Utilized for the Slime Survival Server",
@@ -30,21 +30,24 @@
 	"mixins": [
 		"slimesurvival.mixins.json",
 		"slimesurvival.bewitchment.mixins.json",
-		"slimesurvival.scarpet.mixins.json"
+		"slimesurvival.scarpet.mixins.json",
+		"slimesurvival.artifacts.mixins.json"
 	],
 
 	"depends": {
-		"fabricloader": ">=0.14.6",
+		"fabricloader": ">=0.14.9",
 		"fabric": "*",
 		"minecraft": "~1.18.2",
 		"java": ">=17",
+
+		"artifacts": ">=7.0.3",
+		"betterend": ">=1.1.1",
+		"bewitchment": ">=1.18-22",
+		"carpet": ">=1.4.69",
 		"cloth-config": ">=6.0.0",
+		"origins": ">=1.4.1",
 		"patchouli": "*",
 		"pehkui": ">=3.3.1",
-		"trinkets": ">=3.3.1",
-		"origins": ">=1.4.1",
-		"bewitchment": ">=1.18-22",
-		"betterend": ">=1.1.1",
-		"carpet": ">=1.4.69"
+		"trinkets": ">=3.3.1"
 	}
 }

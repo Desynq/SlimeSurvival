@@ -10,6 +10,7 @@
 			"slimesurvival:mana/regen_amount": 0.05,
 			"slimesurvival:mana/regen_interval": 1.0,
 
+			"slimesurvival:random_crit/chance": 0.01,
 			"slimesurvival:random_crit/multiplier": 1.0,
 
 			"slimesurvival:dodge_chance": 0.01,

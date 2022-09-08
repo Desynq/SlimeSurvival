@@ -1,5 +1,7 @@
 package net.slimesurvival.common.armor;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 import com.google.common.collect.ImmutableMultimap;
@@ -7,14 +9,19 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap.Builder;
 
 import net.minecraft.block.DispenserBlock;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.ItemStack;
+import net.slimesurvival.common.interfaces.InitialStackStateProvider;
 
-public class MystiteArmor extends ArmorItem {
+public class MystiteArmor extends ArmorItem implements InitialStackStateProvider {
 	private static final UUID[] MODIFIERS = new UUID[] {
 		UUID.fromString("11FD6B5B-87FD-426A-98D6-E9F4FB5BE8A1"),
 		UUID.fromString("A68944C6-1820-4DC5-AD6C-EFA834F5A55D"),
@@ -46,9 +53,31 @@ public class MystiteArmor extends ArmorItem {
 		this.attributeModifiers = builder.build();
 	}
 
+
+
+
+
+	@Override
+	public void initializeState(ItemStack stack) {
+		Map<Enchantment, Integer> defaultEnchants = new HashMap<>();
+
+		defaultEnchants.put(Enchantments.PROTECTION, 5);
+
+		EnchantmentHelper.set(defaultEnchants, stack);
+	}
+
+
+
+
+
 	@Override
 	public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
 		return slot == this.slot ? this.attributeModifiers : super.getAttributeModifiers(slot);
+	}
+
+	@Override
+	public boolean hasGlint(ItemStack itemStack) {
+		return false;
 	}
 
 }

@@ -25,6 +25,7 @@ repositories {
 
 
 
+	maven { url 'https://maven.kosmx.dev/' } // PlayerAnimation Lib
 	maven {
 		url 'https://masa.dy.fi/maven'
 	}
@@ -109,6 +110,9 @@ dependencies {
 	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
+
+	modApi include("com.github.ZsoltMolnarrr:TinyConfig:${project.tiny_config_version}")
+
 
 	api("org.apache.commons:commons-text:1.9")
 
@@ -228,6 +232,21 @@ dependencies {
 
 	// https://www.curseforge.com/minecraft/mc-mods/alloy-forgery/files
 	modImplementation "curse.maven:alloy-forgery-438718:3758381"
+
+
+
+
+	// https://www.curseforge.com/minecraft/mc-mods/artifacts-fabric/files
+	modImplementation "curse.maven:artifacts-fabric-401236:3756730"
+
+
+
+
+	// https://www.curseforge.com/minecraft/mc-mods/playeranimator
+	modImplementation include("dev.kosmx.player-anim:player-animation-lib-fabric:0.3.0")
+
+	// https://www.curseforge.com/minecraft/mc-mods/better-combat-by-daedelus/files
+	modImplementation "curse.maven:better-combat-by-daedelus-639842:3953519"
 
 
 

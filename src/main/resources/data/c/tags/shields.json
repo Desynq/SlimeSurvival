@@ -1,0 +1,8 @@
+{
+	"replace": false,
+	"values": [
+		"artifacts:umbrella",
+		"slimesurvival:dragon_shield",
+		"slimesurvival:netherite_shield"
+	]
+}
