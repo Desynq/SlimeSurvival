@@ -32,6 +32,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeInstance;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
@@ -86,15 +87,20 @@ public class EntityValueMixin extends HashMap<String, BiFunction<Entity, Value, 
 			if (!(e instanceof LivingEntity) || a == null || !(a instanceof ListValue)) return Value.NULL;
 			List<Value> args = ((ListValue) a).getItems();
 
-			if (args.size() != 2) throw new InternalExpressionException("'has_attribute_modifier' needs two arguments");
+			if (args.size() != 2) throw new InternalExpressionException("'attribute_modifier' needs two arguments");
 
 			Identifier id = InputValidator.identifierOf(args.get(0).getString());
 			UUID uuid = UUID.fromString(args.get(1).getString());
-			EntityAttribute attribute = Registry.ATTRIBUTE.get(id);
 
 
-			EntityAttributeInstance attributeInstance = ((LivingEntity)e).getAttributeInstance(attribute);
-			return new NumericValue(attributeInstance.getModifier(uuid).getValue());
+			EntityAttribute attribute;
+			EntityAttributeInstance attributeInstance;
+			EntityAttributeModifier attributeModifier;
+
+			if ((attribute = Registry.ATTRIBUTE.get(id)) != null && (attributeInstance = ((LivingEntity) e).getAttributeInstance(attribute)) != null && (attributeModifier = attributeInstance.getModifier(uuid)) != null) {
+				return new NumericValue(attributeModifier.getValue());
+			}
+			return Value.NULL;
 		});
 
 
