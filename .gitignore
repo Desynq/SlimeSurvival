@@ -40,3 +40,4 @@ run/
 
 export_client.bat
 export_server.bat
+mklink.bat

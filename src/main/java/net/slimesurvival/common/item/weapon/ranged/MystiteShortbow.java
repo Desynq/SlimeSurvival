@@ -6,12 +6,13 @@ import java.util.Map;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
+import net.minecraft.item.BowItem;
 import net.minecraft.item.ItemStack;
+import net.projectiledamage.api.IProjectileWeapon;
 import net.slimesurvival.common.interfaces.InitialStackStateProvider;
-import net.slimesurvival.common.item.CustomBowItem;
 import net.slimesurvival.common.registry.ModItemGroups;
 
-public class MystiteShortbow extends CustomBowItem implements InitialStackStateProvider {
+public class MystiteShortbow extends BowItem implements InitialStackStateProvider {
 	
 	public MystiteShortbow(Settings settings) {
 		super(settings
@@ -19,13 +20,7 @@ public class MystiteShortbow extends CustomBowItem implements InitialStackStateP
 			.fireproof()
 			.group(ModItemGroups.RANGED_WEAPONS)
 		);
-	}
-
-
-
-	@Override
-	public double getBaseProjectileDamage() {
-		return 2.0;
+		((IProjectileWeapon) this).setProjectileDamage(15.0f);
 	}
 
 
