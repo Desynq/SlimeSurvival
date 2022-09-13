@@ -20,6 +20,9 @@ import net.minecraft.item.ItemStack;
 @Mixin(FeralClawsItem.class)
 public class FeralClawsItemMixin extends CurioItem {
 
+	/* (non-Javadoc)
+	 * @see artifacts.common.item.curio.CurioItem#applyModifiers(net.minecraft.item.ItemStack, dev.emi.trinkets.api.SlotReference, net.minecraft.entity.LivingEntity, java.util.UUID)
+	 */
 	@Overwrite
 	protected Multimap<EntityAttribute, EntityAttributeModifier> applyModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, UUID uuid) {
 		Multimap<EntityAttribute, EntityAttributeModifier> result = super.applyModifiers(stack, slot, entity, uuid);
