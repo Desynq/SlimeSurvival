@@ -7,7 +7,7 @@ import net.slimesurvival.common.registry.ModToolMaterials;
 public class RiftDagger extends SwordItem {
 
 	public RiftDagger(Settings settings) {
-		super(ModToolMaterials.MYSTITE, 9, 1.0F, settings
+		super(ModToolMaterials.MYSTITE, 14, 1.0F, settings
 			.group(ModItemGroups.WEAPONS)
 			.fireproof()
 		);

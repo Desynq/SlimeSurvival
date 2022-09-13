@@ -27,6 +27,7 @@ import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import io.github.apace100.origins.origin.OriginLayers;
 import io.github.apace100.origins.registry.ModComponents;
+import net.bettercombat.logic.PlayerAttackHelper;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -46,7 +47,7 @@ import net.minecraft.util.registry.Registry;
 @Mixin(targets = "carpet/script/value/EntityValue$1", remap = false)
 public class EntityValueMixin extends HashMap<String, BiFunction<Entity, Value, Value>> {
 	@Inject(method = "<init>", at = @At("RETURN"), remap = false)
-	private void addOriginSupport(CallbackInfo ci) {
+	private void addFeatureAccessors(CallbackInfo ci) {
 
 		put("origin", (e, a) -> {
 			if (e instanceof PlayerEntity) {
@@ -55,6 +56,7 @@ public class EntityValueMixin extends HashMap<String, BiFunction<Entity, Value, 
 			}
 			return Value.NULL;
 		});
+
 
 
 		put("advancement", (e, a) -> {
@@ -69,7 +71,6 @@ public class EntityValueMixin extends HashMap<String, BiFunction<Entity, Value, 
 
 
 
-
 		put("owner", (e, a) -> {
 			if (e instanceof TameableEntity tameableEntity) {
 				Entity owner = tameableEntity.getOwner();
@@ -81,6 +82,7 @@ public class EntityValueMixin extends HashMap<String, BiFunction<Entity, Value, 
 			}
 			return Value.NULL;
 		});
+
 
 
 		put("attribute_modifier", (e, a) -> {
@@ -102,6 +104,27 @@ public class EntityValueMixin extends HashMap<String, BiFunction<Entity, Value, 
 			}
 			return Value.NULL;
 		});
+
+
+
+
+
+		put("dual_wielding", (e, a) -> {
+			if (e instanceof PlayerEntity p) {
+				return BooleanValue.of(PlayerAttackHelper.isDualWielding(p));
+			}
+			return Value.NULL;
+		});
+
+		put("two_handed", (e, a) -> {
+			if (e instanceof PlayerEntity p) {
+				return BooleanValue.of(PlayerAttackHelper.isTwoHandedWielding(p));
+			}
+			return Value.NULL;
+		});
+
+
+
 
 
 		put("trinkets", (e, a) -> {

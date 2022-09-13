@@ -16,7 +16,7 @@ import net.slimesurvival.common.registry.ModToolMaterials;
 public class ButterflyKnife extends SwordItem implements ExtendableTooltipProvider {
 
 	public ButterflyKnife(Settings settings) {
-		super(ModToolMaterials.MYSTITE, 4, 0.0F, settings
+		super(ModToolMaterials.MYSTITE, 5, 2.0F, settings
 			.group(ModItemGroups.WEAPONS)
 		);
 	}

@@ -301,6 +301,12 @@
 
 
 
+
+
+
+
+
+
 	"item.slimesurvival.winter_coat": "Winter Coat",
 	"item.slimesurvival.winter_coat.details": "§7Made from polar bear fur, fox hide, and woven thread.\n§7It also provides a moderate amount of insulation",
 
@@ -328,6 +334,10 @@
 
 	"item.slimesurvival.tactical_glove": "Tactical Glove",
 	"item.slimesurvival.tactical_glove.details": "§7Provides improved ergonomics, reducing recoil and\n§7improving accuracy for guns at the cost of slower hand movement.",
+
+
+	"item.slimesurvival.archery_goggles": "Archery Goggles",
+	"item.slimesurvival.archery_goggles.details": "§7Provides better optical alignment to your target, vastly improving\n§7ranged damage at the cost of more awkward melee attacks.",
 
 
 
