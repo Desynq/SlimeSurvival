@@ -35,8 +35,12 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 
 		ModPowers.register();
 
+
+		// Data-Driven
 		ModItemTags.register();
 		ModRecipeSerializers.register();
+
+		ModLootHandler.register();
 
 		ModDimensions.register();
 		ModDimensionTypes.register();
