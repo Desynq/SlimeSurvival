@@ -38,8 +38,8 @@ public class EntityValueModifierMixin extends HashMap<String, BiConsumer<Entity,
 			if(vals.size() == 2) {
 				switch (source) {
 					case "basic": {
-						livingEntity.damage(ModDamageSources.BASIC_DAMAGE, amount);
 						livingEntity.timeUntilRegen = 0;
+						livingEntity.damage(ModDamageSources.BASIC_DAMAGE, amount);
 						break;
 					}
 					case "generic": {

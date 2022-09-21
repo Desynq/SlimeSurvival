@@ -17,7 +17,7 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
-import net.projectiledamage.api.AdditionalEntityAttributes;
+import net.projectiledamage.api.EntityAttributes_ProjectileDamage;
 import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
 import net.slimesurvival.common.registry.ModItemGroups;
 
@@ -39,7 +39,7 @@ public class ArcheryGoggles extends TrinketItem implements ExtendableTooltipProv
 
 		modifiers.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(uuid, "Archery Goggles", -0.25, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
 		modifiers.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(uuid, "Archery Goggles", -0.25, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
-		modifiers.put(AdditionalEntityAttributes.GENERIC_PROJECTILE_DAMAGE, new EntityAttributeModifier(uuid, "Archery Goggles", 0.5, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
+		modifiers.put(EntityAttributes_ProjectileDamage.GENERIC_PROJECTILE_DAMAGE, new EntityAttributeModifier(uuid, "Archery Goggles", 0.5, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
 
 		return modifiers;
 	}

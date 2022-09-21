@@ -1,0 +1,19 @@
+{
+	"parent": "bettercombat:cutlass",
+	"attributes": {
+		"attack_range": 2.4,
+		"category": "cutlass",
+		"attacks": [
+			{
+				"swing_sound": {
+					"id": "bettercombat:claymore_swing"
+				}
+			},
+			{
+				"swing_sound": {
+					"id": "bettercombat:claymore_swing"
+				}
+			}
+		]
+	}
+}

@@ -246,7 +246,7 @@ dependencies {
 	modImplementation include("dev.kosmx.player-anim:player-animation-lib-fabric:0.3.5")
 
 	// https://github.com/ZsoltMolnarrr/ProjectileDamage/tree/1.18.2
-	modImplementation "com.github.ZsoltMolnarrr:ProjectileDamage:1.18.2-1.0.7"
+	modImplementation "curse.maven:projectile-damage-attribute-643780:${projectile_damage_version}"
 
 	// https://www.curseforge.com/minecraft/mc-mods/better-combat-by-daedelus/files
 	modImplementation "curse.maven:better-combat-by-daedelus-639842:3971350"

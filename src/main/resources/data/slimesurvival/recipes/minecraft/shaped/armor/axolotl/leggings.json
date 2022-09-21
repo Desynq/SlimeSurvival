@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"000",
+		"0 0",
+		"0 0"
+	],
+	"key": {
+		"0": {
+			"item": "slimesurvival:axolotl_gills"
+		}
+	},
+	"result": {
+		"item": "slimesurvival:axolotl_leggings",
+		"count": 1
+	}
+}
