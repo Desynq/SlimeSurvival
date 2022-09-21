@@ -11,7 +11,7 @@ import net.minecraft.util.math.MathHelper;
 public class PlayerEntityMixin {
 	
 	@ModifyArg(method = "damageArmor(Lnet/minecraft/entity/damage/DamageSource;F)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerInventory;damageArmor(Lnet/minecraft/entity/damage/DamageSource;F[I)V"), index = 1)
-	private float injected(float x) {
+	private float reducedArmorDamage(float x) {
 		return MathHelper.floor(x / 4);
 	}
 }
