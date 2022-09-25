@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "slimesurvival",
-	"version": "1.3.0+build.3",
+	"version": "1.3.0+build.4",
 
 	"name": "Slime Survival",
 	"description": "Utilized for the Slime Survival Server",
@@ -29,6 +29,7 @@
 	},
 	"mixins": [
 		"slimesurvival.mixins.json",
+		"slimesurvival.besmirchment.mixins.json",
 		"slimesurvival.bewitchment.mixins.json",
 		"slimesurvival.scarpet.mixins.json",
 		"slimesurvival.artifacts.mixins.json"

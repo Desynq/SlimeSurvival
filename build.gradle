@@ -221,6 +221,8 @@ dependencies {
 	// https://www.curseforge.com/minecraft/mc-mods/bewitchment/files
 	modImplementation "curse.maven:bewitchment-394915:3830795"
 
+	modImplementation "curse.maven:besmirchment-2-542196:${besmirchment_version}"
+
 	// https://www.curseforge.com/minecraft/mc-mods/betterend/files
 	modImplementation "curse.maven:betterend-413596:3814370"
 
@@ -249,7 +251,7 @@ dependencies {
 	modImplementation "curse.maven:projectile-damage-attribute-643780:${projectile_damage_version}"
 
 	// https://www.curseforge.com/minecraft/mc-mods/better-combat-by-daedelus/files
-	modImplementation "curse.maven:better-combat-by-daedelus-639842:3971350"
+	modImplementation "curse.maven:better-combat-by-daedelus-639842:${bettercombat_version}"
 
 
 
