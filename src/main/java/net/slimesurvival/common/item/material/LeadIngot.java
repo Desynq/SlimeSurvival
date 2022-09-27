@@ -19,7 +19,7 @@ import net.slimesurvival.common.registry.ModItemGroups;
 public class LeadIngot extends Item implements ExtendableTooltipProvider {
 
 	public LeadIngot(Settings settings) {
-		super(settings.group(ModItemGroups.Materials).maxCount(32).food(new FoodComponent.Builder()
+		super(settings.group(ModItemGroups.MATERIALS).maxCount(32).food(new FoodComponent.Builder()
 			.hunger(0)
 			.saturationModifier(0f)
 			.alwaysEdible()

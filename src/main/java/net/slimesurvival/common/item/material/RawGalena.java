@@ -15,7 +15,7 @@ import net.slimesurvival.common.registry.ModItemGroups;
 public class RawGalena extends Item implements ExtendableTooltipProvider {
 
 	public RawGalena(Settings settings) {
-		super(settings.group(ModItemGroups.Materials).maxCount(32));
+		super(settings.group(ModItemGroups.MATERIALS).maxCount(32));
 	}
 
 

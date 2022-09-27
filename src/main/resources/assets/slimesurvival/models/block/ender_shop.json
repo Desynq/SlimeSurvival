@@ -1,0 +1,8 @@
+{
+	"parent": "minecraft:block/cube_bottom_top",
+	"textures": {
+		"top": "slimesurvival:block/ender_shop/top",
+		"bottom": "slimesurvival:block/ender_shop/bottom",
+		"side": "slimesurvival:block/ender_shop/side"
+	}
+}

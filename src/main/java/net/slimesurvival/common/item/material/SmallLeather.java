@@ -6,6 +6,6 @@ import net.slimesurvival.common.registry.ModItemGroups;
 public class SmallLeather extends Item {
 
 	public SmallLeather(Settings settings) {
-		super(settings.group(ModItemGroups.Materials).maxCount(32));
+		super(settings.group(ModItemGroups.MATERIALS).maxCount(32));
 	}
 }

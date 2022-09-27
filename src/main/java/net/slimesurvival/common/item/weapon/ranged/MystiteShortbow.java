@@ -20,7 +20,7 @@ public class MystiteShortbow extends BowItem implements InitialStackStateProvide
 			.fireproof()
 			.group(ModItemGroups.RANGED_WEAPONS)
 		);
-		((IProjectileWeapon) this).setProjectileDamage(15.0f);
+		((IProjectileWeapon) this).setProjectileDamage(10.0f);
 	}
 
 

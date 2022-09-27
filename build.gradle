@@ -14,47 +14,22 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-	maven {
-		name "Curse Maven"
-		url "https://www.cursemaven.com"
-	}
-	maven {
-		name "CurseForge"
-		url "https://minecraft.curseforge.com/api/maven"
-	}
-
-
-
+	maven { url 'https://masa.dy.fi/maven' } // Carpet
 	maven { url 'https://maven.kosmx.dev/' } // PlayerAnimation Lib
-	maven {
-		url 'https://masa.dy.fi/maven'
-	}
-	maven {
-		url "https://maven.shedaniel.me/"
-	}
-	maven {
-		url "https://maven.wispforest.io/"
-	}
-	maven {
-		name "Wood API"
-		url "https://maven.terraformersmc.com/"
-	}
-	maven {
-		name "Ladysnake Mods"
-		url "https://ladysnake.jfrog.io/artifactory/mods"
-	}
-	maven {
-		url 'https://maven.blamejared.com'
-	}
-	maven {
-		url 'https://jitpack.io'
-	}
-	maven {
-		url 'https://api.modrinth.com/maven'
-		content {
-			includeGroup "modrinth.maven"
-		}
-	}
+	maven { url "https://jitpack.io" } // Github Repository Releases
+	maven { url "https://ladysnake.jfrog.io/artifactory/mods" }
+	maven { url "https://maven.blamejared.com" } // Jared & Darkhax
+	maven { url "https://maven.dblsaiko.net/" }
+	maven { url "https://maven.florens.be" } // ExpandAbility
+	maven { url "https://maven.gegy.dev/" }
+	maven { url "https://maven.ryanliptak.com/" } // AppleSkin
+	maven { url "https://maven.shedaniel.me/" } // REI
+	maven { url "https://maven.terraformersmc.com/" } // Wood API
+	maven { url "https://maven.wispforest.io/" } // OwO Lib
+	maven { url "https://oss.sonatype.org/content/repositories/snapshots" } // Impersonate
+
+
+
 	maven {
 		url "https://maven.jamieswhiteshirt.com/libs-release"
 		content {
@@ -62,29 +37,17 @@ repositories {
 		}
 	}
 	maven {
-		name "Impersonate"
-		url "https://oss.sonatype.org/content/repositories/snapshots"
-	}
-	maven {
-		name "dblsaiko"
-		url "https://maven.dblsaiko.net/"
-	}
-	maven {
 		name "Cotton"
 		url "http://server.bbkr.space:8081/artifactory/libs-release/"
 		allowInsecureProtocol = true
 	}
+
+
+
+	maven { url "https://www.cursemaven.com" } // Curse Maven
+	maven { url "https://minecraft.curseforge.com/api/maven" } // CurseForge Maven API
 	maven {
-		name "AppleSkin"
-		url "https://maven.ryanliptak.com/"
-	}
-	maven {
-		name "ExpandAbility"
-		url "https://maven.florens.be"
-	}
-	maven {
-		name = "Modrinth"
-		url = "https://api.modrinth.com/maven"
+		url "https://api.modrinth.com/maven"
 		content {
 			includeGroup "maven.modrinth"
 		}
@@ -141,9 +104,6 @@ dependencies {
 
 
 	modImplementation "maven.modrinth:data-attributes:1.1.11"
-
-
-
 
 
 
@@ -229,11 +189,12 @@ dependencies {
 	// https://www.curseforge.com/minecraft/mc-mods/alloy-forgery/files
 	modImplementation "curse.maven:alloy-forgery-438718:3758381"
 
+	// https://www.curseforge.com/minecraft/mc-mods/create-fabric/files
+	// modImplementation "curse.maven:create-fabric-624165:${create_fabric_version}"
+	//* Too lazy to import all its dependencies
+
 	// https://www.curseforge.com/minecraft/mc-mods/fabricae-ex-nihilo/files
 	modImplementation "curse.maven:fabricae-ex-nihilo-596911:3844360"
-
-	// https://www.curseforge.com/minecraft/mc-mods/alloy-forgery/files
-	modImplementation "curse.maven:alloy-forgery-438718:3758381"
 
 
 
@@ -279,6 +240,9 @@ dependencies {
 
 	// Workspace
 	modLocalRuntime "com.ptsmods:devlogin:2.0"
+	modLocalRuntime ("supercoder79:databreaker:0.2.9") {
+		exclude module: "fabric-loader"
+	}
 }
 
 processResources {

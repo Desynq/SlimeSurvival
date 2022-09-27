@@ -25,7 +25,7 @@ public class ArcheryGoggles extends TrinketItem implements ExtendableTooltipProv
 
 	public ArcheryGoggles(Settings settings) {
 		super(settings
-			.group(ModItemGroups.Equipment)
+			.group(ModItemGroups.TRINKETS)
 			.maxCount(1)
 		);
 	}

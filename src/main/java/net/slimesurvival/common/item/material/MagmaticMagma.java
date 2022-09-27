@@ -22,7 +22,7 @@ import net.slimesurvival.common.registry.ModItemGroups;
 public class MagmaticMagma extends Item implements ExtendableTooltipProvider, InitialStackStateProvider {
 
 	public MagmaticMagma(Settings settings) {
-		super(settings.group(ModItemGroups.Materials).maxCount(1));
+		super(settings.group(ModItemGroups.MATERIALS).maxCount(1));
 	}
 
 

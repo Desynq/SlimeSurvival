@@ -73,15 +73,17 @@
 
 
 
-	"block.slimesurvival.gmod_block": "GMod Block",
+	"block.slimesurvival.gmod_block": "§5§kGMod Block",
 
-	"block.slimesurvival.solid_black": "Solid Black",
-	"block.slimesurvival.solid_blue": "Solid Blue",
-	"block.slimesurvival.solid_green": "Solid Green",
-	"block.slimesurvival.solid_magenta": "Solid Magenta",
-	"block.slimesurvival.solid_red": "Solid Red",
-	"block.slimesurvival.solid_white": "Solid White",
-	"block.slimesurvival.solid_yellow": "Solid Yellow",
+	"block.slimesurvival.solid_black": "§0Solid Black",
+	"block.slimesurvival.solid_blue": "§1Solid Blue",
+	"block.slimesurvival.solid_green": "§2Solid Green",
+	"block.slimesurvival.solid_magenta": "§dSolid Magenta",
+	"block.slimesurvival.solid_red": "§4Solid Red",
+	"block.slimesurvival.solid_white": "§fSolid White",
+	"block.slimesurvival.solid_yellow": "§eSolid Yellow",
+
+	"block.slimesurvival.ender_shop": "§5Ender Shop",
 
 	"block.slimesurvival.fake_tnt": "Fake TNT",
 
@@ -116,6 +118,16 @@
 	"item.slimesurvival.lead_ingot": "Lead Ingot",
 	"item.slimesurvival.quicksilver": "Quicksilver",
 	"item.slimesurvival.small_leather": "Small Leather",
+
+	"item.slimesurvival.niter": "Niter",
+
+
+
+	"item.slimesurvival.raw_galena": "Raw Galena",
+	"item.slimesurvival.raw_galena_piece": "Raw Galena Piece",
+	"item.slimesurvival.raw_silver_piece": "Raw Silver Piece",
+
+
 
 	"item.slimesurvival.copper_dust": "Copper Dust",
 	"item.slimesurvival.niter_dust": "Niter Dust",
@@ -262,6 +274,15 @@
 
 
 	"item.slimesurvival.bolt_action_rifle": "Bolt Action Rifle",
+
+
+
+
+
+	"item.slimesurvival.heavy_rifle_ammo": "Heavy Rifle Ammo",
+	"item.slimesurvival.rifle_ammo": "Rifle Ammo",
+	"item.slimesurvival.pistol_ammo": "Pistol Ammo",
+	"item.slimesurvival.shotgun_ammo": "Shotgun Ammo",
 
 
 

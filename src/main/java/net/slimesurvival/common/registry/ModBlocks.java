@@ -21,6 +21,10 @@ public class ModBlocks {
 	public static final Block SOLID_YELLOW = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(1.8F));
 
 
+
+	public static final Block ENDER_SHOP = new Block(FabricBlockSettings.of(Material.REPAIR_STATION).requiresTool().strength(10.0F, 10.0F));
+
+
 	// Like TNT, but it has no functionality and serves purely as a decorational block in builds
 	public static final Block FAKE_TNT = new Block(FabricBlockSettings.of(Material.TNT).breakInstantly().sounds(BlockSoundGroup.GRASS));
 
@@ -39,6 +43,8 @@ public class ModBlocks {
 		Registry.register(Registry.BLOCK, SlimeSurvival.ID("solid_red"), SOLID_RED);
 		Registry.register(Registry.BLOCK, SlimeSurvival.ID("solid_white"), SOLID_WHITE);
 		Registry.register(Registry.BLOCK, SlimeSurvival.ID("solid_yellow"), SOLID_YELLOW);
+
+		Registry.register(Registry.BLOCK, SlimeSurvival.ID("ender_shop"), ENDER_SHOP);
 
 		Registry.register(Registry.BLOCK, SlimeSurvival.ID("fake_tnt"), FAKE_TNT);
 	

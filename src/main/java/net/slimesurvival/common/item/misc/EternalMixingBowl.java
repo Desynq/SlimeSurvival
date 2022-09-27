@@ -16,7 +16,7 @@ public class EternalMixingBowl extends MixingBowlItem implements ExtendableToolt
 
 	public EternalMixingBowl(Settings settings) {
 		super(settings
-			.group(ModItemGroups.Materials)
+			.group(ModItemGroups.MATERIALS)
 			.fireproof()
 			.maxCount(1)
 		);

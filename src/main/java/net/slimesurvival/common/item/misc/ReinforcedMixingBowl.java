@@ -16,7 +16,7 @@ public class ReinforcedMixingBowl extends MixingBowlItem implements ExtendableTo
 
 	public ReinforcedMixingBowl(Settings settings) {
 		super(settings
-			.group(ModItemGroups.Materials)
+			.group(ModItemGroups.MATERIALS)
 			.maxDamage(8192)
 			.fireproof()
 		);

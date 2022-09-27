@@ -26,7 +26,7 @@ public class TacticalGlove extends TrinketItem implements ExtendableTooltipProvi
 
 	public TacticalGlove(Settings settings) {
 		super(settings
-			.group(ModItemGroups.Equipment)
+			.group(ModItemGroups.TRINKETS)
 			.maxCount(1)
 		);
 	}

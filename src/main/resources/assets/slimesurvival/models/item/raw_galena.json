@@ -1,6 +1,6 @@
 {
 	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "slimesurvival:item/material/raw_galena"
+		"layer0": "slimesurvival:item/material/raw_ore/raw_galena"
 	}
 }

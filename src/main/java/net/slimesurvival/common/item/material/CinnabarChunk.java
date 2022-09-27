@@ -15,7 +15,7 @@ import net.slimesurvival.common.registry.ModItemGroups;
 public class CinnabarChunk extends Item implements ExtendableTooltipProvider {
 
 	public CinnabarChunk(Settings settings) {
-		super(settings.group(ModItemGroups.Materials).maxCount(32));
+		super(settings.group(ModItemGroups.MATERIALS).maxCount(32));
 	}
 
 

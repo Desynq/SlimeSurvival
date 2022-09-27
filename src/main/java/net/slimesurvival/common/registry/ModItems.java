@@ -42,12 +42,12 @@ public class ModItems {
 
 
 
-	public static final Item POLAR_BEAR_FUR = ModItems.register("polar_bear_fur", new PolarBearFur(new FabricItemSettings().group(ModItemGroups.Materials).maxCount(32)));
-	public static final Item AXOLOTL_GILLS = ModItems.register("axolotl_gills", new AxolotlGills(new FabricItemSettings().group(ModItemGroups.Materials).maxCount(32)));
-	public static final Item MYSTITE_INGOT = ModItems.register("mystite_ingot", new MystiteIngot(new FabricItemSettings().group(ModItemGroups.Materials).maxCount(32)));
-	public static final Item MYSTITE_TOOL_ROD = ModItems.register("mystite_tool_rod", new MystiteToolRod(new FabricItemSettings().group(ModItemGroups.Materials).maxCount(32)));
-	public static final Item MYSTITE_ORE = ModItems.register("mystite_ore", new MystiteOre(new FabricItemSettings().group(ModItemGroups.Materials).maxCount(32)));
-	public static final Item ENDERIUM_ALLOY = ModItems.register("enderium_alloy", new EnderiumAlloy(new FabricItemSettings().group(ModItemGroups.Materials).maxCount(32)));
+	public static final Item POLAR_BEAR_FUR = ModItems.register("polar_bear_fur", new PolarBearFur(new FabricItemSettings().group(ModItemGroups.MATERIALS).maxCount(32)));
+	public static final Item AXOLOTL_GILLS = ModItems.register("axolotl_gills", new AxolotlGills(new FabricItemSettings().group(ModItemGroups.MATERIALS).maxCount(32)));
+	public static final Item MYSTITE_INGOT = ModItems.register("mystite_ingot", new MystiteIngot(new FabricItemSettings().group(ModItemGroups.MATERIALS).maxCount(32)));
+	public static final Item MYSTITE_TOOL_ROD = ModItems.register("mystite_tool_rod", new MystiteToolRod(new FabricItemSettings().group(ModItemGroups.MATERIALS).maxCount(32)));
+	public static final Item MYSTITE_ORE = ModItems.register("mystite_ore", new MystiteOre(new FabricItemSettings().group(ModItemGroups.MATERIALS).maxCount(32)));
+	public static final Item ENDERIUM_ALLOY = ModItems.register("enderium_alloy", new EnderiumAlloy(new FabricItemSettings().group(ModItemGroups.MATERIALS).maxCount(32)));
 
 	public static final Item CINNABAR = ModItems.register("cinnabar", new Cinnabar(new FabricItemSettings()));
 	public static final Item CINNABAR_CHUNK = ModItems.register("cinnabar_chunk", new CinnabarChunk(new FabricItemSettings()));
@@ -58,8 +58,12 @@ public class ModItems {
 	public static final Item NITER = ModItems.register("niter", new Niter(new FabricItemSettings()));
 	public static final Item QUICKSILVER = ModItems.register("quicksilver", new Quicksilver(new FabricItemSettings()));
 	public static final Item RAW_GALENA = ModItems.register("raw_galena", new RawGalena(new FabricItemSettings()));
-	public static final Item RAW_GALENA_PIECE = ModItems.register("raw_galena_piece", new RawGalenaPiece(new FabricItemSettings()));
 	public static final Item SMALL_LEATHER = ModItems.register("small_leather", new SmallLeather(new FabricItemSettings()));
+
+
+	public static final Item RAW_GALENA_PIECE = ModItems.register("raw_galena_piece", new RawOrePieceItem(new FabricItemSettings()));
+	public static final Item RAW_SILVER_PIECE = ModItems.register("raw_silver_piece", new RawOrePieceItem(new FabricItemSettings()));
+
 
 	public static final Item COPPER_DUST = ModItems.register("copper_dust", new DustItem(new FabricItemSettings()));
 	public static final Item NITER_DUST = ModItems.register("niter_dust", new DustItem(new FabricItemSettings()));
@@ -117,35 +121,35 @@ public class ModItems {
 
 
 
-	public static final Item MYSTITE_HELMET = ModItems.register("mystite_helmet", new MystiteArmor(ModArmorMaterials.MYSTITE, EquipmentSlot.HEAD, new Item.Settings().fireproof().group(ModItemGroups.Equipment)));
-	public static final Item MYSTITE_CHESTPLATE = ModItems.register("mystite_chestplate", new MystiteArmor(ModArmorMaterials.MYSTITE, EquipmentSlot.CHEST, new Item.Settings().fireproof().group(ModItemGroups.Equipment)));
-	public static final Item MYSTITE_LEGGINGS = ModItems.register("mystite_leggings", new MystiteArmor(ModArmorMaterials.MYSTITE, EquipmentSlot.LEGS, new Item.Settings().fireproof().group(ModItemGroups.Equipment)));
-	public static final Item MYSTITE_BOOTS = ModItems.register("mystite_boots", new MystiteArmor(ModArmorMaterials.MYSTITE, EquipmentSlot.FEET, new Item.Settings().fireproof().group(ModItemGroups.Equipment)));
+	public static final Item MYSTITE_HELMET = ModItems.register("mystite_helmet", new MystiteArmor(ModArmorMaterials.MYSTITE, EquipmentSlot.HEAD, new Item.Settings().fireproof().group(ModItemGroups.EQUIPMENT)));
+	public static final Item MYSTITE_CHESTPLATE = ModItems.register("mystite_chestplate", new MystiteArmor(ModArmorMaterials.MYSTITE, EquipmentSlot.CHEST, new Item.Settings().fireproof().group(ModItemGroups.EQUIPMENT)));
+	public static final Item MYSTITE_LEGGINGS = ModItems.register("mystite_leggings", new MystiteArmor(ModArmorMaterials.MYSTITE, EquipmentSlot.LEGS, new Item.Settings().fireproof().group(ModItemGroups.EQUIPMENT)));
+	public static final Item MYSTITE_BOOTS = ModItems.register("mystite_boots", new MystiteArmor(ModArmorMaterials.MYSTITE, EquipmentSlot.FEET, new Item.Settings().fireproof().group(ModItemGroups.EQUIPMENT)));
 
 
 
-	public static final Item TURTLE_HELMET = ModItems.register("turtle_helmet", new TurtleArmor(ModArmorMaterials.TURTLE, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroups.Equipment)));
-	public static final Item TURTLE_CHESTPLATE = ModItems.register("turtle_chestplate", new TurtleArmor(ModArmorMaterials.TURTLE, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroups.Equipment)));
-	public static final Item TURTLE_LEGGINGS = ModItems.register("turtle_leggings", new TurtleArmor(ModArmorMaterials.TURTLE, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroups.Equipment)));
-	public static final Item TURTLE_BOOTS = ModItems.register("turtle_boots", new TurtleArmor(ModArmorMaterials.TURTLE, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroups.Equipment)));
+	public static final Item TURTLE_HELMET = ModItems.register("turtle_helmet", new TurtleArmor(ModArmorMaterials.TURTLE, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
+	public static final Item TURTLE_CHESTPLATE = ModItems.register("turtle_chestplate", new TurtleArmor(ModArmorMaterials.TURTLE, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
+	public static final Item TURTLE_LEGGINGS = ModItems.register("turtle_leggings", new TurtleArmor(ModArmorMaterials.TURTLE, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
+	public static final Item TURTLE_BOOTS = ModItems.register("turtle_boots", new TurtleArmor(ModArmorMaterials.TURTLE, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
 
 
 
-	public static final Item AXOLOTL_HELMET = ModItems.register("axolotl_helmet", new AxolotlArmor(ModArmorMaterials.AXOLOTL, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroups.Equipment)));
-	public static final Item AXOLOTL_CHESTPLATE = ModItems.register("axolotl_chestplate", new AxolotlArmor(ModArmorMaterials.AXOLOTL, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroups.Equipment)));
-	public static final Item AXOLOTL_LEGGINGS = ModItems.register("axolotl_leggings", new AxolotlArmor(ModArmorMaterials.AXOLOTL, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroups.Equipment)));
-	public static final Item AXOLOTL_BOOTS = ModItems.register("axolotl_boots", new AxolotlArmor(ModArmorMaterials.AXOLOTL, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroups.Equipment)));
-
-
-
-
+	public static final Item AXOLOTL_HELMET = ModItems.register("axolotl_helmet", new AxolotlArmor(ModArmorMaterials.AXOLOTL, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
+	public static final Item AXOLOTL_CHESTPLATE = ModItems.register("axolotl_chestplate", new AxolotlArmor(ModArmorMaterials.AXOLOTL, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
+	public static final Item AXOLOTL_LEGGINGS = ModItems.register("axolotl_leggings", new AxolotlArmor(ModArmorMaterials.AXOLOTL, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
+	public static final Item AXOLOTL_BOOTS = ModItems.register("axolotl_boots", new AxolotlArmor(ModArmorMaterials.AXOLOTL, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
 
 
 
 
 
-	public static final Item NETHERITE_SHIELD = ModItems.register("netherite_shield", (Item)new FabricShieldItem(new FabricItemSettings().maxDamage(2500).group(ModItemGroups.Equipment), 60, 13, Items.NETHERITE_INGOT));
-	public static final Item DRAGON_SHIELD = ModItems.register("dragon_shield", (Item)new FabricShieldItem(new FabricItemSettings().maxDamage(3200).group(ModItemGroups.Equipment), 20, 13, Items.NETHERITE_INGOT));
+
+
+
+
+	public static final Item NETHERITE_SHIELD = ModItems.register("netherite_shield", (Item)new FabricShieldItem(new FabricItemSettings().maxDamage(2500).group(ModItemGroups.EQUIPMENT), 60, 13, Items.NETHERITE_INGOT));
+	public static final Item DRAGON_SHIELD = ModItems.register("dragon_shield", (Item)new FabricShieldItem(new FabricItemSettings().maxDamage(3200).group(ModItemGroups.EQUIPMENT), 20, 13, Items.NETHERITE_INGOT));
 
 
 
@@ -177,14 +181,14 @@ public class ModItems {
 
 
 
-	public static final Item UTILITY_BELT = ModItems.register("utility_belt", new UtilityBelt(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
+	public static final Item UTILITY_BELT = ModItems.register("utility_belt", new UtilityBelt(new FabricItemSettings().group(ModItemGroups.TRINKETS).maxCount(1)));
 
-	public static final Item WINTER_COAT = ModItems.register("winter_coat", new WinterCoat(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
-	public static final Item COUNTERCURSE_MANTRA = ModItems.register("countercurse_mantra", new CountercurseMantra(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
-	public static final Item REACTOR_CORE = ModItems.register("reactor_core", new ReactorCore(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
+	public static final Item WINTER_COAT = ModItems.register("winter_coat", new WinterCoat(new FabricItemSettings().group(ModItemGroups.TRINKETS).maxCount(1)));
+	public static final Item COUNTERCURSE_MANTRA = ModItems.register("countercurse_mantra", new CountercurseMantra(new FabricItemSettings().group(ModItemGroups.TRINKETS).maxCount(1)));
+	public static final Item REACTOR_CORE = ModItems.register("reactor_core", new ReactorCore(new FabricItemSettings().group(ModItemGroups.TRINKETS).maxCount(1)));
 
-	public static final Item SHAPED_GLASS = ModItems.register("shaped_glass", new ShapedGlass(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
-	public static final Item BlOODSTAINED_GLASS = ModItems.register("bloodstained_glass", new BloodstainedGlass(new FabricItemSettings().group(ModItemGroups.Equipment).maxCount(1)));
+	public static final Item SHAPED_GLASS = ModItems.register("shaped_glass", new ShapedGlass(new FabricItemSettings().group(ModItemGroups.TRINKETS).maxCount(1)));
+	public static final Item BlOODSTAINED_GLASS = ModItems.register("bloodstained_glass", new BloodstainedGlass(new FabricItemSettings().group(ModItemGroups.TRINKETS).maxCount(1)));
 
 	public static final Item TACTICAL_GLOVE = ModItems.register("tactical_glove", new TacticalGlove(new FabricItemSettings()));
 
@@ -207,6 +211,8 @@ public class ModItems {
 	public static final Item SOLID_RED = ModItems.register(ModBlocks.SOLID_RED, ModItemGroups.BLOCKS);
 	public static final Item SOLID_WHITE = ModItems.register(ModBlocks.SOLID_WHITE, ModItemGroups.BLOCKS);
 	public static final Item SOLID_YELLOW = ModItems.register(ModBlocks.SOLID_YELLOW, ModItemGroups.BLOCKS);
+
+	public static final Item ENDER_SHOP = ModItems.register(ModBlocks.ENDER_SHOP, ModItemGroups.BLOCKS);
 
 	public static final Item FAKE_TNT = ModItems.register(ModBlocks.FAKE_TNT, ModItemGroups.BLOCKS);
 

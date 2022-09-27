@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"010",
+		"232",
+		"040"
+	],
+	"key": {
+		"0": {
+			"item": "betterend:aeternium_forged_plate"
+		},
+		"1": {
+			"item": "minecraft:end_rod"
+		},
+		"2": {
+			"item": "betterend:ender_block"
+		},
+		"3": {
+			"item": "minecraft:ender_chest"
+		},
+		"4": {
+			"item": "betterend:eternal_crystal"
+		}
+	},
+	"result": {
+		"item": "slimesurvival:ender_shop",
+		"count": 1
+	}
+}
