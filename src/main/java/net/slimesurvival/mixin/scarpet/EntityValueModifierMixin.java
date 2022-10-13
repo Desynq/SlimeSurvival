@@ -27,7 +27,7 @@ public class EntityValueModifierMixin extends HashMap<String, BiConsumer<Entity,
 
 		put("damage", (e, v) -> {
 			LivingEntity livingEntity = e instanceof LivingEntity ? (LivingEntity) e : null;
-			// if (livingEntity == null) throw new InternalExpressionException("Expected a living entity as the entity");
+			if (livingEntity == null) throw new InternalExpressionException("Expected a living entity as the entity");
 
 			if (!(v instanceof ListValue)) throw new InternalExpressionException("Expected a list of 2 or 3 parameters as a second argument");
 			List<Value> vals = ((ListValue) v).getItems();
