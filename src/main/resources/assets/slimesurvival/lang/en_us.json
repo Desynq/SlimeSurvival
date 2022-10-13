@@ -364,6 +364,10 @@
 	"item.slimesurvival.archery_goggles.details": "§7Provides better optical alignment to your target, vastly improving\n§7ranged damage at the cost of more awkward melee attacks.",
 
 
+	"item.slimesurvival.black_belt": "Black Belt",
+	"item.slimesurvival.black_belt.details": "§7Magically grants its wearer the ability to perform\n§7incredible acts akin to that of a kung fu master\n§7in order to dodge bullets and sword slashes.",
+
+
 
 	"": ""
 }

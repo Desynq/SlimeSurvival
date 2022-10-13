@@ -191,8 +191,8 @@ public class ModItems {
 	public static final Item BlOODSTAINED_GLASS = ModItems.register("bloodstained_glass", new BloodstainedGlass(new FabricItemSettings().group(ModItemGroups.TRINKETS).maxCount(1)));
 
 	public static final Item TACTICAL_GLOVE = ModItems.register("tactical_glove", new TacticalGlove(new FabricItemSettings()));
-
 	public static final Item ARCHERY_GOGGLES = ModItems.register("archery_goggles", new ArcheryGoggles(new FabricItemSettings()));
+	public static final Item BLACK_BELT = ModItems.register("black_belt", new BlackBelt(new FabricItemSettings()));
 
 
 
