@@ -19,7 +19,7 @@
 	"generator": {
 		"type": "minecraft:flat",
 		"settings": {
-			"biome": "minecraft:the_void",
+			"biome": "slimesurvival:deadzone",
 			"lakes": false,
 			"features": false,
 			"layers": [
