@@ -12,6 +12,7 @@
 		"LootTableBuilderAccessor",
 		"PlayerEntityMixin",
 		"ShapelessRecipeMixin",
+		"SmallFireballEntityMixin",
 		"ToolMaterialsMixin"
 	],
 	"client": [
