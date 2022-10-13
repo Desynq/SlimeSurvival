@@ -31,7 +31,7 @@ public class UtilityBelt extends TrinketItem implements ExtendableTooltipProvide
 	public Multimap<EntityAttribute, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, UUID uuid) {
 		var modifiers = super.getModifiers(stack, slot, entity, uuid);
 		
-		modifiers.put(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier(uuid, "slimesurvival:utility_belt_movement_speed", -0.025, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
+		modifiers.put(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier(uuid, "slimesurvival:utility_belt_movement_speed", -0.05, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
 		SlotAttributes.addSlotModifier(modifiers, "legs/belt", uuid, 1, EntityAttributeModifier.Operation.ADDITION);
 
 		return modifiers;
