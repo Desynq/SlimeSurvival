@@ -1,137 +1,38 @@
-{
-	"condition": "minecraft:alternative",
-	"terms": [
-		{
+[
+	{
+		"condition": "minecraft:inverted",
+		"term": {
 			"condition": "minecraft:alternative",
-			"_comment": "Admin Dimensions",
 			"terms": [
 				{
 					"condition": "minecraft:location_check",
 					"predicate": {
-						"dimension": "slimesurvival:admin/test_world"
-					}
-				}
-			]
-		},
-		{
-			"condition": "minecraft:alternative",
-			"_comment": "Myst Dimensions",
-			"terms": [
-				{
-					"condition": "minecraft:location_check",
-					"predicate": {
-						"dimension": "slimesurvival:myst/deadzone"
+						"dimension": "minecraft:overworld"
 					}
 				},
 				{
 					"condition": "minecraft:location_check",
 					"predicate": {
-						"dimension": "slimesurvival:myst/episode_1"
+						"dimension": "minecraft:the_nether"
 					}
 				},
 				{
 					"condition": "minecraft:location_check",
 					"predicate": {
-						"dimension": "slimesurvival:myst/trainyard"
-					}
-				}
-			]
-		},
-		{
-			"condition": "minecraft:alternative",
-			"_comment": "Soup Dimensions",
-			"terms": [
-				{
-					"condition": "minecraft:location_check",
-					"predicate": {
-						"dimension": "slimesurvival:soup/cs_office"
-					}
-				},
-				{
-					"condition": "minecraft:location_check",
-					"predicate": {
-						"dimension": "slimesurvival:soup/paradise"
-					}
-				},
-				{
-					"condition": "minecraft:location_check",
-					"predicate": {
-						"dimension": "slimesurvival:soup/trainyard"
-					}
-				}
-			]
-		},
-		{
-			"condition": "minecraft:alternative",
-			"_comment": "Zaxaco Dimensions",
-			"terms": [
-				{
-					"condition": "minecraft:location_check",
-					"predicate": {
-						"dimension": "slimesurvival:zaxaco/labyrinth"
-					}
-				}
-			]
-		},
-		{
-			"condition": "minecraft:alternative",
-			"_comment": "CMP Dimensions",
-			"terms": [
-				{
-					"condition": "minecraft:location_check",
-					"predicate": {
-						"dimension": "slimesurvival:cmp/old_1"
-					}
-				},
-				{
-					"condition": "minecraft:location_check",
-					"predicate": {
-						"dimension": "slimesurvival:cmp/old_2"
-					}
-				},
-				{
-					"condition": "minecraft:location_check",
-					"predicate": {
-						"dimension": "slimesurvival:cmp/superflat"
-					}
-				},
-				{
-					"condition": "minecraft:location_check",
-					"predicate": {
-						"dimension": "slimesurvival:cmp/void"
-					}
-				}
-			]
-		},
-		{
-			"condition": "minecraft:alternative",
-			"_comment": "Red Dimensions",
-			"terms": [
-				{
-					"condition": "minecraft:location_check",
-					"predicate": {
-						"dimension": "slimesurvival:red/swamp"
-					}
-				},
-				{
-					"condition": "minecraft:location_check",
-					"predicate": {
-						"dimension": "slimesurvival:red/swamp2"
-					}
-				}
-			]
-		},
-		{
-			"condition": "minecraft:alternative",
-			"_comment": "Se7en Dimensions",
-			"terms": [
-				{
-					"condition": "minecraft:location_check",
-					"predicate": {
-						"dimension": "slimesurvival:se7en/a_lost_mind"
+						"dimension": "minecraft:the_end"
 					}
 				}
 			]
 		}
-	]
-}
+	},
+	{
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"nbt": "{Tags:[\"bypass\"]}"
+			}
+		}
+	}
+]
