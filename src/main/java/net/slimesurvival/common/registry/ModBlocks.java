@@ -22,7 +22,7 @@ public class ModBlocks {
 
 
 
-	public static final Block ENDER_SHOP = new Block(FabricBlockSettings.of(Material.REPAIR_STATION).requiresTool().strength(10.0F, 10.0F));
+	public static final Block ENDER_SHOP = new Block(FabricBlockSettings.of(Material.REPAIR_STATION).requiresTool().strength(8.0F, 10.0F));
 
 
 	// Like TNT, but it has no functionality and serves purely as a decorational block in builds
