@@ -1,0 +1,26 @@
+{
+	"display": {
+		"title": "Origin: Sludge",
+		"description": "You are an insatiable mass of flammable gel hellbent on consuming all that stand in your path.",
+		"icon": {
+			"item": "minecraft:player_head",
+			"nbt": "{SkullOwner:\"MHF_Slime\"}"
+		},
+		"frame": "starter",
+		"background": "minecraft:textures/block/slime_block.png",
+		"show_toast": true,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"critera": {
+		"chose_sludge_origin": {
+			"trigger": "origins:chose_origin",
+			"conditions": {
+				"origin": "slimesurvival:sludge"
+			}
+		}
+	},
+	"rewards": {
+		"function": "slimesurvival:advancement_rewards/origin_upgrades/sludge/root"
+	}
+}

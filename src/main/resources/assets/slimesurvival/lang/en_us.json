@@ -22,7 +22,7 @@
 	"attribute.slimesurvival.generic.random_crit/chance": "Random Crit Chance",
 	"attribute.slimesurvival.generic.random_crit/multiplier": "Random Crit Multiplier",
 
-	"attribute.slimesurvival.generic.dodge_chance": "Dodge Chance",
+	"attribute.name.slimesurvival.dodge_chance": "Dodge Chance",
 	"attribute.slimesurvival.generic.instability": "Instability",
 
 

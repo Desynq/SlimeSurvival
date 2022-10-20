@@ -5,8 +5,9 @@
 		"item": "minecraft:player_head",
 		"tag": "{SkullOwner:\"MHF_Grass\"}"
 	},
-	"order": 5,
-	"impact": 0,
+	"impact": 2,
+	"order": 0,
+	"unchoosable": true,
 
 	"name": "Floran",
 	"description": "You're a plant --- no, really, that's it."

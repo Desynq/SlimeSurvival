@@ -1,9 +1,9 @@
 {
 	"type": "origins:model_color",
 	"alpha": 0.9,
-	"red": 0.25,
-	"green": 0.75,
-	"blue": 0.25,
+	"red": 0.5,
+	"green": 1.0,
+	"blue": 0.5,
 	"name": "Slimy Skin",
 	"description": "Your skin is slightly translucent and has a strong green hue."
 }

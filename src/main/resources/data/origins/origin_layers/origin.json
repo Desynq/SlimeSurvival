@@ -1,22 +1,28 @@
 {
+	"loading_priority": 1,
 	"replace": true,
+
 	"order": 0,
 	"enabled": true,
+	"hidden": false,
+
 	"origins": [
 		"slimesurvival:human",
+
 		"slimesurvival:creeper",
 		"slimesurvival:sludge",
 		"slimesurvival:ghoul",
-		"slimesurvival:floran",
 		"slimesurvival:arachnid",
-		"slimesurvival:warforged",
+
+		"slimesurvival:floran",
 		"slimesurvival:succubus",
 		"slimesurvival:warper"
 	],
+
 	"allow_random": true,
-	"exclude_random": [
-		"slimesurvival:warforged"
-	],
 	"allow_random_unchoosable": true,
-	"hidden": false
+	"exclude_random": [
+		"slimesurvival:floran",
+		"slimesurvival:warper"
+	]
 }

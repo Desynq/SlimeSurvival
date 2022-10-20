@@ -1,14 +1,14 @@
 {
 	"powers": [
-		"slimesurvival:creeper/creeping",
-		"slimesurvival:creeper/creeping/shader",
-		"slimesurvival:creeper/creeping/hunger_over_time"
+		"slimesurvival:origin/creeper/creeping",
+		"slimesurvival:origin/creeper/creeping/shader",
+		"slimesurvival:origin/creeper/creeping/hunger_over_time"
 	],
 	"icon": {
 		"item": "minecraft:creeper_head"
 	},
-	"order": 2,
-	"impact": 0,
+	"impact": 1,
+	"order": 0,
 
 	"name": "Creeper",
 	"description": "You're a creeper but §oslightly§r smarter at blowing stuff up, hopefully."

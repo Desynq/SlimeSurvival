@@ -12,8 +12,8 @@ import net.minecraft.recipe.SmeltingRecipe;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
+import net.slimesurvival.common.power.BouncyPower;
 import net.slimesurvival.common.registry.ModEnchantments;
-import net.slimesurvival.common.registry.ModPowers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,14 +25,23 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import io.github.apace100.apoli.component.PowerHolderComponent;
+
 @Mixin(Block.class)
 public class BlockMixin {
 
-	@Inject(method = "onEntityLand", at = @At("HEAD"), cancellable = true)
-	public void onEntityLand(BlockView world, Entity entity, CallbackInfo callbackInfo) {
-		if (ModPowers.BOUNCY.isActive(entity) && !entity.bypassesLandingEffects()) {
-			entity.setVelocity(entity.getVelocity().multiply(1.0F, -0.85F, 1.0F));
-			callbackInfo.cancel();
+	@Inject(
+		method = "onEntityLand",
+		at = @At("HEAD"), 
+		cancellable = true
+	)
+	public void onEntityLand(BlockView world, Entity entity, CallbackInfo ci) {
+
+		if (!entity.bypassesLandingEffects()) {
+			PowerHolderComponent.getPowers(entity, BouncyPower.class).forEach(power -> {
+				entity.setVelocity(entity.getVelocity().multiply(1.0f, power.getVelocity(), 1.0f));
+				ci.cancel();
+			});
 		}
 	}
 

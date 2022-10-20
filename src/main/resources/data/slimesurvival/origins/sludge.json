@@ -1,14 +1,15 @@
 {
 	"powers": [
-		"slimesurvival:sludge/translucent",
-		"slimesurvival:sludge/bouncy"
+		"slimesurvival:origin/sludge/bouncy",
+		"slimesurvival:origin/sludge/translucent",
+		"slimesurvival:origin/sludge/hurt_sound"
 	],
 	"icon": {
 		"item": "minecraft:player_head",
 		"tag": "{SkullOwner:\"MHF_Slime\"}"
 	},
-	"order": 3,
-	"impact": 0,
+	"impact": 1,
+	"order": 1,
 
 	"name": "Sludge",
 	"description": "You're a gluttonous mass of gelatin that always wants to consume stuff."

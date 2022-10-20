@@ -5,7 +5,6 @@ import java.util.UUID;
 
 import org.jetbrains.annotations.Nullable;
 
-import com.github.clevernucleus.dataattributes.api.DataAttributesAPI;
 import com.google.common.collect.Multimap;
 
 import dev.emi.trinkets.api.SlotReference;
@@ -17,8 +16,8 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
-import net.slimesurvival.SlimeSurvival;
 import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
+import net.slimesurvival.common.registry.ModAttributes;
 import net.slimesurvival.common.registry.ModItemGroups;
 
 public class BlackBelt extends TrinketItem implements ExtendableTooltipProvider {
@@ -37,7 +36,7 @@ public class BlackBelt extends TrinketItem implements ExtendableTooltipProvider 
 	public Multimap<EntityAttribute, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, UUID uuid) {
 		var modifiers = super.getModifiers(stack, slot, entity, uuid);
 
-		modifiers.put(DataAttributesAPI.getAttribute(SlimeSurvival.ID("dodge_chance")).get(), new EntityAttributeModifier(uuid, "slimesurvival:black_belt", 0.05, EntityAttributeModifier.Operation.ADDITION));
+		modifiers.put(ModAttributes.DODGE_CHANCE_ATTRIBUTE, new EntityAttributeModifier(uuid, "Trinket: Black Belt", 0.1, EntityAttributeModifier.Operation.ADDITION));
 
 		return modifiers;
 	}

@@ -1,0 +1,1 @@
+script in z_lambdas run call(global_lambdas:'power':'on_damage', p);

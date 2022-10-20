@@ -1,0 +1,4 @@
+{
+	"type": "apugli:custom_hurt_sound",
+	"sound": "minecraft:entity.slime.hurt"
+}

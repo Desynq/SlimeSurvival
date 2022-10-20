@@ -118,9 +118,15 @@ dependencies {
 
 	// Mods
 
-	modCompileOnly("com.github.apace100:origins-fabric:${origins_version}") {
+	modCompileOnly("com.github.apace100:origins-fabric:${project.origins_version}") {
 		exclude(group: "io.github.onyxstudios.Cardinal-Components-API")
 	}
+
+	
+
+
+
+
 
 
 

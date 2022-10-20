@@ -1,12 +1,17 @@
 {
-	"powers": [
-	],
+	"name": "Human",
+	"description": "You're an ordinary human being and probably don't amount to much.",
+
 	"icon": {
 		"item": "minecraft:player_head"
 	},
-	"order": 1,
-	"impact": 0,
 
-	"name": "Human",
-	"description": "You're an ordinary human being and probably don't amount to much."
+	"impact": 0,
+	"order": 0,
+
+
+
+	"powers": [
+		"slimesurvival:origin/human/bhop"
+	]
 }

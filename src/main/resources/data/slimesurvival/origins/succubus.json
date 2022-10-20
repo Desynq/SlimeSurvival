@@ -1,13 +1,18 @@
 {
-	"powers": [
-	],
+	"name": "Succubus",
+	"description": "You're a \"parasitic\" demon.",
+
 	"icon": {
 		"item": "minecraft:player_head",
 		"tag": "{SkullOwner:\"Succubus\"}"
 	},
-	"order": 8,
-	"impact": 0,
 
-	"name": "Succubus",
-	"description": "You're a \"parasitic\" demon."
+	"impact": 2,
+	"order": 1,
+
+
+	"powers": [
+		"slimesurvival:shared/undead",
+		"slimesurvival:origin/succubus/fire_immunity"
+	]
 }

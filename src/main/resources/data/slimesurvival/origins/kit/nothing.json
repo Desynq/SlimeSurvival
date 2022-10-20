@@ -1,0 +1,11 @@
+{
+	"powers": [
+	],
+	"icon": {
+		"item": "minecraft:glass_bottle"
+	},
+	"impact": 0,
+
+	"name": "Nothing",
+	"description": "So bare bones that you don't even get a lexicon."
+}

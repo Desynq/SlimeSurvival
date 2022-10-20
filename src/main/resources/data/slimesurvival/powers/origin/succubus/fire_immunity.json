@@ -1,0 +1,23 @@
+{
+	"name": "Fire Immunity",
+	"description": "You are accustomed to exceedingly high temperatures.",
+	"badges": [
+		{
+			"sprite": "minecraft:textures/block/fire.png",
+			"name": "§eYou are invulnerable to §nfire§e and §nlava§e damage."
+		}
+	],
+
+
+
+
+	"type": "origins:invulnerability",
+	"damage_condition": {
+		"type": "origins:or",
+		"conditions": [
+			{
+				"type": "origins:fire"
+			}
+		]
+	}
+}
