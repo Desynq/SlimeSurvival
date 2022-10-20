@@ -1,16 +1,25 @@
 package net.slimesurvival;
 
-import net.fabricmc.api.ModInitializer;
-import net.minecraft.util.Identifier;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import carpet.CarpetExtension;
 import carpet.CarpetServer;
 import carpet.script.CarpetExpression;
+import net.fabricmc.api.ModInitializer;
+import net.minecraft.util.Identifier;
 import net.slimesurvival.addons.carpet.script.api.Advancements;
-import net.slimesurvival.common.registry.*;
+import net.slimesurvival.common.registry.ModAttributes;
+import net.slimesurvival.common.registry.ModBlocks;
+import net.slimesurvival.common.registry.ModDimensionTypes;
+import net.slimesurvival.common.registry.ModDimensions;
+import net.slimesurvival.common.registry.ModEnchantments;
+import net.slimesurvival.common.registry.ModItemTags;
+import net.slimesurvival.common.registry.ModItems;
+import net.slimesurvival.common.registry.ModLootHandler;
+import net.slimesurvival.common.registry.ModPowerFactories;
+import net.slimesurvival.common.registry.ModRecipeSerializers;
+import net.slimesurvival.common.registry.ModStatusEffects;
 
 public class SlimeSurvival implements CarpetExtension, ModInitializer {
 	public static Identifier ID(String path) {
@@ -33,6 +42,7 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 		ModBlocks.register();
 		ModItems.register();
 		ModEnchantments.register();
+		ModStatusEffects.register();
 
 		ModPowerFactories.register();
 

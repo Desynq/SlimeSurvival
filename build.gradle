@@ -122,7 +122,8 @@ dependencies {
 		exclude(group: "io.github.onyxstudios.Cardinal-Components-API")
 	}
 
-	
+	modImplementation "com.github.MerchantPug:apugli:${project.apugli_version}"
+	include "com.github.MerchantPug:apugli:${project.apugli_version}"
 
 
 
