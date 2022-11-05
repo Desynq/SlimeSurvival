@@ -27,6 +27,10 @@ import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import dev.mrsterner.besmirchment.common.block.entity.PhylacteryBlockEntity;
 import dev.mrsterner.besmirchment.common.transformation.LichLogic;
+import io.github.apace100.apoli.mixin.EntityAccessor;
+import io.github.apace100.apoli.power.Power;
+import io.github.apace100.apoli.power.PowerType;
+import io.github.apace100.apoli.power.PowerTypeReference;
 import io.github.apace100.origins.origin.OriginLayers;
 import io.github.apace100.origins.registry.ModComponents;
 import moriyashiine.bewitchment.common.registry.BWComponents;
@@ -42,10 +46,16 @@ import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.loot.condition.LootCondition;
+import net.minecraft.loot.context.LootContext;
+import net.minecraft.loot.context.LootContextParameters;
+import net.minecraft.loot.context.LootContextTypes;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Pair;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 
 // carpet.script.value.EntityValue
@@ -54,10 +64,60 @@ public class EntityValueMixin extends HashMap<String, BiFunction<Entity, Value, 
 	@Inject(method = "<init>", at = @At("RETURN"), remap = false)
 	private void addFeatureAccessors(CallbackInfo ci) {
 
+		put("exposed_to_sun", (entity, data) -> {
+			if (entity.world.isDay() && !((EntityAccessor) entity).callIsBeingRainedOn()) {
+				float f = entity.getBrightnessAtEyes();
+				BlockPos blockPos = new BlockPos(entity.getX(), entity.getEyeY(), entity.getZ());
+				return BooleanValue.of(f > 0.5f && entity.world.isSkyVisible(blockPos));
+			}
+			return Value.FALSE;
+		});
+
+
+
+
+
+
+
+
+
+		put("predicate", (entity, data) -> {
+			MinecraftServer server = entity.world.getServer();
+			if (server != null) {
+				LootCondition lootCondition = server.getPredicateManager().get(InputValidator.identifierOf(data.getString()));
+				if (lootCondition != null) {
+					LootContext.Builder lootBuilder = (new LootContext.Builder((ServerWorld) entity.world))
+						.parameter(LootContextParameters.ORIGIN, entity.getPos())
+						.optionalParameter(LootContextParameters.THIS_ENTITY, entity);
+					return BooleanValue.of(lootCondition.test(lootBuilder.build(LootContextTypes.COMMAND)));
+				}
+			}
+			return Value.NULL;
+		});
+
+
+
+
+
+
+
+
+
+
+
+	
 		put("origin", (e, a) -> {
 			if (e instanceof PlayerEntity) {
 				if (a == null) return new StringValue(ModComponents.ORIGIN.get(e).getOrigin(OriginLayers.getLayer(new Identifier("origins:origin"))).getIdentifier().toString());
 				return new StringValue(ModComponents.ORIGIN.get(e).getOrigin(OriginLayers.getLayer(InputValidator.identifierOf(a.getString()))).getIdentifier().toString());
+			}
+			return Value.NULL;
+		});
+
+		put("power", (e, a) -> {
+			if (e instanceof Entity) {
+				PowerType<Power> power = new PowerTypeReference<>(InputValidator.identifierOf(a.getString()));
+				if (power != null) return BooleanValue.of(power.isActive(e));
 			}
 			return Value.NULL;
 		});
@@ -157,7 +217,6 @@ public class EntityValueMixin extends HashMap<String, BiFunction<Entity, Value, 
 
 
 		put("lich_souls", (e, a) -> {
-
 			if (e instanceof PlayerEntity p) {
 				Pair<ServerWorld, PhylacteryBlockEntity> phylactery = LichLogic.getPhylactery(p);
 				if (phylactery != null) {
