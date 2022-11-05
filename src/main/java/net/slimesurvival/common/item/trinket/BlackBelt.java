@@ -17,7 +17,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
-import net.slimesurvival.common.registry.ModAttributes;
+import net.slimesurvival.common.registry.ModEntityAttributes;
 import net.slimesurvival.common.registry.ModItemGroups;
 
 public class BlackBelt extends TrinketItem implements ExtendableTooltipProvider {
@@ -36,7 +36,7 @@ public class BlackBelt extends TrinketItem implements ExtendableTooltipProvider 
 	public Multimap<EntityAttribute, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, UUID uuid) {
 		var modifiers = super.getModifiers(stack, slot, entity, uuid);
 
-		modifiers.put(ModAttributes.DODGE_CHANCE_ATTRIBUTE, new EntityAttributeModifier(uuid, "Trinket: Black Belt", 0.1, EntityAttributeModifier.Operation.ADDITION));
+		modifiers.put(ModEntityAttributes.DODGE_CHANCE_ATTRIBUTE, new EntityAttributeModifier(uuid, "Trinket: Black Belt", 0.1, EntityAttributeModifier.Operation.ADDITION));
 
 		return modifiers;
 	}
