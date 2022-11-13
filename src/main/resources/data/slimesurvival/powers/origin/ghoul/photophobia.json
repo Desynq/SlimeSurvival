@@ -1,0 +1,23 @@
+{
+	"name": "Photophobia",
+	"description": "You cannot tolerate bright areas for extended periods of time",
+
+	"badges": [
+		{
+			"sprite": "minecraft:textures/item/light_12.png",
+			"text": "§cLight levels of 12 or greater will cause you to burn after exposure for more than 2.5 seconds."
+		},
+		{
+			"sprite": "minecraft:textures/mob_effect/invisibility.png",
+			"text": "§bBeing invisible will completely negate this effect"
+		},
+		{
+			"sprite": "bewitchment:textures/item/ectoplasm.png",
+			"text": "§bSpectral form will prolong the duration of exposure before effects begin occuring (8x as long)."
+		}
+	],
+
+
+
+	"type": "origins:simple"
+}

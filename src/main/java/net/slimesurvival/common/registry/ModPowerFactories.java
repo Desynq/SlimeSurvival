@@ -7,8 +7,10 @@ import net.slimesurvival.common.power.*;
 
 public class ModPowerFactories {
 
-	public static void register() {
+	public static String register() {
 		register(BouncyPower.getFactory());
+
+		return "Registered Apoli Power Factories.";
 	}
 
 

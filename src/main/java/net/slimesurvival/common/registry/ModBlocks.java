@@ -33,7 +33,7 @@ public class ModBlocks {
 
 
 
-	public static void register() {
+	public static String register() {
 		Registry.register(Registry.BLOCK, SlimeSurvival.ID("gmod_block"), GMOD_BLOCK);
 
 		Registry.register(Registry.BLOCK, SlimeSurvival.ID("solid_black"), SOLID_BLACK);
@@ -49,5 +49,7 @@ public class ModBlocks {
 		Registry.register(Registry.BLOCK, SlimeSurvival.ID("fake_tnt"), FAKE_TNT);
 	
 		Registry.register(Registry.BLOCK, SlimeSurvival.ID("cracked_obsidian"), CRACKED_OBSIDIAN);
+
+		return "Registered Blocks";
 	}
 }

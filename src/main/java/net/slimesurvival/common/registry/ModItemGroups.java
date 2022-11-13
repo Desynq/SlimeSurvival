@@ -6,13 +6,10 @@ import net.minecraft.item.ItemStack;
 import net.slimesurvival.SlimeSurvival;
 
 
-
+@Deprecated
 public class ModItemGroups {
-	public static final ItemGroup MISC = FabricItemGroupBuilder.create(SlimeSurvival.ID("misc")).icon(() -> new ItemStack(ModItems.LEXICON)).build();
 
-	public static final ItemGroup TOOLS = FabricItemGroupBuilder.create(SlimeSurvival.ID("tools")).icon(() -> new ItemStack(ModItems.MOLTEN_PICKAXE)).build();
-
-	public static final ItemGroup BLOCKS = FabricItemGroupBuilder.create(SlimeSurvival.ID("blocks")).icon(() -> new ItemStack(ModItems.SOLID_BLACK)).build();
+	public static final ItemGroup TOOLS = FabricItemGroupBuilder.create(SlimeSurvival.ID("tools")).icon(() -> new ItemStack(ModItemsNew.MOLTEN_PICKAXE)).build();
 
 
 
@@ -21,7 +18,7 @@ public class ModItemGroups {
 
 
 
-	public static final ItemGroup MATERIALS = FabricItemGroupBuilder.build(SlimeSurvival.ID("materials"), () -> new ItemStack(ModItems.MYSTITE_ORE));
+	public static final ItemGroup MATERIALS = FabricItemGroupBuilder.build(SlimeSurvival.ID("materials"), () -> new ItemStack(ModItemsNew.MYSTITE_ORE));
 
 
 

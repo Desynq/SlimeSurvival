@@ -10,6 +10,30 @@
 
 
 
+	"itemGroup.slimesurvival.main": "Slime Survival",
+
+	"itemGroup.slimesurvival.main.button.github": "View Github Repository",
+
+	"itemGroup.slimesurvival.main.tab.misc": "Miscellaneous",
+	"itemGroup.slimesurvival.main.tab.blocks": "Blocks",
+	"itemGroup.slimesurvival.main.tab.materials": "Materials",
+	"itemGroup.slimesurvival.main.tab.trinkets": "Trinkets",
+	"itemGroup.slimesurvival.main.tab.armor": "Armor",
+	"itemGroup.slimesurvival.main.tab.tools": "Tools",
+	"itemGroup.slimesurvival.main.tab.melee_weapons": "Melee Weapons",
+	"itemGroup.slimesurvival.main.tab.ranged_weapons": "Ranged Weapons",
+	"itemGroup.slimesurvival.main.tab.ranged_ammo": "Ranged Ammo",
+	"itemGroup.slimesurvival.main.tab.crafting": "Crafting",
+	"itemGroup.slimesurvival.main.tab.icons": "Icons",
+
+
+
+
+
+
+
+
+
 	"attribute.slimesurvival.generic.gun/horizontal_recoil": "Horizontal Gun Recoil",
 	"attribute.slimesurvival.generic.gun/vertical_recoil": "Vertical Gun Recoil",
 	"attribute.slimesurvival.generic.gun/accuracy": "Gun Accuracy",
@@ -24,6 +48,15 @@
 
 	"attribute.name.slimesurvival.dodge_chance": "Dodge Chance",
 	"attribute.slimesurvival.generic.instability": "Instability",
+
+
+
+
+
+
+	"effect.slimesurvival.rifting": "Rifting",
+
+
 
 
 
@@ -102,7 +135,7 @@
 	"item.slimesurvival.experience_crystal": "Experience Crystal",
 	"item.slimesurvival.experience_crystal.tooltip": "§bStored Experience: %s / 3000",
 	"item.slimesurvival.experience_crystal.details": "§7This crystal is able to hold a large supply of experience.\n\n§e• Insert experience by right clicking.\n§e• Extract experience by shift right clicking.\n§e• Transfer rate is 10 while in mainhand, 100 while in offhand.",
-	"item.slimesurvival.experience_crystal.credits": "§7• Texture was made Crash404",
+	"item.slimesurvival.experience_crystal.credits": "§7• Texture stolen from §6Thermal Expansion 6",
 
 
 

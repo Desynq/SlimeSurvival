@@ -1,5 +1,4 @@
 {
-	"loading_priority": 1,
 	"replace": true,
 
 	"order": 0,
@@ -9,20 +8,16 @@
 	"origins": [
 		"slimesurvival:human",
 
-		"slimesurvival:creeper",
+		"slimesurvival:creep",
 		"slimesurvival:sludge",
-		"slimesurvival:ghoul",
 		"slimesurvival:arachnid",
 
-		"slimesurvival:floran",
-		"slimesurvival:succubus",
-		"slimesurvival:warper"
+		"slimesurvival:ghoul",
+		"slimesurvival:faerie",
+		"slimesurvival:succubus"
 	],
 
 	"allow_random": true,
-	"allow_random_unchoosable": true,
-	"exclude_random": [
-		"slimesurvival:floran",
-		"slimesurvival:warper"
-	]
+	"allow_random_unchoosable": false,
+	"exclude_random": []
 }

@@ -6,7 +6,7 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
 public enum ModToolMaterials implements ToolMaterial {
-	MYSTITE(MiningLevels.NETHERITE + 1, 3000, 12.0F, 0.0F, 25, Ingredient.ofItems(ModItems.MYSTITE_INGOT)),
+	MYSTITE(MiningLevels.NETHERITE + 1, 3000, 12.0F, 0.0F, 25, Ingredient.ofItems(ModItemsNew.MYSTITE_INGOT)),
 	MOLTEN(MiningLevels.NETHERITE, 1797, 6.0F, 0.0F, 20, Ingredient.ofItems(Items.NETHERITE_INGOT));
 
 

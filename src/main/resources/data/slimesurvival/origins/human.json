@@ -1,9 +1,9 @@
 {
 	"name": "Human",
-	"description": "You're an ordinary human being and probably don't amount to much.",
+	"description": "The \"default\" race. Good at crafting, shooting things with guns, and being egotistical. They suffer no base debuffs, unlike other races.",
 
 	"icon": {
-		"item": "minecraft:player_head"
+		"item": "create:goggles"
 	},
 
 	"impact": 0,
@@ -11,7 +11,5 @@
 
 
 
-	"powers": [
-		"slimesurvival:origin/human/bhop"
-	]
+	"powers": []
 }

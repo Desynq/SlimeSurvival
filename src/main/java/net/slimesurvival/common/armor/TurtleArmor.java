@@ -20,8 +20,8 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.DyeableArmorItem;
 import net.minecraft.item.DyeableItem;
 import net.minecraft.item.ItemStack;
-import net.slimesurvival.common.interfaces.InitialStackStateProvider;
 import net.slimesurvival.common.registry.ModItems;
+import net.slimesurvival.util.interfaces.InitialStackStateProvider;
 
 public class TurtleArmor extends DyeableArmorItem implements InitialStackStateProvider {
 	private static final UUID[] MODIFIERS = new UUID[] {

@@ -12,7 +12,8 @@
 			"actions": [
 				{
 					"type": "origins:execute_command",
-					"command": "function slimesurvival:power/dodge/when_hit"
+					"command": "function slimesurvival:power/dodge/when_hit",
+					"permission_level": 4
 				}
 			]
 		}

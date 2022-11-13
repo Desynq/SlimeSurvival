@@ -1,4 +1,4 @@
-package net.slimesurvival.common.status_effects;
+package net.slimesurvival.common.status_effect;
 
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;

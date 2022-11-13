@@ -10,7 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
-import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
+import net.slimesurvival.util.provider.ExtendableTooltipProvider;
 
 public class MystiteToolRod extends Item implements ExtendableTooltipProvider {
 	public MystiteToolRod(Settings settings) {

@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.ShapelessRecipe;
 import net.minecraft.util.collection.DefaultedList;
-import net.slimesurvival.common.item.MixingBowlItem;
+import net.slimesurvival.common.item.misc.MixingBowlItem;
 import net.slimesurvival.mixin.ShapelessRecipeMixin;
 
 // https://github.com/FabricMC/fabric/issues/50#issuecomment-651795843

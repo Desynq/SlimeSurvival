@@ -9,8 +9,8 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.BowItem;
 import net.minecraft.item.ItemStack;
 import net.projectiledamage.api.IProjectileWeapon;
-import net.slimesurvival.common.interfaces.InitialStackStateProvider;
 import net.slimesurvival.common.registry.ModItemGroups;
+import net.slimesurvival.util.interfaces.InitialStackStateProvider;
 
 public class MystiteShortbow extends BowItem implements InitialStackStateProvider {
 	

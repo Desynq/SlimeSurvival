@@ -1,4 +1,4 @@
-package net.slimesurvival.common.item.misc;
+package net.slimesurvival.common.item.tool;
 
 import java.util.List;
 
@@ -14,16 +14,12 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
-import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
-import net.slimesurvival.common.registry.ModItemGroups;
+import net.slimesurvival.util.provider.ExtendableTooltipProvider;
 
-public class ExperienceCrystal extends Item implements ExtendableTooltipProvider {
+public class ExperienceCrystalItem extends Item implements ExtendableTooltipProvider {
 
-	public ExperienceCrystal(Settings settings) {
-		super(settings
-			.group(ModItemGroups.MISC)
-			.maxCount(1)
-		);
+	public ExperienceCrystalItem(Settings settings) {
+		super(settings);
 	}
 
 

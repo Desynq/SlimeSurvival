@@ -21,7 +21,9 @@ public class ModDimensionTypes {
 
 
 
-	public static void register() {
+	public static String register() {
 		SlimeSurvival.LOGGER.debug("Registering dimension types for " + SlimeSurvival.MOD_ID);
+
+		return "Registered Dimension Types.";
 	}
 }

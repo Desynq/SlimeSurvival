@@ -1,24 +1,26 @@
 {
+	"name": "Ghoul",
+	"description": "Talked about in legends as souls cursed back into their bodies, ghouls are unable to regenerate naturally and must rely on consuming flesh in order to satiate themselves.",
+
+	"icon": {
+		"item": "minecraft:rotten_flesh"
+	},
+
+	"impact": 2,
+	"order": 0,
+
+
+
 	"powers": [
 		"slimesurvival:shared/undead",
-		"slimesurvival:origin/ghoul/solar_urticaria",
-		"slimesurvival:origin/ghoul/pallor",
-		"slimesurvival:origin/ghoul/flesh_eater",
-		"slimesurvival:origin/ghoul/no_swimming",
+
+		"slimesurvival:origin/ghoul/resource/exposure",
+
 		"slimesurvival:origin/ghoul/fire_aversion",
+		"slimesurvival:origin/ghoul/eternal_hunger",
+		"slimesurvival:origin/ghoul/sinking",
+		"slimesurvival:origin/ghoul/photophobia",
 
-		"slimesurvival:origin/ghoul/spectral_form",
-		"slimesurvival:origin/ghoul/spectral_form/desaturated_vision",
-		"slimesurvival:origin/ghoul/spectral_form/ethereal_exhaustion",
-		"slimesurvival:origin/ghoul/spectral_form/translucent",
-		"slimesurvival:origin/ghoul/spectral_form/spectral_fragility"
-	],
-	"icon": {
-		"item": "minecraft:zombie_head"
-	},
-	"impact": 1,
-	"order": 2,
-
-	"name": "Ghoul",
-	"description": "You're a ghost piloting a bone mech suit covered in rotting flesh."
+		"slimesurvival:origin/ghoul/spectral_form"
+	]
 }

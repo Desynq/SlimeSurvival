@@ -16,9 +16,9 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
-import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
 import net.slimesurvival.common.registry.ModEntityAttributes;
 import net.slimesurvival.common.registry.ModItemGroups;
+import net.slimesurvival.util.provider.ExtendableTooltipProvider;
 
 public class BlackBelt extends TrinketItem implements ExtendableTooltipProvider {
 

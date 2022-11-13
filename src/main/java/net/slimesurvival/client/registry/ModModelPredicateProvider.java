@@ -2,14 +2,15 @@ package net.slimesurvival.client.registry;
 
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.util.Identifier;
-import net.slimesurvival.SlimeSurvival;
-import net.slimesurvival.common.item.misc.ExperienceCrystal;
+import net.slimesurvival.common.item.tool.ExperienceCrystalItem;
 import net.slimesurvival.common.registry.ModItems;
+import net.slimesurvival.common.registry.ModItemsNew;
+import net.slimesurvival.util.RegistryHelper;
 
 public class ModModelPredicateProvider {
 	
 	public static void register() {
-		ModelPredicateProviderRegistry.register(ModItems.EXPERIENCE_CRYSTAL, SlimeSurvival.ID("fill"), (stack, world, entity, seed) -> (float)ExperienceCrystal.getStoredExperience(stack) / 3000.0f);
+		ModelPredicateProviderRegistry.register(ModItemsNew.EXPERIENCE_CRYSTAL, RegistryHelper.id("fill"), (stack, world, entity, seed) -> (float)ExperienceCrystalItem.getStoredExperience(stack) / 3000.0f);
 
 
 

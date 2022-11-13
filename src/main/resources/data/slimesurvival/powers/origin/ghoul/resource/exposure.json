@@ -1,0 +1,16 @@
+{
+	"name": "Light Exposure",
+	"description": "Exposure to UV radiation or whatever.",
+	"hidden": true,
+
+
+
+	"type": "origins:resource",
+	"min": 0,
+	"max": 1000,
+	"start_value": 0,
+	"hud_render": {
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+		"bar_index": 15
+	}
+}

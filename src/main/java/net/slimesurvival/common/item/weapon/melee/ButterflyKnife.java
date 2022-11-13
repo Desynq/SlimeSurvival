@@ -9,9 +9,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
-import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
 import net.slimesurvival.common.registry.ModItemGroups;
 import net.slimesurvival.common.registry.ModToolMaterials;
+import net.slimesurvival.util.provider.ExtendableTooltipProvider;
 
 public class ButterflyKnife extends SwordItem implements ExtendableTooltipProvider {
 

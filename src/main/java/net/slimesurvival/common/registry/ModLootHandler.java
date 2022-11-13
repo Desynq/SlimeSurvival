@@ -16,7 +16,7 @@ import net.minecraft.util.Identifier;
 import net.slimesurvival.mixin.LootTableBuilderAccessor;
 
 public class ModLootHandler {
-	public static void register() {
+	public static String register() {
 		LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
 
 			if (source.isBuiltin()) {
@@ -25,6 +25,8 @@ public class ModLootHandler {
 				}
 			}
 		});
+
+		return "Registered Loot Handler.";
 	}
 
 
@@ -33,7 +35,7 @@ public class ModLootHandler {
 		LootPool lootPool = ((LootTableBuilderAccessor) tableBuilder).getPools().get(0);
 		LootPool.Builder lpb = FabricLootPoolBuilder.copyOf(lootPool);
 
-		lpb.with(ItemEntry.builder(ModItems.AXOLOTL_GILLS)
+		lpb.with(ItemEntry.builder(ModItemsNew.AXOLOTL_GILLS)
 			.weight(5)
 			.quality(1)
 			.build()

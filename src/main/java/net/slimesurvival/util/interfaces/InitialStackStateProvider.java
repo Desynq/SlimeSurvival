@@ -1,4 +1,4 @@
-package net.slimesurvival.common.interfaces;
+package net.slimesurvival.util.interfaces;
 
 import net.minecraft.item.ItemStack;
 

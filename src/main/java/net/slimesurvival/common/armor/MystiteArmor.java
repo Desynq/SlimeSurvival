@@ -19,7 +19,7 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
-import net.slimesurvival.common.interfaces.InitialStackStateProvider;
+import net.slimesurvival.util.interfaces.InitialStackStateProvider;
 
 public class MystiteArmor extends ArmorItem implements InitialStackStateProvider {
 	private static final UUID[] MODIFIERS = new UUID[] {

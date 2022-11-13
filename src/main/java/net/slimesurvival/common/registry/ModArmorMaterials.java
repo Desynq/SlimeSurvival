@@ -8,9 +8,9 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-	AXOLOTL("axolotl", 15, new int[]{1, 4, 5, 2}, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, 0.0f, Ingredient.ofItems(ModItems.AXOLOTL_GILLS)),
+	AXOLOTL("axolotl", 15, new int[]{1, 4, 5, 2}, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, 0.0f, Ingredient.ofItems(ModItemsNew.AXOLOTL_GILLS)),
 	TURTLE("turtle", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 2.0f, 2.5f, Ingredient.ofItems(Items.SCUTE)),
-	MYSTITE("mystite", 200, new int[]{5, 8, 10, 5}, 25, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 4.0f, 2.0f, Ingredient.ofItems(ModItems.MYSTITE_INGOT)),
+	MYSTITE("mystite", 200, new int[]{5, 8, 10, 5}, 25, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 4.0f, 2.0f, Ingredient.ofItems(ModItemsNew.MYSTITE_INGOT)),
 	;
 
 	private static final int[] BASE_DURABILITY;

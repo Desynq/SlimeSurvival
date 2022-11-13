@@ -5,23 +5,17 @@ import java.util.List;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
-import net.slimesurvival.common.interfaces.ExtendableTooltipProvider;
-import net.slimesurvival.common.item.MixingBowlItem;
-import net.slimesurvival.common.registry.ModItemGroups;
+import net.slimesurvival.util.provider.ExtendableTooltipProvider;
 
-public class ReinforcedMixingBowl extends MixingBowlItem implements ExtendableTooltipProvider {
+public class MixingBowlItem extends Item implements ExtendableTooltipProvider {
 
-	public ReinforcedMixingBowl(Settings settings) {
-		super(settings
-			.group(ModItemGroups.MATERIALS)
-			.maxDamage(8192)
-			.fireproof()
-		);
+	public MixingBowlItem(Settings settings) {
+		super(settings);
 	}
-
 
 
 
@@ -31,6 +25,7 @@ public class ReinforcedMixingBowl extends MixingBowlItem implements ExtendableTo
 	public boolean hasTooltip() {
 		return true;
 	}
+
 	@Override
 	public boolean hasDetails() {
 		return true;
@@ -40,6 +35,7 @@ public class ReinforcedMixingBowl extends MixingBowlItem implements ExtendableTo
 	public String tooltipTranslationKey() {
 		return this.getTranslationKey();
 	}
+
 	@Override
 	public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
 		tryAppend(tooltip);

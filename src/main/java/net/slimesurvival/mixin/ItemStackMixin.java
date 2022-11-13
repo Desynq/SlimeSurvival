@@ -2,7 +2,7 @@ package net.slimesurvival.mixin;
 
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
-import net.slimesurvival.common.interfaces.InitialStackStateProvider;
+import net.slimesurvival.util.interfaces.InitialStackStateProvider;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

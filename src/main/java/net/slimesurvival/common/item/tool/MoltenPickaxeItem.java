@@ -8,15 +8,14 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.PickaxeItem;
-import net.slimesurvival.common.interfaces.InitialStackStateProvider;
 import net.slimesurvival.common.registry.ModEnchantments;
-import net.slimesurvival.common.registry.ModItemGroups;
 import net.slimesurvival.common.registry.ModToolMaterials;
+import net.slimesurvival.util.interfaces.InitialStackStateProvider;
 
-public class MoltenPickaxe extends PickaxeItem implements InitialStackStateProvider {
+public class MoltenPickaxeItem extends PickaxeItem implements InitialStackStateProvider {
 
-	public MoltenPickaxe(Settings settings) {
-		super(ModToolMaterials.MOLTEN, 5, -2.8F, settings.group(ModItemGroups.TOOLS));
+	public MoltenPickaxeItem(Settings settings) {
+		super(ModToolMaterials.MOLTEN, 5, -2.8F, settings);
 	}
 
 	@Override

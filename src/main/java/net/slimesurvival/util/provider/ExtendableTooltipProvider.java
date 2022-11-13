@@ -1,4 +1,4 @@
-package net.slimesurvival.common.interfaces;
+package net.slimesurvival.util.provider;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,11 +9,12 @@ import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 
+@Deprecated
 public interface ExtendableTooltipProvider {
-	Text SHOW_DETAILS_TOOLTIP = new TranslatableText("tooltip.slimesurvival.show_details");
-	Text SHOW_HOW_TO_OBTAIN_TOOLTIP = new TranslatableText("tooltip.slimesurvival.show_how_to_obtain");
-	Text SHOW_LORE = new TranslatableText("tooltip.slimesurvival.show_lore");
-	Text SHOW_CREDITS = new TranslatableText("tooltip.slimesurvival.show_credits");
+	public static final Text SHOW_DETAILS_TOOLTIP = new TranslatableText("tooltip.slimesurvival.show_details");
+	public static final Text SHOW_HOW_TO_OBTAIN_TOOLTIP = new TranslatableText("tooltip.slimesurvival.show_how_to_obtain");
+	public static final Text SHOW_LORE = new TranslatableText("tooltip.slimesurvival.show_lore");
+	public static final Text SHOW_CREDITS = new TranslatableText("tooltip.slimesurvival.show_credits");
 
 	String tooltipTranslationKey();
 

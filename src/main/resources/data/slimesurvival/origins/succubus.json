@@ -1,14 +1,13 @@
 {
 	"name": "Succubus",
-	"description": "You're a \"parasitic\" demon.",
+	"description": "A creature of demonic ancestry that feasts on the energy of living beings. They're well known as dangerous, charming creatures that easily take advantage of their \"prey\" for their own self gain through possession, contracts, and \"consensual\" pledging.",
 
 	"icon": {
-		"item": "minecraft:player_head",
-		"tag": "{SkullOwner:\"Succubus\"}"
+		"item": "bewitchment:demon_horn"
 	},
 
 	"impact": 2,
-	"order": 1,
+	"order": 2,
 
 
 	"powers": [

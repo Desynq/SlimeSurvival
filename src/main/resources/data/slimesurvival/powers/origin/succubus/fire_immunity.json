@@ -3,8 +3,8 @@
 	"description": "You are accustomed to exceedingly high temperatures.",
 	"badges": [
 		{
-			"sprite": "minecraft:textures/block/fire.png",
-			"name": "§eYou are invulnerable to §nfire§e and §nlava§e damage."
+			"sprite": "minecraft:textures/item/blaze_powder.png",
+			"text": "§eYou are invulnerable to §nfire§e and §nlava§e damage."
 		}
 	],
 

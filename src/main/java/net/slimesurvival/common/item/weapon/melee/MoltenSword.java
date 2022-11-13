@@ -8,10 +8,10 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
-import net.slimesurvival.common.interfaces.InitialStackStateProvider;
 import net.slimesurvival.common.registry.ModEnchantments;
 import net.slimesurvival.common.registry.ModItemGroups;
 import net.slimesurvival.common.registry.ModToolMaterials;
+import net.slimesurvival.util.interfaces.InitialStackStateProvider;
 
 public class MoltenSword extends SwordItem implements InitialStackStateProvider {
 
