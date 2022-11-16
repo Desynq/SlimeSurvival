@@ -12,18 +12,7 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import net.slimesurvival.addons.carpet.script.api.Advancements;
 import net.slimesurvival.common.item.SSItemGroups;
-import net.slimesurvival.common.registry.ModEntityAttributes;
-import net.slimesurvival.common.registry.ModBlocks;
-import net.slimesurvival.common.registry.ModDimensionTypes;
-import net.slimesurvival.common.registry.ModDimensions;
-import net.slimesurvival.common.registry.ModEnchantments;
-import net.slimesurvival.common.registry.ModItemTags;
-import net.slimesurvival.common.registry.ModItems;
-import net.slimesurvival.common.registry.ModItemsNew;
-import net.slimesurvival.common.registry.ModLootHandler;
-import net.slimesurvival.common.registry.ModPowerFactories;
-import net.slimesurvival.common.registry.ModRecipeSerializers;
-import net.slimesurvival.common.registry.ModStatusEffects;
+import net.slimesurvival.common.registry.*;
 import net.slimesurvival.util.RegistryHelper;
 
 public class SlimeSurvival implements CarpetExtension, ModInitializer {
@@ -74,7 +63,8 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 
 
 		// Data-Driven
-		logInit(ModItemTags.register());
+		ModItemTags.register();
+		logInit("Loaded Mod Item Tags");
 		logInit(ModRecipeSerializers.register());
 
 		logInit(ModLootHandler.register());

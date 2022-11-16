@@ -11,7 +11,5 @@ public class ModItemTags {
 
 
 
-	public static String register() {
-		return "Registered Item Tags";
-	}
+	public static void register() {}
 }

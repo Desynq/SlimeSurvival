@@ -4,7 +4,6 @@ import io.wispforest.owo.itemgroup.OwoItemSettings;
 import io.wispforest.owo.registration.reflect.ItemRegistryContainer;
 import net.minecraft.item.Item;
 import net.slimesurvival.SlimeSurvival;
-import net.slimesurvival.common.item.ExtendableTooltipItem;
 import net.slimesurvival.common.item.FoodComponents;
 import net.slimesurvival.common.item.SSItemGroups;
 import net.slimesurvival.common.item.material.*;
@@ -40,29 +39,37 @@ public class ModItemsNew implements ItemRegistryContainer {
 
 
 
-	// Material: Mob Drops
+	// Mob Drops
 	public static final Item POLAR_BEAR_FUR = new PolarBearFur(ItemSettings.MATERIAL);
 	public static final Item CREEPER_FLESH = new Item(ItemSettings.MATERIAL.food(FoodComponents.CREEPER_FLESH));
 
 
-	// Material: Fishing
+	// Fishing
 	public static final Item AXOLOTL_GILLS = new AxolotlGills(ItemSettings.MATERIAL);
 
 
-	// Material: Myst
-	public static final Item MYSTITE_INGOT = new MystiteIngot(ItemSettings.MATERIAL);
+	// Crafting Ingredients
+	public static final Item MAGMATIC_MAGMA = new MagmaticMagmaItem(ItemSettings.MATERIAL.maxCount(1), new ExtendableTooltipSettings().hasDetails());
 	public static final Item MYSTITE_TOOL_ROD = new MystiteToolRod(ItemSettings.MATERIAL);
+	
+
+
+	// Jesus Christ Marie, they're not rocks, they're minerals.
+
+	// Minerals
+	public static final Item CINNABAR = new Item(ItemSettings.MATERIAL);
 	public static final Item MYSTITE_ORE = new MystiteOre(ItemSettings.MATERIAL);
 
-
-	// Material: End
-	public static final Item ENDERIUM_ALLOY = new EnderiumAlloy(ItemSettings.MATERIAL);
-
-
-	// Material: Jesus Christ Marie, they're not rocks, they're minerals.
-	public static final Item CINNABAR = new Item(ItemSettings.MATERIAL);
+	// Pieces/Chunks
 	public static final Item CINNABAR_CHUNK = new Item(ItemSettings.MATERIAL);
+
+	// Dust
 	public static final Item COPPER_SULFATE = new Item(ItemSettings.MATERIAL.food(FoodComponents.COPPER_SULFATE));
+
+	// Ingots
+	//public static final Item ENDERIUM_ALLOY = new CustomItem(ItemSettings.MATERIAL, new ExtendableTooltipSettings(), new CustomItemSettings().hasGlint());
+	public static final Item LEAD_INGOT = new Item(ItemSettings.MATERIAL.food(FoodComponents.LEAD_INGOT));
+	public static final Item MYSTITE_INGOT = new Item(ItemSettings.MATERIAL);
 
 
 
@@ -106,8 +113,4 @@ public class ModItemsNew implements ItemRegistryContainer {
 	public static final Item MOLTEN_PICKAXE = new MoltenPickaxeItem(ItemSettings.TOOLS);
 	public static final Item MOLTEN_AXE = new MoltenAxeItem(ItemSettings.TOOLS);
 	public static final Item MOLTEN_SHOVEL = new MoltenShovelItem(ItemSettings.TOOLS);
-
-
-
-	public static final Item OOGA_BOOGA = new ExtendableTooltipItem(ItemSettings.MATERIAL, new ExtendableTooltipSettings().hasCredits());
 }

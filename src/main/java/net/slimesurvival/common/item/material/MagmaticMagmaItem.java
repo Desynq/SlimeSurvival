@@ -15,14 +15,16 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import net.slimesurvival.common.registry.ModEnchantments;
-import net.slimesurvival.common.registry.ModItemGroups;
+import net.slimesurvival.util.TooltipHelper;
 import net.slimesurvival.util.interfaces.InitialStackStateProvider;
-import net.slimesurvival.util.provider.ExtendableTooltipProvider;
+import net.slimesurvival.util.settings.ExtendableTooltipSettings;
 
-public class MagmaticMagma extends Item implements ExtendableTooltipProvider, InitialStackStateProvider {
+public class MagmaticMagmaItem extends Item implements InitialStackStateProvider {
+	public ExtendableTooltipSettings tooltipSettings;
 
-	public MagmaticMagma(Settings settings) {
-		super(settings.group(ModItemGroups.MATERIALS).maxCount(1));
+	public MagmaticMagmaItem(Settings settings, ExtendableTooltipSettings tooltipSettings) {
+		super(settings);
+		this.tooltipSettings = tooltipSettings;
 	}
 
 
@@ -32,28 +34,10 @@ public class MagmaticMagma extends Item implements ExtendableTooltipProvider, In
 		return true;
 	}
 
-
-
-
-
-	@Override
-	public String tooltipTranslationKey() {
-		return this.getTranslationKey();
-	}
-
-	@Override
-	public boolean hasDetails() {
-		return true;
-	}
-
 	@Override
 	public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-		tryAppend(tooltip);
+		TooltipHelper.addExtendableTooltip(tooltip, tooltipSettings);
 	}
-
-
-
-
 
 	@Override
 	public void initializeState(ItemStack stack) {

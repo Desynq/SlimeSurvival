@@ -11,8 +11,8 @@ import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import net.slimesurvival.util.provider.ExtendableTooltipProvider;
 
-public class MystiteIngot extends Item implements ExtendableTooltipProvider {
-	public MystiteIngot(Settings settings) {
+public class MystiteIngotItem extends Item implements ExtendableTooltipProvider {
+	public MystiteIngotItem(Settings settings) {
 		super(settings);
 	}
 
