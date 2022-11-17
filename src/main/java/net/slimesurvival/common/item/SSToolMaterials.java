@@ -1,11 +1,12 @@
-package net.slimesurvival.common.registry;
+package net.slimesurvival.common.item;
 
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.slimesurvival.common.registry.ModItemsNew;
 
-public enum ModToolMaterials implements ToolMaterial {
+public enum SSToolMaterials implements ToolMaterial {
 	MYSTITE(MiningLevels.NETHERITE + 1, 3000, 12.0F, 0.0F, 25, Ingredient.ofItems(ModItemsNew.MYSTITE_INGOT)),
 	MOLTEN(MiningLevels.NETHERITE, 1797, 6.0F, 0.0F, 20, Ingredient.ofItems(Items.NETHERITE_INGOT));
 
@@ -18,7 +19,7 @@ public enum ModToolMaterials implements ToolMaterial {
 	private final int enchantability;
 	private final Ingredient repairIngredient;
 
-	private ModToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Ingredient repairIngredient) {
+	private SSToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Ingredient repairIngredient) {
 		this.miningLevel = miningLevel;
 		this.itemDurability = itemDurability;
 		this.miningSpeed = miningSpeed;

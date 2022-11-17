@@ -9,14 +9,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
+import net.slimesurvival.common.item.SSToolMaterials;
 import net.slimesurvival.common.registry.ModItemGroups;
-import net.slimesurvival.common.registry.ModToolMaterials;
 import net.slimesurvival.util.provider.ExtendableTooltipProvider;
 
 public class ButterflyKnife extends SwordItem implements ExtendableTooltipProvider {
 
 	public ButterflyKnife(Settings settings) {
-		super(ModToolMaterials.MYSTITE, 5, 2.0F, settings
+		super(SSToolMaterials.MYSTITE, 5, 2.0F, settings
 			.group(ModItemGroups.WEAPONS)
 		);
 	}

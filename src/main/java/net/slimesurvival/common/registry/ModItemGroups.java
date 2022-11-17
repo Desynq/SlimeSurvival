@@ -24,7 +24,7 @@ public class ModItemGroups {
 
 
 
-	public static final ItemGroup EQUIPMENT = FabricItemGroupBuilder.build(SlimeSurvival.ID("equipment"), () -> new ItemStack(ModItems.MYSTITE_HELMET));
+	public static final ItemGroup EQUIPMENT = FabricItemGroupBuilder.build(SlimeSurvival.ID("equipment"), () -> new ItemStack(ModItemsNew.MYSTITE_HELMET));
 	public static final ItemGroup TRINKETS = FabricItemGroupBuilder.build(SlimeSurvival.ID("trinkets"), () -> new ItemStack(ModItems.ARCHERY_GOGGLES));
 
 

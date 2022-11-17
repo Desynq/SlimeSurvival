@@ -8,14 +8,14 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
+import net.slimesurvival.common.item.SSToolMaterials;
 import net.slimesurvival.common.registry.ModEnchantments;
-import net.slimesurvival.common.registry.ModToolMaterials;
 import net.slimesurvival.util.interfaces.InitialStackStateProvider;
 
 public class MoltenAxeItem extends AxeItem implements InitialStackStateProvider {
 
 	public MoltenAxeItem(Settings settings) {
-		super(ModToolMaterials.MOLTEN, 9, -3.0F, settings);
+		super(SSToolMaterials.MOLTEN, 9, -3.0F, settings);
 	}
 
 	@Override

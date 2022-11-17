@@ -1,4 +1,4 @@
-package net.slimesurvival.common.armor;
+package net.slimesurvival.common.item.armor;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,40 +16,39 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.DyeableArmorItem;
+import net.minecraft.item.DyeableItem;
 import net.minecraft.item.ItemStack;
+import net.slimesurvival.common.registry.ModItems;
 import net.slimesurvival.util.interfaces.InitialStackStateProvider;
 
-public class MystiteArmor extends ArmorItem implements InitialStackStateProvider {
+public class AxolotlArmor extends DyeableArmorItem implements InitialStackStateProvider {
 	private static final UUID[] MODIFIERS = new UUID[] {
-		UUID.fromString("11FD6B5B-87FD-426A-98D6-E9F4FB5BE8A1"),
-		UUID.fromString("A68944C6-1820-4DC5-AD6C-EFA834F5A55D"),
-		UUID.fromString("D2911249-938E-4405-B22C-E3F269A6E03F"),
-		UUID.fromString("CCAE1236-6A4B-4B2D-945D-97961D53603E")
+		UUID.fromString("C2B83E0A-BE81-4579-A279-ADAEB160C1EA"),
+		UUID.fromString("A602B8CD-CBE9-4373-BBB8-A13A2F04D7EC"),
+		UUID.fromString("11B2CF25-B4C3-4319-8CFF-0E64B2443616"),
+		UUID.fromString("E7B4F348-D32C-44EE-A44B-B5AF741FA53A")
 	};
 
 	private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 	private final int protection;
-	private final float toughness;
-	protected final float knockbackResistance;
+	private final float max_health;
 	protected final EquipmentSlot slot;
-	protected final ArmorMaterial type;
+	protected final ArmorMaterial material;
 
-	public MystiteArmor(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
+	public AxolotlArmor(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
 		super(material, slot, settings);
-		this.type = material;
+		this.material = material;
 		this.slot = slot;
 		this.protection = material.getProtectionAmount(slot);
-		this.toughness = material.getToughness();
-		this.knockbackResistance = material.getKnockbackResistance();
+		this.max_health = 0.25f;
 
 		DispenserBlock.registerBehavior(this, DISPENSER_BEHAVIOR);
 		Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
 		UUID UUID = MODIFIERS[slot.getEntitySlotId()];
 		builder.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(UUID, "Armor modifier", (double) this.protection, EntityAttributeModifier.Operation.ADDITION));
-		builder.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, new EntityAttributeModifier(UUID, "Armor toughness", (double) this.toughness, EntityAttributeModifier.Operation.ADDITION));
-		builder.put(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, new EntityAttributeModifier(UUID, "Armor knockback resistance", (double) this.knockbackResistance / 10.0d, EntityAttributeModifier.Operation.ADDITION));
+		builder.put(EntityAttributes.GENERIC_MAX_HEALTH, new EntityAttributeModifier(UUID, "Axolotl armor modifier", (double) this.max_health, EntityAttributeModifier.Operation.MULTIPLY_BASE));
 		this.attributeModifiers = builder.build();
 	}
 
@@ -60,10 +59,18 @@ public class MystiteArmor extends ArmorItem implements InitialStackStateProvider
 	@Override
 	public void initializeState(ItemStack stack) {
 		Map<Enchantment, Integer> defaultEnchants = new HashMap<>();
-
-		defaultEnchants.put(Enchantments.PROTECTION, 5);
+		
+		if (stack.getItem() == ModItems.AXOLOTL_HELMET) {
+			defaultEnchants.put(Enchantments.RESPIRATION, 3);
+			defaultEnchants.put(Enchantments.AQUA_AFFINITY, 1);
+		} else if (stack.getItem() == ModItems.AXOLOTL_BOOTS) {
+			defaultEnchants.put(Enchantments.DEPTH_STRIDER, 3);
+		}
 
 		EnchantmentHelper.set(defaultEnchants, stack);
+
+		((DyeableItem) stack.getItem()).setColor(stack, 15961002);
+		stack.addHideFlag(ItemStack.TooltipSection.DYE);
 	}
 
 

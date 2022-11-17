@@ -14,11 +14,12 @@ import net.minecraft.item.ToolMaterials;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.slimesurvival.SlimeSurvival;
-import net.slimesurvival.common.armor.*;
 import net.slimesurvival.common.item.DustItem;
 import net.slimesurvival.common.item.RawOrePieceItem;
+import net.slimesurvival.common.item.SSArmorMaterials;
 import net.slimesurvival.common.item.SSItemGroups;
 import net.slimesurvival.common.item.ammo.*;
+import net.slimesurvival.common.item.armor.*;
 import net.slimesurvival.common.item.material.*;
 import net.slimesurvival.common.item.trinket.*;
 import net.slimesurvival.common.item.weapon.gun.*;
@@ -82,29 +83,17 @@ public class ModItems {
 
 
 
+	public static final Item TURTLE_HELMET = register("turtle_helmet", new TurtleArmor(SSArmorMaterials.TURTLE, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
+	public static final Item TURTLE_CHESTPLATE = register("turtle_chestplate", new TurtleArmor(SSArmorMaterials.TURTLE, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
+	public static final Item TURTLE_LEGGINGS = register("turtle_leggings", new TurtleArmor(SSArmorMaterials.TURTLE, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
+	public static final Item TURTLE_BOOTS = register("turtle_boots", new TurtleArmor(SSArmorMaterials.TURTLE, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
 
 
 
-
-
-	public static final Item MYSTITE_HELMET = register("mystite_helmet", new MystiteArmor(ModArmorMaterials.MYSTITE, EquipmentSlot.HEAD, new Item.Settings().fireproof().group(ModItemGroups.EQUIPMENT)));
-	public static final Item MYSTITE_CHESTPLATE = register("mystite_chestplate", new MystiteArmor(ModArmorMaterials.MYSTITE, EquipmentSlot.CHEST, new Item.Settings().fireproof().group(ModItemGroups.EQUIPMENT)));
-	public static final Item MYSTITE_LEGGINGS = register("mystite_leggings", new MystiteArmor(ModArmorMaterials.MYSTITE, EquipmentSlot.LEGS, new Item.Settings().fireproof().group(ModItemGroups.EQUIPMENT)));
-	public static final Item MYSTITE_BOOTS = register("mystite_boots", new MystiteArmor(ModArmorMaterials.MYSTITE, EquipmentSlot.FEET, new Item.Settings().fireproof().group(ModItemGroups.EQUIPMENT)));
-
-
-
-	public static final Item TURTLE_HELMET = register("turtle_helmet", new TurtleArmor(ModArmorMaterials.TURTLE, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
-	public static final Item TURTLE_CHESTPLATE = register("turtle_chestplate", new TurtleArmor(ModArmorMaterials.TURTLE, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
-	public static final Item TURTLE_LEGGINGS = register("turtle_leggings", new TurtleArmor(ModArmorMaterials.TURTLE, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
-	public static final Item TURTLE_BOOTS = register("turtle_boots", new TurtleArmor(ModArmorMaterials.TURTLE, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
-
-
-
-	public static final Item AXOLOTL_HELMET = register("axolotl_helmet", new AxolotlArmor(ModArmorMaterials.AXOLOTL, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
-	public static final Item AXOLOTL_CHESTPLATE = register("axolotl_chestplate", new AxolotlArmor(ModArmorMaterials.AXOLOTL, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
-	public static final Item AXOLOTL_LEGGINGS = register("axolotl_leggings", new AxolotlArmor(ModArmorMaterials.AXOLOTL, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
-	public static final Item AXOLOTL_BOOTS = register("axolotl_boots", new AxolotlArmor(ModArmorMaterials.AXOLOTL, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
+	public static final Item AXOLOTL_HELMET = register("axolotl_helmet", new AxolotlArmor(SSArmorMaterials.AXOLOTL, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
+	public static final Item AXOLOTL_CHESTPLATE = register("axolotl_chestplate", new AxolotlArmor(SSArmorMaterials.AXOLOTL, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
+	public static final Item AXOLOTL_LEGGINGS = register("axolotl_leggings", new AxolotlArmor(SSArmorMaterials.AXOLOTL, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
+	public static final Item AXOLOTL_BOOTS = register("axolotl_boots", new AxolotlArmor(SSArmorMaterials.AXOLOTL, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
 
 
 

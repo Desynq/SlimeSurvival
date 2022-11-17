@@ -1,4 +1,4 @@
-package net.slimesurvival.common.registry;
+package net.slimesurvival.common.item;
 
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
@@ -6,8 +6,9 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.slimesurvival.common.registry.ModItemsNew;
 
-public enum ModArmorMaterials implements ArmorMaterial {
+public enum SSArmorMaterials implements ArmorMaterial {
 	AXOLOTL("axolotl", 15, new int[]{1, 4, 5, 2}, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, 0.0f, Ingredient.ofItems(ModItemsNew.AXOLOTL_GILLS)),
 	TURTLE("turtle", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 2.0f, 2.5f, Ingredient.ofItems(Items.SCUTE)),
 	MYSTITE("mystite", 200, new int[]{5, 8, 10, 5}, 25, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 4.0f, 2.0f, Ingredient.ofItems(ModItemsNew.MYSTITE_INGOT)),
@@ -23,7 +24,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
 	private final float knockbackResistance;
 	private final Ingredient repairIngredient;
 
-	private ModArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Ingredient repairIngredient) {
+	private SSArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Ingredient repairIngredient) {
 		this.name = name;
 		this.durabilityMultiplier = durabilityMultiplier;
 		this.protectionAmounts = protectionAmounts;

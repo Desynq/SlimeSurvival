@@ -49,7 +49,7 @@ public class SSItemGroups extends OwoItemGroup {
 
 		addTab(ModItems.UTILITY_BELT, "trinkets");
 
-		addTab(ModItems.MYSTITE_HELMET, "armor");
+		addTab(ModItemsNew.MYSTITE_HELMET, "armor");
 
 		addTab(ModItemsNew.MOLTEN_PICKAXE, "tools");
 

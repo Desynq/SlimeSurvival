@@ -1,4 +1,4 @@
-package net.slimesurvival.common.armor;
+package net.slimesurvival.common.item.armor;
 
 import java.util.HashMap;
 import java.util.Map;

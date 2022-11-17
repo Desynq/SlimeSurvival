@@ -8,15 +8,15 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
+import net.slimesurvival.common.item.SSToolMaterials;
 import net.slimesurvival.common.registry.ModEnchantments;
 import net.slimesurvival.common.registry.ModItemGroups;
-import net.slimesurvival.common.registry.ModToolMaterials;
 import net.slimesurvival.util.interfaces.InitialStackStateProvider;
 
 public class MoltenSword extends SwordItem implements InitialStackStateProvider {
 
 	public MoltenSword(Settings settings) {
-		super(ModToolMaterials.MOLTEN, 7, -2.4F, settings.group(ModItemGroups.TOOLS));
+		super(SSToolMaterials.MOLTEN, 7, -2.4F, settings.group(ModItemGroups.TOOLS));
 	}
 
 	@Override
