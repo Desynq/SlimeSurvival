@@ -18,4 +18,8 @@ public class ItemSettings {
 	.group(SlimeSurvival.TABBED_ITEM_GROUP)
 	.tab(SSItemGroups.Tabs.TOOLS.ordinal())
 	.maxCount(1);
+
+	public static final OwoItemSettings ARMOR = new OwoItemSettings()
+	.group(SlimeSurvival.TABBED_ITEM_GROUP)
+	.tab(SSItemGroups.Tabs.ARMOR.ordinal());
 }
