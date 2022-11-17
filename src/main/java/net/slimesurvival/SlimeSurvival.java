@@ -47,10 +47,10 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 
 		logInit(ModBlocks.register());
 
-		logInit(ModItems.register());
-
 		FieldRegistrationHandler.register(ModItemsNew.class, MOD_ID, true);
 		logInit("Loaded oωo Items");
+
+		logInit(ModItems.register());
 
 		logInit(ModEnchantments.register());
 
