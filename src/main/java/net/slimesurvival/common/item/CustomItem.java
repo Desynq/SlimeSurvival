@@ -14,16 +14,18 @@ import net.slimesurvival.util.settings.CustomItemSettings;
 import net.slimesurvival.util.settings.ExtendableTooltipSettings;
 
 public class CustomItem extends Item {
-	public ExtendableTooltipSettings tooltipSettings;
-	public CustomItemSettings itemSettings;
+	public final CustomItemSettings itemSettings;
+	public final ExtendableTooltipSettings tooltipSettings;
 
-	public CustomItem(Settings settings, ExtendableTooltipSettings tooltipSettings, CustomItemSettings itemSettings) {
+	public CustomItem(Settings settings, CustomItemSettings itemSettings, ExtendableTooltipSettings tooltipSettings) {
 		super(settings);
-		this.tooltipSettings = tooltipSettings;
 		this.itemSettings = itemSettings;
+		this.tooltipSettings = tooltipSettings;
 	}
 	public CustomItem(Settings settings, CustomItemSettings itemSettings) {
 		super(settings);
+		this.itemSettings = itemSettings;
+		this.tooltipSettings = null;
 	}
 
 
@@ -35,6 +37,8 @@ public class CustomItem extends Item {
 
 	@Override
 	public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-		TooltipHelper.addExtendableTooltip(tooltip, tooltipSettings);
+		if (tooltipSettings != null) {
+			TooltipHelper.addExtendableTooltip(tooltip, tooltipSettings);
+		}
 	}
 }

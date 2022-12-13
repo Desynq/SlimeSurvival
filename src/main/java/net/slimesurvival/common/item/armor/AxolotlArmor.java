@@ -20,6 +20,7 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.DyeableArmorItem;
 import net.minecraft.item.DyeableItem;
 import net.minecraft.item.ItemStack;
+import net.slimesurvival.common.item.SSArmorMaterials;
 import net.slimesurvival.common.registry.ModItems;
 import net.slimesurvival.util.interfaces.InitialStackStateProvider;
 
@@ -37,18 +38,21 @@ public class AxolotlArmor extends DyeableArmorItem implements InitialStackStateP
 	protected final EquipmentSlot slot;
 	protected final ArmorMaterial material;
 
-	public AxolotlArmor(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
-		super(material, slot, settings);
-		this.material = material;
+	public AxolotlArmor(EquipmentSlot slot, Settings settings) {
+		super(SSArmorMaterials.AXOLOTL, slot, settings);
+		this.material = SSArmorMaterials.AXOLOTL;
 		this.slot = slot;
-		this.protection = material.getProtectionAmount(slot);
+		this.protection = this.material.getProtectionAmount(slot);
 		this.max_health = 0.25f;
 
 		DispenserBlock.registerBehavior(this, DISPENSER_BEHAVIOR);
+
 		Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
 		UUID UUID = MODIFIERS[slot.getEntitySlotId()];
+
 		builder.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(UUID, "Armor modifier", (double) this.protection, EntityAttributeModifier.Operation.ADDITION));
 		builder.put(EntityAttributes.GENERIC_MAX_HEALTH, new EntityAttributeModifier(UUID, "Axolotl armor modifier", (double) this.max_health, EntityAttributeModifier.Operation.MULTIPLY_BASE));
+
 		this.attributeModifiers = builder.build();
 	}
 
@@ -59,14 +63,17 @@ public class AxolotlArmor extends DyeableArmorItem implements InitialStackStateP
 	@Override
 	public void initializeState(ItemStack stack) {
 		Map<Enchantment, Integer> defaultEnchants = new HashMap<>();
-		
-		if (stack.getItem() == ModItems.AXOLOTL_HELMET) {
-			defaultEnchants.put(Enchantments.RESPIRATION, 3);
-			defaultEnchants.put(Enchantments.AQUA_AFFINITY, 1);
-		} else if (stack.getItem() == ModItems.AXOLOTL_BOOTS) {
-			defaultEnchants.put(Enchantments.DEPTH_STRIDER, 3);
+		switch (this.slot) {
+			case HEAD:
+				defaultEnchants.put(Enchantments.RESPIRATION, 3);
+				defaultEnchants.put(Enchantments.AQUA_AFFINITY, 1);
+				break;
+			case FEET:
+				defaultEnchants.put(Enchantments.DEPTH_STRIDER, 3);
+				break;
+			default:
+				break;
 		}
-
 		EnchantmentHelper.set(defaultEnchants, stack);
 
 		((DyeableItem) stack.getItem()).setColor(stack, 15961002);
@@ -81,10 +88,4 @@ public class AxolotlArmor extends DyeableArmorItem implements InitialStackStateP
 	public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
 		return slot == this.slot ? this.attributeModifiers : super.getAttributeModifiers(slot);
 	}
-
-	@Override
-	public boolean hasGlint(ItemStack itemStack) {
-		return false;
-	}
-
 }

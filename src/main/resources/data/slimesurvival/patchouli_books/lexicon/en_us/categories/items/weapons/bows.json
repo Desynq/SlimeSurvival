@@ -1,0 +1,6 @@
+{
+	"name": "Bows",
+	"icon": "slimesurvival:mystite_bow",
+	"parent": "slimesurvival:items/weapons",
+	"description": "A class of ranged weapons that fires projectiles using a string-drawn mechanism such as a crossbow or longbow. Bows are typically easy to construct and use but require extensive practice and honing in order to use proficiently."
+}

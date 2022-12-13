@@ -32,8 +32,8 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	public static final Integer TOTAL_INITIALIZATION_STEPS = 14;
-	public static Integer currentInitializationStep = -1;
+	public static final int TOTAL_INITIALIZATION_STEPS = 16;
+	public static int currentInitializationStep = 0;
 
 
 
@@ -43,12 +43,13 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 		logInit("Initializing...");
 
 		ModEntityAttributes.register();
-		logInit("Registered Entity Attributes");
+		logInit("Registered entity attributes");
 
-		logInit(ModBlocks.register());
+		FieldRegistrationHandler.register(ModBlocks.class, MOD_ID, false);
+		logInit("Registered blocks and block items");
 
-		FieldRegistrationHandler.register(ModItemsNew.class, MOD_ID, true);
-		logInit("Loaded oωo Items");
+		FieldRegistrationHandler.register(ModItemsNew.class, MOD_ID, false);
+		logInit("Registered items");
 
 		logInit(ModItems.register());
 
@@ -75,6 +76,7 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 
 
 		CarpetServer.manageExtension(this);
+		logInit("Managed carpet extension");
 
 
 
@@ -83,7 +85,7 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 
 	// bri'ish
 	private static void logInit(String string) {
-		LOGGER.info(String.format("[%d/%d] " + string, currentInitializationStep += 1, TOTAL_INITIALIZATION_STEPS));
+		LOGGER.info(String.format("[%d/%d] " + string, ++currentInitializationStep, TOTAL_INITIALIZATION_STEPS));
 	}
 
 

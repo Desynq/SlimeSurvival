@@ -129,11 +129,6 @@ dependencies {
 
 
 
-	// Content-Adding
-	modImplementation "curse.maven:terrarian-slimes-465336:${project.terrarian_slimes_version}"
-
-
-
 
 
 	// https://maven.wispforest.io/io/wispforest/owo-lib/

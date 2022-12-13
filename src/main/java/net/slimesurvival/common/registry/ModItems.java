@@ -6,7 +6,6 @@ import io.wispforest.owo.itemgroup.OwoItemSettings;
 import moriyashiine.bewitchment.common.registry.BWMaterials;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -14,13 +13,8 @@ import net.minecraft.item.ToolMaterials;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.slimesurvival.SlimeSurvival;
-import net.slimesurvival.common.item.DustItem;
-import net.slimesurvival.common.item.RawOrePieceItem;
-import net.slimesurvival.common.item.SSArmorMaterials;
 import net.slimesurvival.common.item.SSItemGroups;
 import net.slimesurvival.common.item.ammo.*;
-import net.slimesurvival.common.item.armor.*;
-import net.slimesurvival.common.item.material.*;
 import net.slimesurvival.common.item.trinket.*;
 import net.slimesurvival.common.item.weapon.gun.*;
 import net.slimesurvival.common.item.weapon.melee.*;
@@ -30,27 +24,6 @@ import net.slimesurvival.util.RegistryHelper;
 
 @Deprecated
 public class ModItems {
-
-	public static final Item NITER = register("niter", new Niter(new FabricItemSettings()));
-	public static final Item QUICKSILVER = register("quicksilver", new Quicksilver(new FabricItemSettings()));
-	public static final Item RAW_GALENA = register("raw_galena", new RawGalena(new FabricItemSettings()));
-	public static final Item SMALL_LEATHER = register("small_leather", new SmallLeather(new FabricItemSettings()));
-
-
-	public static final Item RAW_GALENA_PIECE = register("raw_galena_piece", new RawOrePieceItem(new FabricItemSettings()));
-	public static final Item RAW_SILVER_PIECE = register("raw_silver_piece", new RawOrePieceItem(new FabricItemSettings()));
-
-
-	public static final Item COPPER_DUST = register("copper_dust", new DustItem(new FabricItemSettings()));
-	public static final Item NITER_DUST = register("niter_dust", new DustItem(new FabricItemSettings()));
-	public static final Item SILVER_DUST = register("silver_dust", new DustItem(new FabricItemSettings()));
-	public static final Item SULFUR_DUST = register("sulfur_dust", new DustItem(new FabricItemSettings()));
-
-
-
-
-
-
 
 	public static final Item BAN_HAMMER = register("ban_hammer", new BanHammer(ToolMaterials.DIAMOND, Integer.MAX_VALUE, 16.0F, new FabricItemSettings().group(ModItemGroups.WEAPONS)));
 
@@ -80,20 +53,6 @@ public class ModItems {
 	public static final Item MYSTITE_LONGBOW = register("mystite_longbow", new MystiteLongbow(new FabricItemSettings()));
 
 	public static final Item ZEUS_BOW = register("zeus_bow", new ZeusBow(new FabricItemSettings()));
-
-
-
-	public static final Item TURTLE_HELMET = register("turtle_helmet", new TurtleArmor(SSArmorMaterials.TURTLE, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
-	public static final Item TURTLE_CHESTPLATE = register("turtle_chestplate", new TurtleArmor(SSArmorMaterials.TURTLE, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
-	public static final Item TURTLE_LEGGINGS = register("turtle_leggings", new TurtleArmor(SSArmorMaterials.TURTLE, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
-	public static final Item TURTLE_BOOTS = register("turtle_boots", new TurtleArmor(SSArmorMaterials.TURTLE, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
-
-
-
-	public static final Item AXOLOTL_HELMET = register("axolotl_helmet", new AxolotlArmor(SSArmorMaterials.AXOLOTL, EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
-	public static final Item AXOLOTL_CHESTPLATE = register("axolotl_chestplate", new AxolotlArmor(SSArmorMaterials.AXOLOTL, EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
-	public static final Item AXOLOTL_LEGGINGS = register("axolotl_leggings", new AxolotlArmor(SSArmorMaterials.AXOLOTL, EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
-	public static final Item AXOLOTL_BOOTS = register("axolotl_boots", new AxolotlArmor(SSArmorMaterials.AXOLOTL, EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroups.EQUIPMENT)));
 
 
 
@@ -176,8 +135,6 @@ public class ModItems {
 	public static final Item SOLID_YELLOW = register(ModBlocks.SOLID_YELLOW, "blocks");
 
 	public static final Item FAKE_TNT = register(ModBlocks.FAKE_TNT, "blocks");
-
-	public static final Item CRACKED_OBSIDIAN = register(ModBlocks.CRACKED_OBSIDIAN, "blocks");
 
 
 	public static final Item ENDER_SHOP = register(ModBlocks.ENDER_SHOP, "blocks");

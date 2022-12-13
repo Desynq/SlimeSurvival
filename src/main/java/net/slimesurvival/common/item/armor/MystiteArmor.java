@@ -57,10 +57,4 @@ public class MystiteArmor extends ArmorItem {
 	public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
 		return slot == this.slot ? this.attributeModifiers : super.getAttributeModifiers(slot);
 	}
-
-	@Override
-	public boolean hasGlint(ItemStack itemStack) {
-		return false;
-	}
-
 }

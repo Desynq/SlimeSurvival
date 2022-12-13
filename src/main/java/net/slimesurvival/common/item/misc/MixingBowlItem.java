@@ -9,35 +9,19 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
-import net.slimesurvival.util.provider.ExtendableTooltipProvider;
+import net.slimesurvival.util.TooltipHelper;
+import net.slimesurvival.util.settings.ExtendableTooltipSettings;
 
-public class MixingBowlItem extends Item implements ExtendableTooltipProvider {
+public class MixingBowlItem extends Item {
+	public final ExtendableTooltipSettings tooltipSettings;
 
-	public MixingBowlItem(Settings settings) {
+	public MixingBowlItem(Settings settings, ExtendableTooltipSettings tooltipSettings) {
 		super(settings);
-	}
-
-
-
-
-
-	@Override
-	public boolean hasTooltip() {
-		return true;
-	}
-
-	@Override
-	public boolean hasDetails() {
-		return true;
-	}
-
-	@Override
-	public String tooltipTranslationKey() {
-		return this.getTranslationKey();
+		this.tooltipSettings = tooltipSettings;
 	}
 
 	@Override
 	public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-		tryAppend(tooltip);
+		TooltipHelper.addExtendableTooltip(tooltip, tooltipSettings);
 	}
 }

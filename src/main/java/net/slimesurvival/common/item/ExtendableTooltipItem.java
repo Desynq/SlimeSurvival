@@ -13,7 +13,7 @@ import net.slimesurvival.util.TooltipHelper;
 import net.slimesurvival.util.settings.ExtendableTooltipSettings;
 
 public class ExtendableTooltipItem extends Item {
-	public ExtendableTooltipSettings tooltipSettings;
+	public final ExtendableTooltipSettings tooltipSettings;
 
 	public ExtendableTooltipItem(Settings settings, ExtendableTooltipSettings tooltipSettings) {
 		super(settings);

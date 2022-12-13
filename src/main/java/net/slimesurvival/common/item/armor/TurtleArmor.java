@@ -20,7 +20,7 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.DyeableArmorItem;
 import net.minecraft.item.DyeableItem;
 import net.minecraft.item.ItemStack;
-import net.slimesurvival.common.registry.ModItems;
+import net.slimesurvival.common.item.SSArmorMaterials;
 import net.slimesurvival.util.interfaces.InitialStackStateProvider;
 
 public class TurtleArmor extends DyeableArmorItem implements InitialStackStateProvider {
@@ -38,13 +38,13 @@ public class TurtleArmor extends DyeableArmorItem implements InitialStackStatePr
 	protected final EquipmentSlot slot;
 	protected final ArmorMaterial material;
 
-	public TurtleArmor(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
-		super(material, slot, settings);
-		this.material = material;
+	public TurtleArmor(EquipmentSlot slot, Settings settings) {
+		super(SSArmorMaterials.TURTLE, slot, settings);
+		this.material = SSArmorMaterials.TURTLE;
 		this.slot = slot;
-		this.protection = material.getProtectionAmount(slot);
-		this.toughness = material.getToughness();
-		this.knockbackResistance = material.getKnockbackResistance();
+		this.protection = this.material.getProtectionAmount(slot);
+		this.toughness = this.material.getToughness();
+		this.knockbackResistance = this.material.getKnockbackResistance();
 
 		DispenserBlock.registerBehavior(this, DISPENSER_BEHAVIOR);
 		Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
@@ -63,7 +63,7 @@ public class TurtleArmor extends DyeableArmorItem implements InitialStackStatePr
 	public void initializeState(ItemStack stack) {
 		Map<Enchantment, Integer> defaultEnchants = new HashMap<>();
 		
-		if (stack.getItem() == ModItems.TURTLE_HELMET) {
+		if (this.slot == EquipmentSlot.HEAD) {
 			defaultEnchants.put(Enchantments.RESPIRATION, 3);
 			defaultEnchants.put(Enchantments.AQUA_AFFINITY, 1);
 		}
@@ -81,10 +81,4 @@ public class TurtleArmor extends DyeableArmorItem implements InitialStackStatePr
 	public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
 		return slot == this.slot ? this.attributeModifiers : super.getAttributeModifiers(slot);
 	}
-
-	@Override
-	public boolean hasGlint(ItemStack itemStack) {
-		return false;
-	}
-
 }

@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
+import net.slimesurvival.common.registry.ModBlocks;
 import net.slimesurvival.common.registry.ModItems;
 import net.slimesurvival.common.registry.ModItemsNew;
 
@@ -15,8 +16,6 @@ public class SSItemGroups extends OwoItemGroup {
 	public SSItemGroups(Identifier id) {
 		super(id);
 	}
-
-
 
 	public enum Tabs {
 		MISC,
@@ -31,8 +30,6 @@ public class SSItemGroups extends OwoItemGroup {
 		RANGED_AMMO,
 		ICONS
 	}
-
-
 
 	@Override
 	protected void setup() {
