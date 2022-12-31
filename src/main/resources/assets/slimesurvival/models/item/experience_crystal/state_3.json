@@ -1,6 +1,0 @@
-{
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "slimesurvival:item/misc/experience_crystal/state_3"
-	}
-}

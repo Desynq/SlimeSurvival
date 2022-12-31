@@ -1,6 +1,0 @@
-{
-	"parent": "minecraft:item/generated",
-	"textures": {
-		"layer0": "slimesurvival:item/armor/mystite_boots"
-	}
-}

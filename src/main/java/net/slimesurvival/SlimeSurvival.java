@@ -6,14 +6,10 @@ import org.slf4j.LoggerFactory;
 import carpet.CarpetExtension;
 import carpet.CarpetServer;
 import carpet.script.CarpetExpression;
-import io.wispforest.owo.itemgroup.OwoItemGroup;
-import io.wispforest.owo.registration.reflect.FieldRegistrationHandler;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import net.slimesurvival.addons.carpet.script.api.Advancements;
-import net.slimesurvival.common.item.SSItemGroups;
-import net.slimesurvival.common.registry.*;
-import net.slimesurvival.util.RegistryHelper;
+import net.slimesurvival.addons.carpet.script.api.UUIDUtils;
 
 public class SlimeSurvival implements CarpetExtension, ModInitializer {
 	@Deprecated
@@ -26,66 +22,15 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 	public static final String MOD_ID = "slimesurvival";
 	public static final String MOD_NAME = "Slime Survival";
 
-	public static final OwoItemGroup TABBED_ITEM_GROUP = new SSItemGroups(RegistryHelper.id("main"));
-
 
 
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-
-	public static final int TOTAL_INITIALIZATION_STEPS = 16;
-	public static int currentInitializationStep = 0;
 
 
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info(System.lineSeparator());
-		logInit("Initializing...");
-
-		ModEntityAttributes.register();
-		logInit("Registered entity attributes");
-
-		FieldRegistrationHandler.register(ModBlocks.class, MOD_ID, false);
-		logInit("Registered blocks and block items");
-
-		FieldRegistrationHandler.register(ModItemsNew.class, MOD_ID, false);
-		logInit("Registered items");
-
-		logInit(ModItems.register());
-
-		logInit(ModEnchantments.register());
-
-		logInit(ModStatusEffects.register());
-
-		logInit(ModPowerFactories.register());
-
-		TABBED_ITEM_GROUP.initialize();
-		logInit("Loaded oωo Item Groups.");
-
-
-		// Data-Driven
-		ModItemTags.register();
-		logInit("Loaded Mod Item Tags");
-		logInit(ModRecipeSerializers.register());
-
-		logInit(ModLootHandler.register());
-
-		logInit(ModDimensions.register());
-		logInit(ModDimensionTypes.register());
-
-
-
 		CarpetServer.manageExtension(this);
-		logInit("Managed carpet extension");
-
-
-
-		logInit("Finished initializing." + System.lineSeparator());
-	}
-
-	// bri'ish
-	private static void logInit(String string) {
-		LOGGER.info(String.format("[%d/%d] " + string, ++currentInitializationStep, TOTAL_INITIALIZATION_STEPS));
 	}
 
 
@@ -93,5 +38,6 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 	@Override
 	public void scarpetApi(CarpetExpression expression) {
 		Advancements.apply(expression.getExpr());
+		UUIDUtils.apply(expression.getExpr());
 	}
 }

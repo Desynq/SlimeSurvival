@@ -20,7 +20,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
 import net.minecraft.server.world.ServerWorld;
-import net.slimesurvival.SlimeSurvival;
+import net.slimesurvival.util.RegistryHelper;
 
 @Mixin(Explosion.class)
 public class ExplosionMixin {
@@ -54,7 +54,7 @@ public class ExplosionMixin {
 		if (this.world instanceof ServerWorld) {
 			LootContext.Builder builder = new LootContext.Builder((ServerWorld) this.world).parameter(LootContextParameters.ORIGIN, new Vec3d(x, y, z)).optionalParameter(LootContextParameters.THIS_ENTITY, this.entity);
 			LootConditionManager lootConditionManager = ((ServerWorld) this.world).getServer().getPredicateManager();
-			LootCondition lootCondition = lootConditionManager.get(SlimeSurvival.ID("can_affect_blocks"));
+			LootCondition lootCondition = lootConditionManager.get(RegistryHelper.id("can_affect_blocks"));
 
 			if (!affectedBlocks.isEmpty() && lootCondition != null && !lootCondition.test(builder.build(LootContextTypes.COMMAND))) {
 				affectedBlocks.clear();

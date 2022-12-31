@@ -1,6 +1,0 @@
-{
-	"parent": "slimesurvival:item/zeus_bow",
-	"textures": {
-		"layer0": "slimesurvival:item/weapon/zeus_bow/pulling_2"
-	}
-}

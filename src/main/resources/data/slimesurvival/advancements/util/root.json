@@ -1,7 +1,0 @@
-{
-	"criteria": {
-		"acquired": {
-			"trigger": "minecraft:impossible"
-		}
-	}
-}

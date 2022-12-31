@@ -1,7 +1,0 @@
-{
-	"fallbackValue": 0.0,
-	"minValue": -2147483648.0,
-	"maxValue": 2147483647.0,
-	"translationKey": "attribute.slimesurvival.generic.gun/vertical_recoil",
-	"stackingBehaviour": "FLAT"
-}

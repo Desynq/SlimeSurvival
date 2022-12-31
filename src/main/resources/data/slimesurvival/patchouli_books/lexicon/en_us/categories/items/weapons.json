@@ -1,6 +1,0 @@
-{
-	"name": "Weapons",
-	"icon": "slimesurvival:rift_battleaxe",
-	"parent": "slimesurvival:items",
-	"description": "Armaments that aid in neutralizing or otherwise attacking opponents."
-}

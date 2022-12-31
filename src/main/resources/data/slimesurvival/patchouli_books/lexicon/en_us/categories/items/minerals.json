@@ -1,6 +1,0 @@
-{
-	"name": "Minerals",
-	"icon": "minecraft:iron_ingot",
-	"parent": "slimesurvival:items",
-	"description": "Resources that you find underground and process into stuff."
-}

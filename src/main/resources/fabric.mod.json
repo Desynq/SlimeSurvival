@@ -1,10 +1,10 @@
 {
 	"schemaVersion": 1,
 	"id": "slimesurvival",
-	"version": "1.3.2",
+	"version": "0.1+1.18.2-Neopolitan",
 
 	"name": "Slime Survival",
-	"description": "Utilized for the Slime Survival Server",
+	"description": "Semi-vanilla version of the Slime Survival mod designed to be used only on the serverside",
 	"authors": [
 		"Desynq"
 	],
@@ -19,20 +19,11 @@
 	"entrypoints": {
 		"main": [
 			"net.slimesurvival.SlimeSurvival"
-		],
-		"client": [
-			"net.slimesurvival.client.SlimeSurvivalClient"
-		],
-		"mm:early_risers": [
-			"net.slimesurvival.common.SlimeSurvivalEarlyRiser"
 		]
 	},
 	"mixins": [
 		"slimesurvival.mixins.json",
-		"slimesurvival.besmirchment.mixins.json",
-		"slimesurvival.bewitchment.mixins.json",
-		"slimesurvival.scarpet.mixins.json",
-		"slimesurvival.artifacts.mixins.json"
+		"slimesurvival.scarpet.mixins.json"
 	],
 
 	"depends": {
@@ -41,19 +32,6 @@
 		"minecraft": "~1.18.2",
 		"java": ">=17",
 
-		"artifacts": ">=7.0.3",
-		"betterend": ">=1.1.1",
-		"bewitchment": ">=1.18-22",
-		"carpet": ">=1.4.69",
-		"cloth-config": ">=6.0.0",
-		"origins": ">=1.4.1",
-		"patchouli": "*",
-		"pehkui": ">=3.3.1",
-		"trinkets": ">=3.3.1",
-		"projectiledamage": ">=2.2.0",
-		"fabricshieldlib": ">=1.5.3-1.18"
-	},
-	"recommends": {
-		"universalenchants": ">=3.0.6"
+		"carpet": ">=1.4.69"
 	}
 }

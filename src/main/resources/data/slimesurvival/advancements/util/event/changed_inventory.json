@@ -1,8 +1,0 @@
-{
-	"criteria": {
-		"acquired": {
-			"trigger": "minecraft:inventory_changed"
-		}
-	},
-	"parent": "slimesurvival:util/root"
-}

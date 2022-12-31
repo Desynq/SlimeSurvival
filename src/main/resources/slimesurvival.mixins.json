@@ -4,16 +4,9 @@
 	"package": "net.slimesurvival.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"BlockMixin",
-		"BossBarHudMixin",
 		"ExplosionMixin",
-		"ItemStackMixin",
-		"LivingEntityMixin",
-		"LootTableBuilderAccessor",
 		"PlayerEntityMixin",
-		"ShapelessRecipeMixin",
-		"SmallFireballEntityMixin",
-		"ToolMaterialsMixin"
+		"SmallFireballEntityMixin"
 	],
 	"client": [
 	],
