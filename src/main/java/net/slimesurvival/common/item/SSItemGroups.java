@@ -33,7 +33,7 @@ public class SSItemGroups extends OwoItemGroup {
 
 	@Override
 	protected void setup() {
-		setStackHeight(5);
+		setTabStackHeight(5);
 		keepStaticTitle();
 
 		addTab(Items.LAVA_BUCKET, "misc");

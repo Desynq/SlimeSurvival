@@ -25,16 +25,12 @@ import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.SlotType;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
-import dev.mrsterner.besmirchment.common.block.entity.PhylacteryBlockEntity;
-import dev.mrsterner.besmirchment.common.transformation.LichLogic;
 import io.github.apace100.apoli.mixin.EntityAccessor;
 import io.github.apace100.apoli.power.Power;
 import io.github.apace100.apoli.power.PowerType;
 import io.github.apace100.apoli.power.PowerTypeReference;
 import io.github.apace100.origins.origin.OriginLayers;
 import io.github.apace100.origins.registry.ModComponents;
-import moriyashiine.bewitchment.common.registry.BWComponents;
-import moriyashiine.bewitchment.common.registry.BWRegistries;
 import net.bettercombat.logic.PlayerAttackHelper;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.entity.Entity;
@@ -210,28 +206,6 @@ public class EntityValueMixin extends HashMap<String, BiFunction<Entity, Value, 
 					}
 					return ListValue.wrap(list);
 				}
-			}
-			return Value.NULL;
-		});
-
-
-
-		put("lich_souls", (e, a) -> {
-			if (e instanceof PlayerEntity p) {
-				Pair<ServerWorld, PhylacteryBlockEntity> phylactery = LichLogic.getPhylactery(p);
-				if (phylactery != null) {
-					int souls = phylactery.getRight().souls;
-					return new NumericValue(souls);
-				}
-			}
-			return Value.NULL;
-		});
-
-
-
-		put("bw_transformation", (e, a) -> {
-			if (e instanceof PlayerEntity p) {
-				return new StringValue(BWRegistries.TRANSFORMATIONS.getId(BWComponents.TRANSFORMATION_COMPONENT.get(p).getTransformation()).toString());
 			}
 			return Value.NULL;
 		});

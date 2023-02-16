@@ -8,9 +8,7 @@ import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -44,7 +42,7 @@ public class ExperienceCrystalItem extends Item implements ExtendableTooltipProv
 			stack.getOrCreateNbt().putInt("StoredExperience", storedExperience);
 			user.addExperience(-experienceMultiplier);
 
-			user.sendMessage(new LiteralText(storedExperience.toString()), true);
+			user.sendMessage(Text.of(storedExperience.toString()), true);
 
 			return TypedActionResult.success(stack);
 		}
@@ -53,7 +51,7 @@ public class ExperienceCrystalItem extends Item implements ExtendableTooltipProv
 			stack.getOrCreateNbt().putInt("StoredExperience", storedExperience);
 			user.addExperience(experienceMultiplier);
 
-			user.sendMessage(new LiteralText(storedExperience.toString()), true);
+			user.sendMessage(Text.of(storedExperience.toString()), true);
 
 			return TypedActionResult.success(stack);
 		}
@@ -86,6 +84,6 @@ public class ExperienceCrystalItem extends Item implements ExtendableTooltipProv
 	public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
 		tryAppend(tooltip);
 		
-		tooltip.add(1, new TranslatableText("item.slimesurvival.experience_crystal.tooltip", getStoredExperience(stack)));
+		tooltip.add(1, Text.translatable("item.slimesurvival.experience_crystal.tooltip", getStoredExperience(stack)));
 	}
 }

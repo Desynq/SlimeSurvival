@@ -23,20 +23,7 @@ This is simply a "collage" of different modder's work with some of my own and eg
 
 ### Download Required
 
-- Artifacts
-  - My mod has a mixin that "rebalances" the Feral Claws
-- Bewitchment by MoriyaShiine
-  - Used for various origins, recipes, weapons, etc.
-- Origins by Apace100
-  - Used for my own special origins and powers
-- *Patchouli is a mod by Vazkii*
-  - Used for in-game mod documentation (that I haven't done because I'm too lazy)
-- Pehkui
-  - Used for scale related changes
-- Trinkets
-  - Used for the various trinkets my mod adds
-- Projectile Damage
-  - Gives my ranged weapons custom damage and allows for certain trinkets to work
+"WIP"
 
 ### Included
 

@@ -3,9 +3,6 @@ plugins {
 	id 'maven-publish'
 }
 
-loom {
-}
-
 sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
@@ -14,6 +11,9 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
+	// Architectury
+	maven { url 'https://maven.architectury.dev' }
+
 	// MerchantPug
 	maven { url 'https://maven.merchantpug.net/releases/' }
 
@@ -38,7 +38,7 @@ repositories {
 	// ExpandAbility
 	maven { url "https://maven.florens.be/releases" }
 
-	//
+	// DataBreaker
 	maven { url "https://maven.gegy.dev/" }
 
 	// Appleskin
@@ -55,6 +55,9 @@ repositories {
 
 	// Impersonate
 	maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+
+	// JEI
+	maven { url = "https://dvs1.progwml6.com/files/maven/" }
 
 	//
 	maven {
@@ -90,29 +93,28 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
 
-	api "org.apache.commons:commons-text:1.9"
-
-
-
-
+	implementation 'org.apache.commons:commons-text:1.9'
+	implementation 'it.unimi.dsi:fastutil:8.5.11'
 
 	implementation "com.github.LlamaLad7:MixinExtras:${project.mixin_extras_version}"
 	annotationProcessor "com.github.LlamaLad7:MixinExtras:${project.mixin_extras_version}"
 	include "com.github.LlamaLad7:MixinExtras:${project.mixin_extras_version}"
 
+
+
 	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
 
-	modImplementation include("com.github.DaFuqs:AdditionalEntityAttributes:${project.aea_version}") {
-		version { strictly '1.19.2-SNAPSHOT' }
-	}
 
-	modImplementation include("com.github.eggohito:apoli:${project.apoli_version}") {
-		exclude group: 'com.github.DaFuqs', module: 'AdditionalEntityAttributes'
+
+
+
+	include modImplementation("com.github.DaFuqs:AdditionalEntityAttributes:${project.aea_version}") {
+		version { strictly '1.19.2-SNAPSHOT' }
 	}
 
 	modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cc_version}"
@@ -126,16 +128,12 @@ dependencies {
 
 	modImplementation include("com.github.StellarWind22:Fabric-Shield-Lib:${project.fabric_shield_lib_version}")
 
-	modImplementation "com.github.quiqueck:BCLib:${project.bclib_version}"
-
 	modImplementation "maven.modrinth:data-attributes:${project.data_attributes_version}"
 
-	modCompileOnly("com.github.apace100:origins-fabric:${project.origins_version}") {
-		exclude group: 'io.github.onyxstudios.Cardinal-Components-API'
-		exclude group: 'com.github.apace100', module: 'apoli'
-	}
 
-	modImplementation include("net.merchantpug:apugli:${project.apugli_version}")
+	// Origins
+	modImplementation("com.github.eggohito:origins-fabric:${project.origins_version}")
+
 
 	modImplementation("dev.emi:trinkets:${project.trinkets_version}")
 
@@ -146,8 +144,7 @@ dependencies {
 
 	modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
 
-	modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_wood_api_version}"
-	include "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_wood_api_version}"
+	//include modImplementation("com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_wood_api_version}")
 
 	modApi("com.github.virtuoel:pehkui:${project.pehkui_version}") {
 		exclude group: "net.fabricmc.fabric-api"
@@ -159,17 +156,17 @@ dependencies {
 
 	modImplementation "be.florens:expandability-fabric:${project.expandability_version}"
 
-	modImplementation "curse.maven:bewitchment-394915:${project.bewitchment_version}"
 
-	modImplementation "curse.maven:besmirchment-2-542196:${project.besmirchment_version}"
+	//modImplementation "com.github.quiqueck:BCLib:${project.bclib_version}"
+	//modImplementation ("maven.modrinth:betterend:${project.better_end_version}")
 
-	modImplementation "com.github.quiqueck:BetterEnd:${project.better_end_version}"
+
 
 	modImplementation "curse.maven:alloy-forgery-438718:${project.alloy_forgery_version}"
 
 	modImplementation "curse.maven:fabricae-ex-nihilo-596911:${project.fabricae_ex_nihilo_version}"
 
-	modImplementation include("dev.kosmx.player-anim:player-animation-lib-fabric:${project.player_animation_lib_version}")
+	include modImplementation("dev.kosmx.player-anim:player-animation-lib-fabric:${project.player_animation_lib_version}")
 
 	modImplementation "curse.maven:projectile-damage-attribute-643780:${project.projectile_damage_version}"
 
@@ -183,11 +180,8 @@ dependencies {
 
 
 
-	// Workspace
-	modLocalRuntime "com.ptsmods:devlogin:2.0"
-	modLocalRuntime ("supercoder79:databreaker:0.2.9") {
-		exclude module: "fabric-loader"
-	}
+
+	modRuntimeOnly "dev.architectury:architectury-fabric:${project.architectury_version}"
 }
 
 processResources {

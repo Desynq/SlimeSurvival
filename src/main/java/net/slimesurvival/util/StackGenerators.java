@@ -4,7 +4,7 @@ import java.util.function.BiConsumer;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 
 public class StackGenerators {
@@ -19,7 +19,7 @@ public class StackGenerators {
 		for (int i = 0; i <= ICON_MAX; i++) {
 			ItemStack stack = new ItemStack(item);
 			stack.getOrCreateNbt().putInt("CustomModelData", i);
-			stack.setCustomName(new LiteralText(String.valueOf(i)));
+			stack.setCustomName(Text.of(String.valueOf(i)));
 			stacks.add(stack);
 		}
 	};

@@ -8,7 +8,7 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.BowItem;
 import net.minecraft.item.ItemStack;
-import net.projectiledamage.api.IProjectileWeapon;
+import net.projectile_damage.api.IProjectileWeapon;
 import net.slimesurvival.common.registry.ModItemGroups;
 import net.slimesurvival.util.interfaces.InitialStackStateProvider;
 

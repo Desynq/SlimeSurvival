@@ -6,15 +6,7 @@
 	"hidden": false,
 
 	"origins": [
-		"slimesurvival:human",
-
-		"slimesurvival:creep",
-		"slimesurvival:sludge",
-		"slimesurvival:arachnid",
-
-		"slimesurvival:ghoul",
-		"slimesurvival:faerie",
-		"slimesurvival:succubus"
+		"slimesurvival:human"
 	],
 
 	"allow_random": true,

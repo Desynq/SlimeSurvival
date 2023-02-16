@@ -1,7 +1,7 @@
 package net.slimesurvival.common.item.weapon.ranged;
 
 import net.minecraft.item.BowItem;
-import net.projectiledamage.api.IProjectileWeapon;
+import net.projectile_damage.api.IProjectileWeapon;
 import net.slimesurvival.common.registry.ModItemGroups;
 
 public class ZeusBow extends BowItem {

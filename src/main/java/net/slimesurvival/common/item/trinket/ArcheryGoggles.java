@@ -17,7 +17,7 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
-import net.projectiledamage.api.EntityAttributes_ProjectileDamage;
+import net.projectile_damage.api.EntityAttributes_ProjectileDamage;
 import net.slimesurvival.common.registry.ModItemGroups;
 import net.slimesurvival.util.provider.ExtendableTooltipProvider;
 

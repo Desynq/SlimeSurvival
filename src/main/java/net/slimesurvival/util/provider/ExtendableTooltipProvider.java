@@ -5,16 +5,14 @@ import java.util.List;
 
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.resource.language.I18n;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 
 @Deprecated
 public interface ExtendableTooltipProvider {
-	public static final Text SHOW_DETAILS_TOOLTIP = new TranslatableText("tooltip.slimesurvival.show_details");
-	public static final Text SHOW_HOW_TO_OBTAIN_TOOLTIP = new TranslatableText("tooltip.slimesurvival.show_how_to_obtain");
-	public static final Text SHOW_LORE = new TranslatableText("tooltip.slimesurvival.show_lore");
-	public static final Text SHOW_CREDITS = new TranslatableText("tooltip.slimesurvival.show_credits");
+	public static final Text SHOW_DETAILS_TOOLTIP = Text.translatable("tooltip.slimesurvival.show_details");
+	public static final Text SHOW_HOW_TO_OBTAIN_TOOLTIP = Text.translatable("tooltip.slimesurvival.show_how_to_obtain");
+	public static final Text SHOW_LORE = Text.translatable("tooltip.slimesurvival.show_lore");
+	public static final Text SHOW_CREDITS = Text.translatable("tooltip.slimesurvival.show_credits");
 
 	String tooltipTranslationKey();
 
@@ -70,7 +68,7 @@ public interface ExtendableTooltipProvider {
 		ArrayList<Text> texts = new ArrayList<Text>();
 
 		for (String line : lines) {
-			texts.add(new LiteralText(line));
+			texts.add(Text.of(line));
 		}
 
 		tooltip.addAll(texts);

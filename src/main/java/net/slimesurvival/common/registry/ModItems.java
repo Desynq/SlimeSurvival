@@ -3,7 +3,6 @@ package net.slimesurvival.common.registry;
 import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShieldItem;
 
 import io.wispforest.owo.itemgroup.OwoItemSettings;
-import moriyashiine.bewitchment.common.registry.BWMaterials;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -29,7 +28,7 @@ public class ModItems {
 
 	public static final Item BUTTERFLY_KNIFE = register("butterfly_knife", new ButterflyKnife(new FabricItemSettings()));
 
-	public static final Item DUSKBREAKER = register("duskbreaker", new Duskbreaker(BWMaterials.SILVER_TOOL, 5, -2.0F, new FabricItemSettings().group(ModItemGroups.WEAPONS)));
+	public static final Item DUSKBREAKER = register("duskbreaker", new Duskbreaker(ToolMaterials.IRON, 5, -2.0F, new FabricItemSettings().group(ModItemGroups.WEAPONS)));
 
 	public static final Item MOLTEN_SWORD = register("molten_sword", new MoltenSword(new FabricItemSettings()));
 
