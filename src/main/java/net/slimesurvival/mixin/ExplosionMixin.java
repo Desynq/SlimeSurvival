@@ -1,7 +1,5 @@
 package net.slimesurvival.mixin;
 
-import java.util.List;
-
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -9,6 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.entity.Entity;
 import net.minecraft.loot.condition.LootCondition;
 import net.minecraft.loot.condition.LootConditionManager;
@@ -42,7 +41,7 @@ public class ExplosionMixin {
 
 	@Final
 	@Shadow
-	private List<BlockPos> affectedBlocks;
+	private ObjectArrayList<BlockPos> affectedBlocks;
 
 	@Final
 	@Shadow

@@ -14,71 +14,25 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-	// Carpet
-	maven { url 'https://masa.dy.fi/maven' }
-
-	// PAL
-	maven { url 'https://maven.kosmx.dev/' }
-
-	// Jitpack
-	maven { url "https://jitpack.io" }
-
-	// idk
-	maven { url "https://ladysnake.jfrog.io/artifactory/mods" }
-
-	// Jared & Darkhax
-	maven { url "https://maven.blamejared.com" }
-
-	//
-	maven { url "https://maven.dblsaiko.net/" }
-
-	// ExpandAbility
-	maven { url "https://maven.florens.be/releases" }
-
-	//
-	maven { url "https://maven.gegy.dev/" }
-
-	// Appleskin
-	maven { url "https://maven.ryanliptak.com/" }
-
-	// REI
-	maven { url "https://maven.shedaniel.me/" }
-
-	// Wood API (Bewitchment)
-	maven { url "https://maven.terraformersmc.com/" }
-
-	// OwoLib
-	maven { url "https://maven.wispforest.io/" }
-
-	// Impersonate
-	maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
-
-	//
 	maven {
-		url "https://maven.jamieswhiteshirt.com/libs-release"
-		content {
-			includeGroup "com.jamieswhiteshirt"
-		}
+		name 'Jitpack'
+		url 'https://jitpack.io'
 	}
-
-	//
 	maven {
-		name "Cotton"
-		url "http://server.bbkr.space:8081/artifactory/libs-release/"
-		allowInsecureProtocol = true
+		name 'Cloth Config'
+		url 'https://maven.shedaniel.me/'
 	}
-
-	// Curse Maven
-	maven { url "https://www.cursemaven.com" }
-	// Curseforge Maven API
-	maven { url "https://minecraft.curseforge.com/api/maven" }
-
-	// Modrinth Maven
 	maven {
-		url "https://api.modrinth.com/maven"
-		content {
-			includeGroup "maven.modrinth"
-		}
+		name 'Mod Menu, Trinkets'
+		url 'https://maven.terraformersmc.com/releases/'
+	}
+	maven {
+		name 'PlayerAbilityLib'
+		url 'https://ladysnake.jfrog.io/artifactory/mods'
+	}
+	maven {
+		name 'Reach Entity Attributes'
+		url 'https://maven.jamieswhiteshirt.com/libs-release'
 	}
 }
 
@@ -91,18 +45,18 @@ dependencies {
 
 
 
-	api "org.apache.commons:commons-text:1.9"
-
-
-	modImplementation "carpet:fabric-carpet:1.18.2-1.4.69+v220331"
+	api 'org.apache.commons:commons-text:1.9'
+	api 'it.unimi.dsi:fastutil:8.5.11'
 
 
 
-	// Workspace
-	modLocalRuntime "com.ptsmods:devlogin:2.0"
-	modLocalRuntime ("supercoder79:databreaker:0.2.9") {
-		exclude module: "fabric-loader"
-	}
+	modImplementation "com.github.gnembon:fabric-carpet:${project.carpet_version}"
+
+	modImplementation "com.github.apace100:origins-fabric:${project.origins_version}"
+
+
+
+	modLocalRuntime "com.ptsmods:devlogin:3.1.1"
 }
 
 processResources {

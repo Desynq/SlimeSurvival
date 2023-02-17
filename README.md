@@ -23,43 +23,16 @@ This is simply a "collage" of different modder's work with some of my own and eg
 
 ### Download Required
 
-- Artifacts
-  - My mod has a mixin that "rebalances" the Feral Claws
-- Bewitchment by MoriyaShiine
-  - Used for various origins, recipes, weapons, etc.
-- Origins by Apace100
-  - Used for my own special origins and powers
-- *Patchouli is a mod by Vazkii*
-  - Used for in-game mod documentation (that I haven't done because I'm too lazy)
-- Pehkui
-  - Used for scale related changes
-- Trinkets
-  - Used for the various trinkets my mod adds
-- Projectile Damage
-  - Gives my ranged weapons custom damage and allows for certain trinkets to work
+- Carpet
+  - This mod adds some new functions and entity features, and so it requires carpet (>=1.4.96).
 
 ### Included
 
-- PlayerAbilityLib
-- Reach Entity Attributes
-- Terraform Wood API
-  - Workspace dependency for Bewitchment
-
 ### Recommended
-
-- Universal Enchants by Fuzs
-  - Will allow weapons with normally incompatible enchantments to work as intended (I.e., Mystite Longbow and Mystite Shortbow)
-  - Can probably be substituted with any mod that completes the same function of allowing enchantments to work on different items (I.e., quick charge and piercing on bow)
 
 ## Credits
 
-Note: *This list is incomplete*
+Note: This list is *probably* incomplete
 
-- MultiBossbarFix
-  - I copied your single mixin and transplanted it into my mod for 1.18.2.
-- Things
-  - I used your `ExtendableTooltipProvider` as "inspiration" for my own tooltip provider that supports line breaks (`\n`) in tooltip translation keys.
 - Mob Origins
-  - I literally copied your mixin for the bouncy effect.
-- Better Nether
-  - I hardcoded your `InitialStackStateProvider` for my own use.
+  - Mixin code for the bouncy power for their slime origin

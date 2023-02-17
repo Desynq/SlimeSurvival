@@ -34,7 +34,7 @@ public class Advancements {
 			if (lv.size() == 1) return ListValue.wrap(validArguments.stream().map(StringValue::new).collect(Collectors.toList()));
 			if (lv.size() != 2) throw new InternalExpressionException("Advancement-type argument should be defined by its identifier as a string and then by a string that defines what to get from the advancement");
 
-			Advancement advancement = cc.s.getServer().getAdvancementLoader().get(InputValidator.identifierOf(lv.get(0).getString()));
+			Advancement advancement = cc.source().getServer().getAdvancementLoader().get(InputValidator.identifierOf(lv.get(0).getString()));
 
 			if (advancement == null) return Value.NULL;
 

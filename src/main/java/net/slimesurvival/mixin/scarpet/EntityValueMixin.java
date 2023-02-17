@@ -33,7 +33,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
 
 // carpet.script.value.EntityValue
 @Mixin(targets = "carpet/script/value/EntityValue$1", remap = false)
@@ -97,7 +97,7 @@ public class EntityValueMixin extends HashMap<String, BiFunction<Entity, Value, 
 			EntityAttributeInstance attributeInstance;
 			EntityAttributeModifier attributeModifier;
 
-			if ((attribute = Registry.ATTRIBUTE.get(id)) != null && (attributeInstance = ((LivingEntity) e).getAttributeInstance(attribute)) != null && (attributeModifier = attributeInstance.getModifier(uuid)) != null) {
+			if ((attribute = Registries.ATTRIBUTE.get(id)) != null && (attributeInstance = ((LivingEntity) e).getAttributeInstance(attribute)) != null && (attributeModifier = attributeInstance.getModifier(uuid)) != null) {
 				return new NumericValue(attributeModifier.getValue());
 			}
 			return Value.NULL;
