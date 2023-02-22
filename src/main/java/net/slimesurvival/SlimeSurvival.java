@@ -20,8 +20,8 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 
 
 
-	public static final String MOD_ID = "slimesurvival";
-	public static final String MOD_NAME = "Slime Survival";
+	public static final String MOD_ID = "xsurvival";
+	public static final String MOD_NAME = "X-Survival";
 
 
 
