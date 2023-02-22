@@ -1,10 +1,10 @@
 {
 	"schemaVersion": 1,
-	"id": "slimesurvival",
+	"id": "xsurvival",
 	"version": "0.1.0+1.19.3",
 
-	"name": "Slime Survival",
-	"description": "Semi-vanilla version of the Slime Survival mod designed to be used only on the serverside",
+	"name": "X-Survival",
+	"description": "A mod that incorporates code shared by multiple survival projects that I've made, such as End Survival and Slime Survival.",
 	"authors": [
 		"Desynq"
 	],
@@ -13,7 +13,7 @@
 	},
 
 	"license": "CC0-1.0",
-	"icon": "assets/slimesurvival/icon.png",
+	"icon": "assets/xsurvival/icon.png",
 
 	"environment": "*",
 	"entrypoints": {
@@ -22,8 +22,8 @@
 		]
 	},
 	"mixins": [
-		"slimesurvival.mixins.json",
-		"slimesurvival.scarpet.mixins.json"
+		"xsurvival.mixins.json",
+		"xsurvival.scarpet.mixins.json"
 	],
 
 	"depends": {
