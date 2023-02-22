@@ -10,6 +10,7 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import net.slimesurvival.addons.carpet.script.api.Advancements;
 import net.slimesurvival.addons.carpet.script.api.UUIDUtils;
+import net.slimesurvival.common.item.SSItemGroup;
 
 public class SlimeSurvival implements CarpetExtension, ModInitializer {
 	@Deprecated
@@ -31,6 +32,8 @@ public class SlimeSurvival implements CarpetExtension, ModInitializer {
 	@Override
 	public void onInitialize() {
 		CarpetServer.manageExtension(this);
+
+		SSItemGroup.GROUP.initialize();
 	}
 
 

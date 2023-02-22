@@ -34,6 +34,14 @@ repositories {
 		name 'Reach Entity Attributes'
 		url 'https://maven.jamieswhiteshirt.com/libs-release'
 	}
+	maven {
+		name 'Patchouli'
+		url 'https://maven.blamejared.com'
+	}
+	maven {
+		name 'Owo Lib'
+		url 'https://maven.wispforest.io'
+	}
 }
 
 dependencies {
@@ -53,6 +61,10 @@ dependencies {
 	modImplementation "com.github.gnembon:fabric-carpet:${project.carpet_version}"
 
 	modImplementation "com.github.apace100:origins-fabric:${project.origins_version}"
+
+	modImplementation "vazkii.patchouli:Patchouli:${project.patchouli_version}"
+
+	modImplementation "io.wispforest:owo-lib:${project.owo_lib_version}"
 
 
 
