@@ -61,8 +61,10 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
 
 
-	modImplementation "com.github.gnembon:fabric-carpet:1.4.112"
-	modImplementation "com.github.apace100:origins-fabric:v1.10.0"
+	modImplementation "com.github.gnembon:fabric-carpet:${carpet_version}"
+
+	//modImplementation "com.github.apace100:apoli:v${apoli_version}"
+	modImplementation "com.github.apace100:origins-fabric:v${origins_version}"
 }
 
 processResources {
