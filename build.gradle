@@ -63,7 +63,7 @@ dependencies {
 
 	modImplementation "com.github.gnembon:fabric-carpet:${carpet_version}"
 
-	//modImplementation "com.github.apace100:apoli:v${apoli_version}"
+	modCompileOnly "com.github.apace100:apoli:v${apoli_version}"
 	modImplementation "com.github.apace100:origins-fabric:v${origins_version}"
 }
 
