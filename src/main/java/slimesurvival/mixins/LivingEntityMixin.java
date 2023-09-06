@@ -7,8 +7,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
-import slimesurvival.registry.ModEntityAttributes;
+import slimesurvival.common.registry.ModEntityAttributes;
 
+// net.minecraft.entity.SlimeEntity
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin {
 

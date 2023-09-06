@@ -1,0 +1,18 @@
+{
+	"attribute.slimesurvival.dodge_chance": "Dodge Chance",
+
+
+	"item.slimesurvival.bolt_action_rifle": "Bolt-Action Rifle",
+
+	"item.slimesurvival.heavy_rifle_ammo": "Heavy Rifle Ammo",
+
+
+	"block.slimesurvival.missing_block": "§5§kMissing Block",
+	"block.slimesurvival.solid_black": "§0Solid Black",
+	"block.slimesurvival.solid_blue": "§1Solid Blue",
+	"block.slimesurvival.solid_green": "§2Solid Green",
+	"block.slimesurvival.solid_magenta": "§dSolid Magenta",
+	"block.slimesurvival.solid_red": "§4Solid Red",
+	"block.slimesurvival.solid_white": "§fSolid White",
+	"block.slimesurvival.solid_yellow": "§eSolid Yellow"
+}

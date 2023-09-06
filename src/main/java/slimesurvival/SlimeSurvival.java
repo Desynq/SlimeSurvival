@@ -2,10 +2,13 @@ package slimesurvival;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
-import slimesurvival.registry.ModEntityAttributes;
+import slimesurvival.common.registry.ModEntityAttributes;
+import slimesurvival.common.registry.ModItems;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import io.wispforest.owo.registration.reflect.FieldRegistrationHandler;
 
 public class SlimeSurvival implements ModInitializer {
 
@@ -29,6 +32,8 @@ public class SlimeSurvival implements ModInitializer {
 		// Proceed with mild caution.
 
 		ModEntityAttributes.register();
+
+		FieldRegistrationHandler.register(ModItems.class, MOD_ID, false);
 
 		LOGGER.info("Hello Fabric world!");
 	}

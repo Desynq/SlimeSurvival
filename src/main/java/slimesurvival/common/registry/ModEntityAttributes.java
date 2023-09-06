@@ -1,4 +1,4 @@
-package slimesurvival.registry;
+package slimesurvival.common.registry;
 
 import net.minecraft.entity.attribute.ClampedEntityAttribute;
 import net.minecraft.entity.attribute.EntityAttribute;
