@@ -61,6 +61,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
 
 
+	modImplementation "io.wispforest:owo-lib:${owo_version}"
+
 	modImplementation "com.github.gnembon:fabric-carpet:${carpet_version}"
 
 	modCompileOnly "com.github.apace100:apoli:v${apoli_version}"
