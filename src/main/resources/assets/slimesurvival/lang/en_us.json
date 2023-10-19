@@ -5,6 +5,12 @@
 	"item.slimesurvival.bolt_action_rifle": "Bolt-Action Rifle",
 
 	"item.slimesurvival.heavy_rifle_ammo": "Heavy Rifle Ammo",
+	"item.slimesurvival.rifle_ammo": "Rifle Ammo",
+	"item.slimesurvival.shotgun_ammo": "Shotgun Ammo",
+	"item.slimesurvival.pistol_ammo": "Pistol Ammo",
+
+	"item.slimesurvival.material.axolotl_gills": "Axolotl Gills",
+	"item.slimesurvival.material.mystite_ingot": "Mystite Ingot",
 
 
 	"block.slimesurvival.missing_block": "§5§kMissing Block",
