@@ -7,8 +7,9 @@ import net.minecraft.registry.Registry;
 import slimesurvival.SlimeSurvival;
 
 public class ModEntityAttributes {
-	public static final EntityAttribute DODGE_CHANCE = createAttribute("dodge_chance", 0, 0, Integer.MAX_VALUE);
-	public static final EntityAttribute CHANCE_TO_NOT_CONSUME_AMMO = createAttribute("chance_to_not_consume_ammo", 0, 0, Integer.MAX_VALUE);
+	public static final EntityAttribute DODGE_CHANCE = createAttribute("dodge_chance", 0, 0, Double.MAX_VALUE);
+	public static final EntityAttribute CHANCE_TO_NOT_CONSUME_AMMO = createAttribute("chance_to_not_consume_ammo", 0, 0, Double.MAX_VALUE);
+	public static final EntityAttribute MAX_MANA = createAttribute("max_mana", 100, 0, Double.MAX_VALUE);
 
 
 
@@ -16,8 +17,14 @@ public class ModEntityAttributes {
 		return new ClampedEntityAttribute("attribute.name." + SlimeSurvival.MOD_ID + "." + name, base, min, max).setTracked(true);
 	}
 
+	private static void registerAttribute(EntityAttribute Attribute, String path) {
+		Registry.register(Registries.ATTRIBUTE, SlimeSurvival.ID(path), Attribute);
+	}
+
 
 	public static void register() {
-		Registry.register(Registries.ATTRIBUTE, SlimeSurvival.ID("dodge_chance"), DODGE_CHANCE);
+		registerAttribute(DODGE_CHANCE, "dodge_chance");
+		registerAttribute(CHANCE_TO_NOT_CONSUME_AMMO, "chance_to_not_consume_ammo");
+		registerAttribute(MAX_MANA, "max_mana");
 	}
 }
