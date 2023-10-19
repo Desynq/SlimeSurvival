@@ -16,5 +16,7 @@ public class LivingEntityMixin {
 	@Inject(method = "createLivingAttributes()Lnet/minecraft/entity/attribute/DefaultAttributeContainer$Builder;", require = 1, allow = 1, at = @At("RETURN"))
 	private static void addSlimeSurvivalEntityAttributes(final CallbackInfoReturnable<DefaultAttributeContainer.Builder> info) {
 		info.getReturnValue().add(ModEntityAttributes.DODGE_CHANCE);
+		info.getReturnValue().add(ModEntityAttributes.CHANCE_TO_NOT_CONSUME_AMMO);
+		info.getReturnValue().add(ModEntityAttributes.MAX_MANA);
 	}
 }
