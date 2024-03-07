@@ -18,5 +18,6 @@ public class LivingEntityMixin {
 		info.getReturnValue().add(ModEntityAttributes.DODGE_CHANCE);
 		info.getReturnValue().add(ModEntityAttributes.CHANCE_TO_NOT_CONSUME_AMMO);
 		info.getReturnValue().add(ModEntityAttributes.MAX_MANA);
+		info.getReturnValue().add(ModEntityAttributes.PASSIVE_MANA_REGEN_RATE);
 	}
 }
