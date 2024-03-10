@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import slimesurvival.common.registry.ModEntityAttributes;
 import slimesurvival.common.registry.ModItems;
+import slimesurvival.common.registry.ModPowerFactories;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,6 +33,7 @@ public class SlimeSurvival implements ModInitializer {
 		// Proceed with mild caution.
 
 		ModEntityAttributes.register();
+		ModPowerFactories.register();
 
 		FieldRegistrationHandler.register(ModItems.class, MOD_ID, false);
 

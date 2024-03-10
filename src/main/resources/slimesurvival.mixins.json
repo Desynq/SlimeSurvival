@@ -3,6 +3,10 @@
 	"package": "slimesurvival.mixins",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
+		"ExtinguishMixins$LivingEntityMixin",
+		"ExtinguishMixins$EntityMixin",
+		"ExtinguishMixins$PotionEntityMixin",
+		"ExtinguishMixins$LeveledCauldronBlockMixin",
 		"ExplosionMixin",
 		"LivingEntityMixin"
 	],
