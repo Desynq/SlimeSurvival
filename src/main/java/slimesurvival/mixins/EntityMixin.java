@@ -5,7 +5,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-import net.minecraft.entity.Entity;
+import net.minecraft.world.entity.Entity;
 import slimesurvival.helpers.MixinHelper;
 
 @Mixin(Entity.class)
@@ -13,20 +13,23 @@ public class EntityMixin {
 	/**
 	 * Water state is updated every tick and if the player is in water, they are extinguished every tick
 	 * Chose to redirect extinguish()V method directly since there are multiple unrelated side effects, making a redirect at the if statement difficult
-	 * @see net.minecraft.entity.Entity#checkWaterState()
+	 * @see net.minecraft.world.entity.Entity#updateInWaterStateAndDoWaterCurrentPushing()
 	 */
-	@Redirect(method = "checkWaterState()V", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;extinguish()V"))
-	private void extinguish(Entity thisEntity) {
-		if (MixinHelper.isUnextinguishable(thisEntity)) return;
-		thisEntity.extinguish();
+	@Redirect(
+		method = "updateInWaterStateAndDoWaterCurrentPushing()V",
+		at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;clearFire()V")
+	)
+	private void extinguish(Entity entity) {
+		if (MixinHelper.isUnextinguishable(entity)) return;
+		entity.clearFire();
 	}
 
 	/**
 	 * Entities are extinguished if they are moving while on fire and either in powder snow or wet
-	 * @see net.minecraft.entity.Entity#move(net.minecraft.entity.MovementType, net.minecraft.util.math.Vec3d)
+	 * @see net.minecraft.world.entity.Entity#move()
 	 */
 	@Redirect(
-		method = "move(Lnet/minecraft/entity/MovementType;Lnet/minecraft/util/math/Vec3d;)V",
+		method = "move()V",
 		at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;isOnFire()Z", opcode = Opcodes.INVOKEVIRTUAL, ordinal = 1)
 	)
 	private boolean isOnFireRedirect(Entity entity) {
@@ -36,10 +39,10 @@ public class EntityMixin {
 	/**
 	 * Stops extinguish sound from playing for unextinguishable entities (while moving and either in powder snow or wet)
 	 * The extinguish sound plays when you're both in a block that sets you on fire while also being extinguished at the same time
-	 * @see net.minecraft.entity.Entity#move(net.minecraft.entity.MovementType, net.minecraft.util.math.Vec3d)
+	 * @see net.minecraft.world.entity.Entity#move()
 	 */
 	@Redirect(
-		method = "move(Lnet/minecraft/entity/MovementType;Lnet/minecraft/util/math/Vec3d;)V",
+		method = "move()V",
 		at = @At(value = "FIELD", target = "Lnet/minecraft/entity/Entity;wasOnFire:Z", opcode = Opcodes.GETFIELD, ordinal = 0)
 	)
 	private boolean wasOnFireRedirect(Entity entity) {

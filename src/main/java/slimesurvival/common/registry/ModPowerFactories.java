@@ -2,7 +2,7 @@ package slimesurvival.common.registry;
 
 import io.github.apace100.apoli.power.factory.PowerFactory;
 import io.github.apace100.apoli.registry.ApoliRegistries;
-import net.minecraft.registry.Registry;
+import net.minecraft.core.Registry;
 import slimesurvival.common.power.UnextinguishablePower;
 
 public class ModPowerFactories {

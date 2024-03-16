@@ -2,13 +2,13 @@ package slimesurvival.common.item;
 
 import java.util.EnumMap;
 
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.Items;
-import net.minecraft.recipe.Ingredient;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Util;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.Util;
 import slimesurvival.common.registry.ModItems;
 
 public enum ModArmorMaterials implements ArmorMaterial {
@@ -17,19 +17,19 @@ public enum ModArmorMaterials implements ArmorMaterial {
 		map.put(ArmorItem.Type.LEGGINGS, 4);
 		map.put(ArmorItem.Type.CHESTPLATE, 5);
 		map.put(ArmorItem.Type.HELMET, 2);
-	}), 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, 0.0f, Ingredient.ofItems(ModItems.AXOLOTL_GILLS)),
+	}), 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0f, 0.0f, Ingredient.of(ModItems.AXOLOTL_GILLS)),
 	TURTLE("turtle", 33, Util.make(new EnumMap<ArmorItem.Type, Integer>(ArmorItem.Type.class), map -> {
 		map.put(ArmorItem.Type.BOOTS, 3);
 		map.put(ArmorItem.Type.LEGGINGS, 6);
 		map.put(ArmorItem.Type.CHESTPLATE, 8);
 		map.put(ArmorItem.Type.HELMET, 3);
-	}), 10, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 2.0f, 2.5f, Ingredient.ofItems(Items.SCUTE)),
+	}), 10, SoundEvents.ARMOR_EQUIP_TURTLE, 2.0f, 2.5f, Ingredient.of(Items.SCUTE)),
 	MYSTITE("mystite", 200, Util.make(new EnumMap<ArmorItem.Type, Integer>(ArmorItem.Type.class), map -> {
 		map.put(ArmorItem.Type.BOOTS, 5);
 		map.put(ArmorItem.Type.LEGGINGS, 8);
 		map.put(ArmorItem.Type.CHESTPLATE, 10);
 		map.put(ArmorItem.Type.HELMET, 5);
-	}), 25, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4.0f, 2.0f, Ingredient.ofItems(ModItems.MYSTITE_INGOT));
+	}), 25, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0f, 2.0f, Ingredient.of(ModItems.MYSTITE_INGOT));
 
 	private static final EnumMap<ArmorItem.Type, Integer> BASE_DURABILITY;
 	private final String name;
@@ -53,17 +53,17 @@ public enum ModArmorMaterials implements ArmorMaterial {
 	}
 
 	@Override
-	public int getDurability(ArmorItem.Type type) {
+	public int getDurabilityForType(ArmorItem.Type type) {
 		return BASE_DURABILITY.get((Object)type) * this.durabilityMultiplier;
 	}
 
 	@Override
-	public int getProtection(ArmorItem.Type type) {
+	public int getDefenseForType(ArmorItem.Type type) {
 		return this.protectionAmounts.get((Object)type);
 	}
 
 	@Override
-	public int getEnchantability() {
+	public int getEnchantmentValue() {
 		return this.enchantability;
 	}
 

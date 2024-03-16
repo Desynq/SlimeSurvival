@@ -1,7 +1,7 @@
 package slimesurvival;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import slimesurvival.common.registry.ModEntityAttributes;
 import slimesurvival.common.registry.ModItems;
 import slimesurvival.common.registry.ModPowerFactories;
@@ -16,8 +16,8 @@ public class SlimeSurvival implements ModInitializer {
 	public static final String MOD_ID = "slimesurvival";
 	public static final String MOD_NAME = "Slime Survival";
 
-	public static Identifier ID(String path) {
-		return new Identifier(MOD_ID, path);
+	public static ResourceLocation ID(String path) {
+		return new ResourceLocation(MOD_ID, path);
 	}
 
 

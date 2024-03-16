@@ -1,7 +1,7 @@
 package slimesurvival.helpers;
 
 import io.github.apace100.apoli.component.PowerHolderComponent;
-import net.minecraft.entity.Entity;
+import net.minecraft.world.entity.Entity;
 import slimesurvival.common.power.UnextinguishablePower;
 
 public class MixinHelper {

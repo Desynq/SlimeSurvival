@@ -3,8 +3,8 @@ package slimesurvival.common.registry;
 import io.wispforest.owo.registration.annotations.AssignedName;
 import io.wispforest.owo.registration.reflect.ItemRegistryContainer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Item;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.Item;
 import slimesurvival.common.item.GunItem;
 import slimesurvival.common.item.ModArmorMaterials;
 
