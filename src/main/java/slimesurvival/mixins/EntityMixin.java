@@ -30,7 +30,7 @@ public class EntityMixin {
 	 */
 	@Redirect(
 		method = "move()V",
-		at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;isOnFire()Z", opcode = Opcodes.INVOKEVIRTUAL, ordinal = 1)
+		at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;isOnFire()Z", opcode = Opcodes.INVOKEVIRTUAL, ordinal = 1)
 	)
 	private boolean isOnFireRedirect(Entity entity) {
 		return !MixinHelper.isUnextinguishable(entity) && entity.isOnFire();
@@ -43,7 +43,7 @@ public class EntityMixin {
 	 */
 	@Redirect(
 		method = "move()V",
-		at = @At(value = "FIELD", target = "Lnet/minecraft/entity/Entity;wasOnFire:Z", opcode = Opcodes.GETFIELD, ordinal = 0)
+		at = @At(value = "FIELD", target = "Lnet/minecraft/world/entity/Entity;wasOnFire:Z", opcode = Opcodes.GETFIELD, ordinal = 0)
 	)
 	private boolean wasOnFireRedirect(Entity entity) {
 		return !MixinHelper.isUnextinguishable(entity) && entity.wasOnFire;
